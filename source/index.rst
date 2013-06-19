@@ -3,20 +3,25 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Ovation Scientific Data Management System's documentation!
-=====================================================================
+|Ovation(TM)|
+=============
 
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+    :maxdepth: 1
+    
+    introduction
+    getting_started
+	
 
+.. |(R)| unicode:: U+00AE
+.. |Ovation(TM)| unicode:: Ovation U+2122
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. Indices and tables
+.. ==================
+.. 
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
 
