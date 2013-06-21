@@ -3,7 +3,7 @@ Introduction
 
 Ovation is the revolutionary data management service that empowers researchers through the seamless organization of multiple data formats and sources, preservation of the link between raw data and analyses and the ability to securely share of all of this with colleagues and collaborators.
 
-.. figure::  media/ui-mri-screen-small.png
+.. figure::  _static/ui-mri-screen-small.png
    :figwidth: 33%
    :scale: 25%
    
