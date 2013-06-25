@@ -6,6 +6,14 @@ Getting Started
 
 Once you've signed up for an account, you can download the Ovation application and get started.
 
+Requirements
+============
+
+Ovation supports the following operating systems and architectures:
+
+* OS X 10.8 and later
+* Windows 7 and later (64-bit)
+
 Installation
 ============
 
@@ -24,19 +32,19 @@ Matlab
 
 2. Download the `Ovation Matlab API <https://github.com/physion/ovation-matlab/archive/master.zip>` package. Add the unzipped folder to the Matlab path. After unzipping `ovation-matlab-master`, you may add the following to Matlab's `startup.m` to autmatically load the Ovation API at startup::
 
-	addpath path/to/ovation-matlab-master
-	import ovation.*
-	
+    addpath path/to/ovation-matlab-master
+    import ovation.*
+
 .. note::
-	You must add the Ovation jar to the top of Matlab's `classpath.txt`. The Ovation API will not function properly if you add the jar to Matlab's classpath via `javaaddpath`.
-	
+    You must add the Ovation jar to the top of Matlab's `classpath.txt`. The Ovation API will not function properly if you add the jar to Matlab's classpath via `javaaddpath`.
+
 3. After starting Matlab, open a `DataContext`—a view of the Ovation database data—with the `NewDataContext()` function. Enter your `ovation.io <http://ovation.io>`_ account email and password when prompted::
 
-	>> context = NewDataContext()
+    >> context = NewDataContext()
 
 
 .. todo::
-	Provide JAR download
+    Provide JAR download
 
 Python
 ------
