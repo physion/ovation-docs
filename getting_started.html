@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Getting Started &mdash; Ovation Scientific Data Management System 2.0b1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.0b1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Ovation Scientific Data Management System 2.0b1 documentation" href="index.html" />
+    <link rel="prev" title="Installation" href="installation.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="index.html">Ovation</a>
+        <span class="navbar-text pull-left"><b>2.0</b></span>
+
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="divider-vertical"></li>
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Getting Started</a></li>
+</ul>
+</ul>
+</li>
+              <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Getting Started</a><ul>
+<li><a class="reference internal" href="#authentication">Authentication</a></li>
+<li><a class="reference internal" href="#adding-a-new-project">Adding a new <cite>Project</cite></a></li>
+<li><a class="reference internal" href="#adding-a-new-source">Adding a new <cite>Source</cite></a></li>
+<li><a class="reference internal" href="#adding-an-experiment-s-worth-of-data">Adding an <cite>Experiment</cite>&#8216;s worth of data</a><ul>
+<li><a class="reference internal" href="#adding-an-experiment">Adding an Experiment</a></li>
+<li><a class="reference internal" href="#adding-data">Adding Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+            
+            
+              
+  <li><a href="installation.html"
+         title="previous chapter">&laquo; Installation</a></li>
+            
+            
+              <li>
+  <a href="_sources/getting_started.txt"
+     rel="nofollow">Source</a></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-search pull-right" action="search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  
+  <div class="section" id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<p>Once you&#8217;ve <a class="reference internal" href="installation.html#doc-installation"><em>installed</em></a> Ovation, you&#8217;re ready to start organizing your data. Ovation organizes data using entities (&#8220;nouns&#8221;) that are familiar to scientists: Projects, Experiments, Protocols, Measurements, etc. Each instance of these (and other) entities stored in the are called &#8220;objects&#8221;.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Object identity</p>
+<p class="last">Every object in the Ovation database has a unique identity—a globally unique identifier such as <cite>C3617DF6-3296-434E-890D-4AA730A80431</cite>.</p>
+</div>
+<p>This tutorial will demonstrate adding numeric, image and tabular <cite>Measurements</cite> to a new <cite>Project</cite>.</p>
+<div class="section" id="authentication">
+<h2>Authentication<a class="headerlink" href="#authentication" title="Permalink to this headline">¶</a></h2>
+<p>Before you can add data to your Ovation database, you must login using your email address and <a class="reference external" href="http://ovation.io">ovation.io</a> password.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you&#8217;ve forgotten your <a class="reference external" href="http://ovation.io">ovation.io</a> password, you can <a class="reference external" href="https://ovation.io/users/password/new">reset</a> it.</p>
+</div>
+</div>
+<div class="section" id="adding-a-new-project">
+<span id="sec-new-project"></span><h2>Adding a new <cite>Project</cite><a class="headerlink" href="#adding-a-new-project" title="Permalink to this headline">¶</a></h2>
+<p>This section shows you how to add a new <cite>Project</cite> object to the database. Projects are top-level entities in the Ovation data model, and are used to organize Experiment data. Projects may contain many Experiments, and Experiments can belong to many Projects.</p>
+<a class="reference internal image-reference" href="_images/full_screen_before_project_insert_project1.png"><img alt="_images/full_screen_before_project_insert_project1.png" src="_images/full_screen_before_project_insert_project1.png" style="width: 60%;" /></a>
+<p>To add a new <cite>Project</cite>, right click on the Ovation browser window and select &#8216;Insert Project..&#8217;.</p>
+<a class="reference internal image-reference" href="_images/insert_project_wizard1.png"><img alt="_images/insert_project_wizard1.png" src="_images/insert_project_wizard1.png" style="width: 60%;" /></a>
+<p>Follow the wizard to set the name, start time, and purpose for your Project. The purpose may be as general or specific as you want, although it generally should correspond to the hypothesis being tested in this Project.</p>
+<a class="reference internal image-reference" href="_images/full_screen_after_project1.png"><img alt="_images/full_screen_after_project1.png" src="_images/full_screen_after_project1.png" style="width: 60%;" /></a>
+<p>Now that we have inserted a Project, it&#8217;s time to start adding Sources to the Project.</p>
+</div>
+<div class="section" id="adding-a-new-source">
+<h2>Adding a new <cite>Source</cite><a class="headerlink" href="#adding-a-new-source" title="Permalink to this headline">¶</a></h2>
+<p>In life sciences, Sources can be thought of as the biological subject of an experiment. They are explicitly associated with the Epochs (or trials) they are involved in, and there can be many Sources associated with an Epoch. The Source object in the Ovation data model serves as the place to store any information that pertains to that Source, regardless of the conditions of an experiment it was involved in.</p>
+<a class="reference internal image-reference" href="_images/insert_source.png"><img alt="_images/insert_source.png" src="_images/insert_source.png" style="width: 60%;" /></a>
+<p>Let&#8217;s insert a Source object, by switching our view to the Source Navigator, and right clicking in the browser window.</p>
+<a class="reference internal image-reference" href="_images/insert_source_wizard1.png"><img alt="_images/insert_source_wizard1.png" src="_images/insert_source_wizard1.png" style="width: 60%;" /></a>
+<p>Here, I&#8217;ve given the Source a name of &#8216;Mouse&#8217;, and an id corresponding to the id in my animal database.</p>
+<p>Since I&#8217;ve created two sources with the same label (Mouse), I should add some properties to them to distinguish them. I will do this by selecting my newly created Source, and switching to the properties view on the right side of my screen.</p>
+<a class="reference internal image-reference" href="_images/source_property_panel.png"><img alt="_images/source_property_panel.png" src="_images/source_property_panel.png" style="width: 60%;" /></a>
+<p>Here, I&#8217;ll add a few things that I know about this source.</p>
+<a class="reference internal image-reference" href="_images/source_with_properties.png"><img alt="_images/source_with_properties.png" src="_images/source_with_properties.png" style="width: 60%;" /></a>
+<p>Now that we&#8217;ve created the Source object that we&#8217;ll use for the Experiment data we will add, we should add the Experiment.</p>
+</div>
+<div class="section" id="adding-an-experiment-s-worth-of-data">
+<h2>Adding an <cite>Experiment</cite>&#8216;s worth of data<a class="headerlink" href="#adding-an-experiment-s-worth-of-data" title="Permalink to this headline">¶</a></h2>
+<p>Experiments are entities in the Ovation data model that contain a number of trials (called Epochs), organized into a hierarchy of trial groups (called EpochGroups). Conceptually, you should use EpochGroups to group Epochs in a way thats meaningful to your experimental protocol. Raw data is then added to Epochs in the form of Measurements.</p>
+<div class="section" id="adding-an-experiment">
+<h3>Adding an Experiment<a class="headerlink" href="#adding-an-experiment" title="Permalink to this headline">¶</a></h3>
+<p>Experiments also contain the general setup and protocol information for all of the Epochs (or trials) contained in the Experiment. Information about the equipment used, including make, model, software version, as well as global settings of that equipment all belong in the EquipmentSetup entity attached to the Experiment. Information about the protocol for the Experiment belongs in the Protocol entity attached to this Experiment. Both the protocol and equipment setup information can be added after the fact, so we will not add it now.</p>
+<div class="figure" style="width: 60%">
+<img alt="_images/insert_experiment1.png" src="_images/insert_experiment1.png" />
+</div>
+<p>To add a new <cite>Experiment</cite>, right click on a Project entity, and select &#8216;Insert Experiment...&#8217;</p>
+<div class="figure" style="width: 60%">
+<img alt="_images/insert_experiment_wizard1.png" src="_images/insert_experiment_wizard1.png" />
+</div>
+<p>Now, lets add a couple EpochGroups to this experiment. Below, I&#8217;ll add two EpochGroups, one labeled &#8216;Control&#8217;, and the other labeled &#8216;Test&#8217;. To add an EpochGroup, right click the Experiment you just created, and select &#8216;Insert EpochGroup...&#8217;.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="34%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<img alt="_images/insert_control_protocol_wizard1.png" src="_images/insert_control_protocol_wizard1.png" />
+</div>
+</td>
+<td><div class="first last figure">
+<img alt="_images/insert_control_protocol_wizard2.png" src="_images/insert_control_protocol_wizard2.png" />
+</div>
+</td>
+<td><div class="first last figure">
+<img alt="_images/insert_control_protocol_wizard3.png" src="_images/insert_control_protocol_wizard3.png" />
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The first three panels of the wizard are related to an EpochGroup protocol. You may select an existing protocol at this stage, create a new one, or choose not to select one. I will choose to create a protocol named &#8216;Demo Protocol&#8217; by typing &#8216;Demo Protocol&#8217; in the text box below, and clicking on the plus button. Then I will edit the corresponding text box, to add my protocol document text. On the next panel, I will choose to add the protocol parameters {control, true}, because this is the protocol for my &#8216;control&#8217; EpochGroup. I have no device parameters at this time, so I&#8217;ll leave that table blank.</p>
+<div class="figure">
+<img alt="_images/insert_control_epoch_group.png" src="_images/insert_control_epoch_group.png" />
+</div>
+<p>The last panel contains the information for the EpochGroup object. I will set the label to &#8216;Control&#8217; to indicate that all the Epochs found in this EpochGroup are control trials.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="34%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<img alt="_images/insert_test_protocol_wizard1.png" src="_images/insert_test_protocol_wizard1.png" />
+</div>
+</td>
+<td><div class="first last figure">
+<img alt="_images/insert_test_protocol_wizard2.png" src="_images/insert_test_protocol_wizard2.png" />
+</div>
+</td>
+<td><div class="first last figure">
+<img alt="_images/insert_test_protocol_wizard3.png" src="_images/insert_test_protocol_wizard3.png" />
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>I will then create another EpochGroup with label &#8216;Test&#8217;. Again, the labeling of &#8216;Control&#8217; and &#8216;Test&#8217; are arbitrary, I chose them because it fit my experiment structure.</p>
+<div class="figure" style="width: 60%">
+<img alt="_images/epoch_groups_inserted.png" src="_images/epoch_groups_inserted.png" />
+</div>
+<p>We are now ready to add the data to our Experiment!</p>
+</div>
+<div class="section" id="adding-data">
+<h3>Adding Data<a class="headerlink" href="#adding-data" title="Permalink to this headline">¶</a></h3>
+<p>Adding data is a two part process. First, we create an Epoch object. Each Epoch represents an event that happened during a specific time, involving a set of Sources. The next step is to add one or many Measurements to the newly created Epoch. To begin, right click on the &#8216;Control&#8217; EpochGroup and select &#8216;Insert Measurement...&#8217;. This wizard will create an Epoch object with one Measurement object. You may optionally add more measurements to the Epoch object after it has been created.</p>
+<p>Step 1 contains the start and end time for the Epoch.</p>
+<div class="figure" style="width: 60%">
+<img alt="_images/insert_epoch_wizard1.png" src="_images/insert_epoch_wizard1.png" />
+</div>
+<p>Step 2 allows you to select the sources that are present during this Epoch. For this example, I will add the Source I created earlier, by selecting it on the left, and clicking the + button.</p>
+<div class="figure" style="width: 60%">
+<img alt="_images/select_source_wizard1.png" src="_images/select_source_wizard1.png" />
+</div>
+<p>Sources are named within the scope of the Epoch. If you don&#8217;t set a name, the default is created of the form &#8216;label | id&#8217;. However, I&#8217;d like to rename the Source &#8216;first mouse&#8217;.</p>
+<div class="figure" style="width: 60%">
+<img alt="_images/select_source_wizard2.png" src="_images/select_source_wizard2.png" />
+</div>
+<p>Steps 3-5 correspond to the protocol for this Epoch. I&#8217;ve chosen to skip that information, because my EpochGroup protocol document contains all the information I need.</p>
+<p>Step 6 is where I choose the data file to add. I chose to add an image here, but I could have chosen a csv file, or any other single file of data. For image formats that contain important metadata or span multiple files, choose &#8216;Insert Image...&#8217; instead of &#8216;Insert Measurement...&#8217;.</p>
+<div class="figure" style="width: 60%">
+<img alt="_images/insert_meausrement_image.png" src="_images/insert_meausrement_image.png" />
+</div>
+<p>The next two steps allow you to select which among the sources and devices associated with the Epoch should be associated with this particular measurement. By default, all sources and devices are associated with all measurements; however, if a measurement is associated with just one source, or just one device, you may uncheck the irrelevant sources and devices here. Since I have not added any devices to this Experiment&#8217;s EquipmentSetup, my device list below is empty.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="48%" />
+<col width="52%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure">
+<img alt="_images/insert_meausrement_select_sources.png" src="_images/insert_meausrement_select_sources.png" />
+</div>
+</td>
+<td><div class="first last figure">
+<img alt="_images/insert_meausrement_select_empty_devices.png" src="_images/insert_meausrement_select_empty_devices.png" />
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Great, we have now inserted our first Measurement! Follow either the &#8216;Insert Measurement...&#8217;, &#8216;Insert Numeric Measurement...&#8217;, or &#8216;Insert Image...&#8217; wizards to insert more data.</p>
+<div class="figure" style="width: 60%">
+<img alt="_images/measurement_inserted.png" src="_images/measurement_inserted.png" />
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013, Physion.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2b1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
