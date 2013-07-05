@@ -169,21 +169,20 @@
 <h2>Programming environment setup<a class="headerlink" href="#programming-environment-setup" title="Permalink to this headline">¶</a></h2>
 <p>Ovation integrates with several scientific programming environments. Follow the instructions for your language of choice below.</p>
 <div class="section" id="matlab">
-<h3>Matlab<a class="headerlink" href="#matlab" title="Permalink to this headline">¶</a></h3>
-<ol class="arabic">
-<li><p class="first">Download the the bundled Ovation <cite>jar</cite>. Add the path to this jar to the <em>top</em> of the <cite>${matlabroot}/toolbox/local/classpath.txt</cite> file.</p>
-</li>
-<li><p class="first">Download the <cite>Ovation Matlab API &lt;https://github.com/physion/ovation-matlab/archive/master.zip&gt;</cite> package. Add the unzipped folder to the Matlab path. After unzipping <cite>ovation-matlab-master</cite>, you may add the following to Matlab&#8217;s <cite>startup.m</cite> to autmatically load the Ovation API at startup:</p>
-<div class="highlight-python"><pre>addpath path/to/ovation-matlab-master
-import ovation.*</pre>
-</div>
-</li>
+<span id="sec-matlab-installation"></span><h3>Matlab<a class="headerlink" href="#matlab" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><a class="reference external" href="http://ovation.io/downloads">Download</a> the the &#8220;Ovation API all-in-one Jar&#8221;. Add the path to the all-in-one jar file to the <em>top</em> of the <cite>${matlabroot}/toolbox/local/classpath.txt</cite> file.</li>
 </ol>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">You must add the Ovation jar to the top of Matlab&#8217;s <cite>classpath.txt</cite>. The Ovation API will not function properly if you add the jar to Matlab&#8217;s classpath via <cite>javaaddpath</cite>.</p>
 </div>
-<ol class="arabic" start="3">
+<ol class="arabic" start="2">
+<li><p class="first">Download the <cite>Ovation Matlab API &lt;https://github.com/physion/ovation-matlab/archive/master.zip&gt;</cite> package. Add the unzipped folder to the Matlab path. After unzipping <cite>ovation-matlab-master</cite>, you may add the following to Matlab&#8217;s <cite>startup.m</cite> to autmatically load the Ovation API at startup:</p>
+<div class="highlight-python"><pre>addpath path/to/ovation-matlab-master
+import ovation.*</pre>
+</div>
+</li>
 <li><p class="first">After starting Matlab, open a <cite>DataContext</cite>—a view of the Ovation database data—with the <cite>NewDataContext()</cite> function. Enter your <a class="reference external" href="http://ovation.io">ovation.io</a> account email and password when prompted:</p>
 <div class="highlight-python"><pre>&gt;&gt; context = NewDataContext()</pre>
 </div>

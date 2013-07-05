@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Selected Data Importers &mdash; Ovation Scientific Data Management System 2.0b1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.0b1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Ovation Scientific Data Management System 2.0b1 documentation" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="index.html">Ovation</a>
+        <span class="navbar-text pull-left"><b>2.0</b></span>
+
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="divider-vertical"></li>
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+</ul>
+</ul>
+</li>
+              <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Selected Data Importers</a><ul>
+<li><a class="reference internal" href="#fenton-lab-dat-data">Fenton Lab .dat Data</a></li>
+<li><a class="reference internal" href="#pclamp-abf">pClamp ABF</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+            
+            
+              
+            
+            
+              <li>
+  <a href="_sources/importing_data.txt"
+     rel="nofollow">Source</a></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-search pull-right" action="search.html" method="get">
+  <input type="text" name="q" class="search-query" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  
+  <div class="section" id="selected-data-importers">
+<h1>Selected Data Importers<a class="headerlink" href="#selected-data-importers" title="Permalink to this headline">¶</a></h1>
+<p>This page describes usage of selected Ovation data import plugins.</p>
+<div class="section" id="fenton-lab-dat-data">
+<h2>Fenton Lab .dat Data<a class="headerlink" href="#fenton-lab-dat-data" title="Permalink to this headline">¶</a></h2>
+<p>The Fenton Lab dat import script is a trio of Matlab functions. The top-level function is <cite>import_fenton_dat</cite>. The <cite>import_fenton_dat</cite> script requires the <a class="reference internal" href="installation.html#sec-matlab-installation"><em>Ovation Matlab API</em></a>.</p>
+<ol class="arabic">
+<li><p class="first">Add a Project and Experiment to the databse (if needed)</p>
+</li>
+<li><p class="first">Set the Experiment equipment setup:</p>
+<blockquote>
+<div><p>&gt;&gt; exp.setEquipmentSetup(config2map(&#8216;&lt;cfg file&gt;&#8217;, &#8216;Arena&#8217;))</p>
+</div></blockquote>
+</li>
+</ol>
+<p>You can choose a different equipment name than <cite>arena</cite> if you choose. Whatever you choose, you&#8217;ll need to use the same name later when calling <cite>import_fenton_dat</cite></p>
+<ol class="arabic" start="3">
+<li><p class="first">Create an EpochGroup within the new Experiment for the behavioral data</p>
+</li>
+<li><p class="first">Retrieve a reference to the <cite>EpochGroup</cite>, <cite>Source</cite> and <cite>Protocol</cite> for the data. You can browse from the <cite>DataContext</cite> in Matlab or copy-and-paste from the Ovation application, using <cite>getObjectWithURI</cite> from the Matlab <cite>DataContext</cite>, e.g.:</p>
+<blockquote>
+<div><p>&gt;&gt; source = context.getObjectWithURI(&#8216;&lt;pasted URI from Ovation application&gt;&#8217;);
+&gt;&gt; protocol = context.getObjectWithURI(&#8216;&lt;pasted URI from Ovation application Protocols View&gt;&#8217;);
+&gt;&gt; epochGroup = context.getObjectWithURI(&#8216;&lt;pasted URI from Ovation application&gt;&#8217;);</p>
+</div></blockquote>
+</li>
+</ol>
+<ol class="arabic" start="4">
+<li><p class="first">Import the room-frame and arena-frame .dat and image files. This example shows an import of the <cite>bl1D1Hab</cite> trial:</p>
+<blockquote>
+<div><p>&gt;&gt; epoch = import_fenton_dat(source, epochGroup, protocol, &#8216;Arena&#8217;, &#8216;Arena.Camera&#8217;, &#8216;America/New_York&#8217;, 600, &#8216;bl1D1Hab_Arena.dat&#8217;, fullfile(pwd(), &#8216;bl1D1Hab_Arena.png&#8217;), &#8216;bl1D1Hab_Room.dat&#8217;, fullfile(pwd(), &#8216;bl1D1Hab_Room.png&#8217;), &#8216;image/png&#8217;)</p>
+</div></blockquote>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You must provide the <em>abolute</em> path (i.e. from the file-system root) to the image files. Because Matlab does not change the JVM&#8217;s working directory when changing Matlab working directories, there is no way to calculate the absolute path in code. You can use <cite>fullfile(pwd(), &lt;relative path&gt;)</cite> to create an absolute path.</p>
+</div>
+<ol class="arabic" start="6">
+<li><p class="first">Additional table (e.g. CSV) data can be imported using the &#8220;Insert Measurement...&#8221; wizard in the Ovation application:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>&gt;&gt; epoch.insertMeasurement(&#8216;&lt;table name&gt;&#8217;, ...</dt>
+<dd><p class="first last">array2set({&#8216;subject&#8217;}), ...
+array2set({&#8216;Arena&#8217;}), ...
+java.util.File(&#8216;&lt;absolute path to .csv&gt;&#8217;).toURI().toURL(), ...
+&#8216;application/csv&#8217;... % or other appropriate content type
+)</p>
+</dd>
+</dl>
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="pclamp-abf">
+<h2>pClamp ABF<a class="headerlink" href="#pclamp-abf" title="Permalink to this headline">¶</a></h2>
+<p>The Ovation pClamp (ABF) importer is a command-line tool</p>
+<ol class="arabic">
+<li><p class="first">If needed, install Python 2.7 (download from <a class="reference external" href="http://python.org">http://python.org</a>)</p>
+</li>
+<li><p class="first">Install the Python <cite>setuptools</cite> package. Download and run <a class="reference external" href="http://peak.telecommunity.com/dist/ez_setup.py">ez_setup.py</a>:</p>
+<blockquote>
+<div><p>python ez_setup.py</p>
+</div></blockquote>
+</li>
+<li><p class="first">If needed, install the ovation-api and ovation python modules. Download the ovation-api and install with <cite>easy_isntall</cite>:</p>
+<blockquote>
+<div><p>easy_install ovation-</p>
+</div></blockquote>
+</li>
+</ol>
+</div>
+</div>
+
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013, Physion.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2b1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

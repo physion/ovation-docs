@@ -1,3 +1,5 @@
+.. _doc-getting-started:
+
 ***************
 Getting Started
 ***************
