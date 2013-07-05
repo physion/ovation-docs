@@ -34,4 +34,5 @@ nosetests.xml
 .project
 .pydevproject
 
-source/_static/.DS_Store
+.DS_Store
+build/
