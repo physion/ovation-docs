@@ -1,7 +1,0 @@
-Getting Started
-===============
-
-|Ovation(TM)| is a combination web service, local application and programming platform. To get started with Ovation, you sign up for an account on `ovation.io<http://ovation.io>`_.
-
-
-.. |Ovation(TM)| unicode:: Ovation U+2122

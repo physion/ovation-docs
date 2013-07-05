@@ -115,7 +115,7 @@
 </li>
 <li><p class="first">Set the Experiment equipment setup:</p>
 <blockquote>
-<div><p>&gt;&gt; exp.setEquipmentSetup(config2map(&#8216;&lt;cfg file&gt;&#8217;, &#8216;Arena&#8217;))</p>
+<div><p>exp.setEquipmentSetup(config2map(&#8216;&lt;cfg file&gt;&#8217;, &#8216;Arena&#8217;))</p>
 </div></blockquote>
 </li>
 </ol>
@@ -125,16 +125,16 @@
 </li>
 <li><p class="first">Retrieve a reference to the <cite>EpochGroup</cite>, <cite>Source</cite> and <cite>Protocol</cite> for the data. You can browse from the <cite>DataContext</cite> in Matlab or copy-and-paste from the Ovation application, using <cite>getObjectWithURI</cite> from the Matlab <cite>DataContext</cite>, e.g.:</p>
 <blockquote>
-<div><p>&gt;&gt; source = context.getObjectWithURI(&#8216;&lt;pasted URI from Ovation application&gt;&#8217;);
-&gt;&gt; protocol = context.getObjectWithURI(&#8216;&lt;pasted URI from Ovation application Protocols View&gt;&#8217;);
-&gt;&gt; epochGroup = context.getObjectWithURI(&#8216;&lt;pasted URI from Ovation application&gt;&#8217;);</p>
+<div><p>source = context.getObjectWithURI(&#8216;&lt;pasted URI from Ovation application&gt;&#8217;);
+protocol = context.getObjectWithURI(&#8216;&lt;pasted URI from Ovation application Protocols View&gt;&#8217;);
+epochGroup = context.getObjectWithURI(&#8216;&lt;pasted URI from Ovation application&gt;&#8217;);</p>
 </div></blockquote>
 </li>
 </ol>
 <ol class="arabic" start="4">
 <li><p class="first">Import the room-frame and arena-frame .dat and image files. This example shows an import of the <cite>bl1D1Hab</cite> trial:</p>
 <blockquote>
-<div><p>&gt;&gt; epoch = import_fenton_dat(source, epochGroup, protocol, &#8216;Arena&#8217;, &#8216;Arena.Camera&#8217;, &#8216;America/New_York&#8217;, 600, &#8216;bl1D1Hab_Arena.dat&#8217;, fullfile(pwd(), &#8216;bl1D1Hab_Arena.png&#8217;), &#8216;bl1D1Hab_Room.dat&#8217;, fullfile(pwd(), &#8216;bl1D1Hab_Room.png&#8217;), &#8216;image/png&#8217;)</p>
+<div><p>epoch = import_fenton_dat(source, epochGroup, protocol, &#8216;Arena&#8217;, &#8216;Arena.Camera&#8217;, &#8216;America/New_York&#8217;, 600, &#8216;bl1D1Hab_Arena.dat&#8217;, fullfile(pwd(), &#8216;bl1D1Hab_Arena.png&#8217;), &#8216;bl1D1Hab_Room.dat&#8217;, fullfile(pwd(), &#8216;bl1D1Hab_Room.png&#8217;), &#8216;image/png&#8217;)</p>
 </div></blockquote>
 </li>
 </ol>
@@ -146,7 +146,7 @@
 <li><p class="first">Additional table (e.g. CSV) data can be imported using the &#8220;Insert Measurement...&#8221; wizard in the Ovation application:</p>
 <blockquote>
 <div><dl class="docutils">
-<dt>&gt;&gt; epoch.insertMeasurement(&#8216;&lt;table name&gt;&#8217;, ...</dt>
+<dt>epoch.insertMeasurement(&#8216;&lt;table name&gt;&#8217;, ...</dt>
 <dd><p class="first last">array2set({&#8216;subject&#8217;}), ...
 array2set({&#8216;Arena&#8217;}), ...
 java.util.File(&#8216;&lt;absolute path to .csv&gt;&#8217;).toURI().toURL(), ...
