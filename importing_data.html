@@ -72,7 +72,6 @@
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">Selected Data Importers</a><ul>
 <li><a class="reference internal" href="#fenton-lab-dat-data">Fenton Lab .dat Data</a></li>
-<li><a class="reference internal" href="#pclamp-abf">pClamp ABF</a></li>
 </ul>
 </li>
 </ul>
@@ -114,28 +113,28 @@
 <li><p class="first">Add a Project and Experiment to the databse (if needed)</p>
 </li>
 <li><p class="first">Set the Experiment equipment setup:</p>
-<blockquote>
-<div><p>exp.setEquipmentSetup(config2map(&#8216;&lt;cfg file&gt;&#8217;, &#8216;Arena&#8217;))</p>
-</div></blockquote>
+<div class="highlight-python"><pre>&gt;&gt; exp.setEquipmentSetup(config2map('&lt;cfg file&gt;', 'Arena'))</pre>
+</div>
 </li>
 </ol>
-<p>You can choose a different equipment name than <cite>arena</cite> if you choose. Whatever you choose, you&#8217;ll need to use the same name later when calling <cite>import_fenton_dat</cite></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You may choose a different equipment prefix than <cite>Arena</cite> if you choose. Whatever you choose, you&#8217;ll need to use the same name later when calling <cite>import_fenton_dat</cite></p>
+</div>
 <ol class="arabic" start="3">
 <li><p class="first">Create an EpochGroup within the new Experiment for the behavioral data</p>
 </li>
 <li><p class="first">Retrieve a reference to the <cite>EpochGroup</cite>, <cite>Source</cite> and <cite>Protocol</cite> for the data. You can browse from the <cite>DataContext</cite> in Matlab or copy-and-paste from the Ovation application, using <cite>getObjectWithURI</cite> from the Matlab <cite>DataContext</cite>, e.g.:</p>
-<blockquote>
-<div><p>source = context.getObjectWithURI(&#8216;&lt;pasted URI from Ovation application&gt;&#8217;);
-protocol = context.getObjectWithURI(&#8216;&lt;pasted URI from Ovation application Protocols View&gt;&#8217;);
-epochGroup = context.getObjectWithURI(&#8216;&lt;pasted URI from Ovation application&gt;&#8217;);</p>
-</div></blockquote>
+<div class="highlight-python"><pre>&gt;&gt; source = context.getObjectWithURI('&lt;pasted URI from Ovation application&gt;');
+&gt;&gt; protocol = context.getObjectWithURI('&lt;pasted URI from Ovation application Protocols View&gt;');
+&gt;&gt; epochGroup = context.getObjectWithURI('&lt;pasted URI from Ovation application&gt;');</pre>
+</div>
 </li>
 </ol>
 <ol class="arabic" start="4">
 <li><p class="first">Import the room-frame and arena-frame .dat and image files. This example shows an import of the <cite>bl1D1Hab</cite> trial:</p>
-<blockquote>
-<div><p>epoch = import_fenton_dat(source, epochGroup, protocol, &#8216;Arena&#8217;, &#8216;Arena.Camera&#8217;, &#8216;America/New_York&#8217;, 600, &#8216;bl1D1Hab_Arena.dat&#8217;, fullfile(pwd(), &#8216;bl1D1Hab_Arena.png&#8217;), &#8216;bl1D1Hab_Room.dat&#8217;, fullfile(pwd(), &#8216;bl1D1Hab_Room.png&#8217;), &#8216;image/png&#8217;)</p>
-</div></blockquote>
+<div class="highlight-python"><pre>&gt;&gt; epoch = import_fenton_dat(source, epochGroup, protocol, 'Arena', 'Arena.Camera', 'America/New_York', 600, 'bl1D1Hab_Arena.dat', fullfile(pwd(), 'bl1D1Hab_Arena.png'), 'bl1D1Hab_Room.dat', fullfile(pwd(), 'bl1D1Hab_Room.png'), 'image/png')</pre>
+</div>
 </li>
 </ol>
 <div class="admonition note">
@@ -144,35 +143,13 @@ epochGroup = context.getObjectWithURI(&#8216;&lt;pasted URI from Ovation applica
 </div>
 <ol class="arabic" start="6">
 <li><p class="first">Additional table (e.g. CSV) data can be imported using the &#8220;Insert Measurement...&#8221; wizard in the Ovation application:</p>
-<blockquote>
-<div><dl class="docutils">
-<dt>epoch.insertMeasurement(&#8216;&lt;table name&gt;&#8217;, ...</dt>
-<dd><p class="first last">array2set({&#8216;subject&#8217;}), ...
-array2set({&#8216;Arena&#8217;}), ...
-java.util.File(&#8216;&lt;absolute path to .csv&gt;&#8217;).toURI().toURL(), ...
-&#8216;application/csv&#8217;... % or other appropriate content type
-)</p>
-</dd>
-</dl>
-</div></blockquote>
-</li>
-</ol>
+<div class="highlight-python"><pre>&gt;&gt; epoch.insertMeasurement('&lt;table name&gt;', ...
+    array2set({'subject'}), ...
+    array2set({'Arena'}), ...
+    java.util.File('&lt;absolute path to .csv&gt;').toURI().toURL(), ...
+    'application/csv'... % or other appropriate content type
+    )</pre>
 </div>
-<div class="section" id="pclamp-abf">
-<h2>pClamp ABF<a class="headerlink" href="#pclamp-abf" title="Permalink to this headline">¶</a></h2>
-<p>The Ovation pClamp (ABF) importer is a command-line tool</p>
-<ol class="arabic">
-<li><p class="first">If needed, install Python 2.7 (download from <a class="reference external" href="http://python.org">http://python.org</a>)</p>
-</li>
-<li><p class="first">Install the Python <cite>setuptools</cite> package. Download and run <a class="reference external" href="http://peak.telecommunity.com/dist/ez_setup.py">ez_setup.py</a>:</p>
-<blockquote>
-<div><p>python ez_setup.py</p>
-</div></blockquote>
-</li>
-<li><p class="first">If needed, install the ovation-api and ovation python modules. Download the ovation-api and install with <cite>easy_isntall</cite>:</p>
-<blockquote>
-<div><p>easy_install ovation-</p>
-</div></blockquote>
 </li>
 </ol>
 </div>
