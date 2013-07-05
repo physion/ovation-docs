@@ -14,6 +14,8 @@ Contents:
     introduction
     installation
     getting_started
+    
+.. importing_data
 	
 
 .. |(R)| unicode:: U+00AE

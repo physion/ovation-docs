@@ -58,26 +58,25 @@ Programming environment setup
 
 Ovation integrates with several scientific programming environments. Follow the instructions for your language of choice below.
 
+.. _sec-matlab-installation:
+
 Matlab
 ------
 
-1. Download the the bundled Ovation `jar`. Add the path to this jar to the *top* of the `${matlabroot}/toolbox/local/classpath.txt` file.
+1. `Download <http://ovation.io/downloads>`_ the the "Ovation API all-in-one Jar". Add the path to the all-in-one jar file to the *top* of the `${matlabroot}/toolbox/local/classpath.txt` file.
+
+.. note::
+    You must add the Ovation jar to the top of Matlab's `classpath.txt`. The Ovation API will not function properly if you add the jar to Matlab's classpath via `javaaddpath`.
 
 2. Download the `Ovation Matlab API <https://github.com/physion/ovation-matlab/archive/master.zip>` package. Add the unzipped folder to the Matlab path. After unzipping `ovation-matlab-master`, you may add the following to Matlab's `startup.m` to autmatically load the Ovation API at startup::
 
     addpath path/to/ovation-matlab-master
     import ovation.*
 
-.. note::
-    You must add the Ovation jar to the top of Matlab's `classpath.txt`. The Ovation API will not function properly if you add the jar to Matlab's classpath via `javaaddpath`.
-
 3. After starting Matlab, open a `DataContext`—a view of the Ovation database data—with the `NewDataContext()` function. Enter your `ovation.io <http://ovation.io>`_ account email and password when prompted::
 
     >> context = NewDataContext()
 
-
-.. todo::
-    Provide JAR download
 
 Python
 ------
