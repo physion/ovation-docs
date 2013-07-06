@@ -208,7 +208,7 @@ measurement &lt;- epoch$insertMeasurement("table1", # Measurement name
 fs &lt;- context$getFileService()
 TimeUnit &lt;- J("java.util.concurrent.TimeUnit")
 Long &lt;- J("java.lang.Long")
-fs$waitForPendingUploads(new(Long, "60"), $MINUTES)
+fs$waitForPendingUploads(as.integer(60), TimeUnit$MINUTES)
 
 
 ## Retrieve the DataFrame from measurement
