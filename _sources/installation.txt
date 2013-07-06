@@ -105,6 +105,18 @@ Installation will also install the following (required) packages:
 R Project for Statistical Computing
 -----------------------------------
 
+Ovation's R API (`Rovation`) supports R 2.15 and later via the `rJava` package. To install the R API, follow the instructions below.
+
+1. Download the Ovation R API from http://ovation.io/downloads.
+2. Install the `Rovation` from the package archive file.
+
+.. figure:: _static/r_studio_install_package.png
+    
+    Rstudio package installation window. Select Install From "Package Archive", then choose the path to the Rovation package downloaded from http://ovation.io. Click "Install" to install `Rovation`.
+
+.. note::
+    The first version of Rovation was written by Romain Franconville at the Janelia Farm Research Campus of the Howard Hughes Medical Institute. Thanks, Romain!
+
 Java
 ----
 
