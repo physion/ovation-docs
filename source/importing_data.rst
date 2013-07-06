@@ -65,7 +65,7 @@ Import CSV via the R API
 
 .. figure:: _static/r_studio_install_package.png
     
-    Rstudio package installation window. Select Install From "Package Archive", then choose the path to the Rovation package downloaded from http://ovation.io. Click "Install" to install `Rovation`
+    Rstudio package installation window. Select Install From "Package Archive", then choose the path to the Rovation package downloaded from http://ovation.io. Click "Install" to install `Rovation`.
     
 2. Load the `Rovation` library within R::
 
@@ -82,7 +82,7 @@ Import CSV via the R API
     ## Or a protocol load one via URI
     protocol <- context$getObjectWithURI('<URI copied from Ovation application>')
 
-    ## Get a reference to a Source and Epoch container (e.g. an EpochGroup)
+    ## Get a reference to a Source and Epoch container (e.g. an EpochGroup) by copy-and-paste from the Ovation application
 
     source <- context$getObjectWithURI('ovation://1ce7d897-db87-4a66-aab9-65898e2cddc9/')
     epochGroup <- context$getObjectWithURI('ovation://7271a95c-4b91-4e09-a48e-1cf510332ffb/')
