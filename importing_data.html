@@ -180,8 +180,8 @@ protocol &lt;- context$getObjectWithURI('&lt;URI copied from Ovation application
 
 ## Get a reference to a Source and Epoch container (e.g. an EpochGroup) by copy-and-paste from the Ovation application
 
-source &lt;- context$getObjectWithURI('ovation://1ce7d897-db87-4a66-aab9-65898e2cddc9/')
-epochGroup &lt;- context$getObjectWithURI('ovation://7271a95c-4b91-4e09-a48e-1cf510332ffb/')
+source &lt;- context$getObjectWithURI('&lt;source URI&gt;')
+epochGroup &lt;- context$getObjectWithURI('&lt;epochGroup URI&gt;')
 
 ## Insert a new Epoch
 protocolParameters &lt;- list(param1 = "value1", param2 = 3, param3 = "some text")
@@ -197,18 +197,15 @@ epoch &lt;- epochGroup$insertEpoch(List2Map(inputSources),
                                 List2Map(deviceParameters))
 
 ## Add a CSV measurement
-measurement &lt;- epoch$insertMeasurement("table1", # Measurement name
+measurement &lt;- epoch$insertMeasurement("&lt;measurement name&gt;",
                                        Vector2Set(c("subject")), # Note same name as inputSources above
                                        Vector2Set(c("device1", "device2")), # Device(s) used to make measurement. Should be present (or added) in Experiment$getEquipmentSetup
-                                       NewUrl("/path/to/example.csv"),
+                                       NewUrl("&lt;/path/to/example.csv&gt;"),
                                        "application/csv"
                                        )
 
-# Wait (up to 60 minutes) for all uploads to finish
-fs &lt;- context$getFileService()
-TimeUnit &lt;- J("java.util.concurrent.TimeUnit")
-Long &lt;- J("java.lang.Long")
-fs$waitForPendingUploads(as.integer(60), TimeUnit$MINUTES)
+# Wait (up to 10 minutes) for all uploads to finish
+WaitForPendingUploads(context, timeout.seconds = 600)
 
 
 ## Retrieve the DataFrame from measurement
