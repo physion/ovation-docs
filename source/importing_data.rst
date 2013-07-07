@@ -84,8 +84,8 @@ Import CSV via the R API
 
     ## Get a reference to a Source and Epoch container (e.g. an EpochGroup) by copy-and-paste from the Ovation application
 
-    source <- context$getObjectWithURI('ovation://1ce7d897-db87-4a66-aab9-65898e2cddc9/')
-    epochGroup <- context$getObjectWithURI('ovation://7271a95c-4b91-4e09-a48e-1cf510332ffb/')
+    source <- context$getObjectWithURI('<source URI>')
+    epochGroup <- context$getObjectWithURI('<epochGroup URI>')
 
     ## Insert a new Epoch
     protocolParameters <- list(param1 = "value1", param2 = 3, param3 = "some text")
@@ -101,18 +101,15 @@ Import CSV via the R API
                                     List2Map(deviceParameters))
 
     ## Add a CSV measurement
-    measurement <- epoch$insertMeasurement("table1", # Measurement name
+    measurement <- epoch$insertMeasurement("<measurement name>",
                                            Vector2Set(c("subject")), # Note same name as inputSources above
                                            Vector2Set(c("device1", "device2")), # Device(s) used to make measurement. Should be present (or added) in Experiment$getEquipmentSetup
-                                           NewUrl("/path/to/example.csv"),
+                                           NewUrl("</path/to/example.csv>"),
                                            "application/csv"
                                            )
 
-    # Wait (up to 60 minutes) for all uploads to finish
-    fs <- context$getFileService()
-    TimeUnit <- J("java.util.concurrent.TimeUnit")
-    Long <- J("java.lang.Long")
-    fs$waitForPendingUploads(as.integer(60), TimeUnit$MINUTES)
+    # Wait (up to 10 minutes) for all uploads to finish
+    WaitForPendingUploads(context, timeout.seconds = 600)
   
 
     ## Retrieve the DataFrame from measurement
