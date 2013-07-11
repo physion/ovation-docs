@@ -20,7 +20,7 @@ Before you can add data to your Ovation database, you must login using your emai
 
 .. figure:: _static/login_screen1.png
    :figwidth: 50%
-   :padding: 10px
+.. :padding: 10px
 
 .. note:: If you've forgotten your `ovation.io`_ password, you can `reset <https://ovation.io/users/password/new>`_ it.
 
@@ -48,7 +48,7 @@ Follow the wizard to set the name, start time, and purpose for your Project. The
 Now that we have inserted a Project, it's time to start adding Sources to the Project.
 
 
-.. _sec-new-source
+.. _sec-new-source:
 
 Adding a new `Source`
 #####################
@@ -82,7 +82,7 @@ Here, I'll add a few things that I know about this source.
 Now that we've created the Source object that we'll use for the Experiment data we will add, we should add the Experiment.
 
 
-.. _sec-new-experiment
+.. _sec-new-experiment:
 
 Adding an `Experiment`'s worth of data
 ######################################
@@ -106,7 +106,7 @@ To add a new `Experiment`, right click on a Project entity, and select 'Insert E
    :figwidth: 60%
 
 
-.. _sec-new-epoch-groups
+.. _sec-new-epoch-groups:
 
 Now, lets add a couple EpochGroups to this experiment. Below, I'll add two EpochGroups, one labeled 'Control', and the other labeled 'Test'. To add an EpochGroup, right click the Experiment you just created, and select 'Insert EpochGroup...'. 
 
@@ -136,7 +136,7 @@ I will then create another EpochGroup with label 'Test'. Again, the labeling of 
 
 We are now ready to add the data to our Experiment!
 
-.. _sec-new-data
+.. _sec-new-data:
 
 Adding Data
 ===========

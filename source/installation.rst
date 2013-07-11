@@ -4,7 +4,9 @@
 Installation
 ************
 
-|Ovation(TM)| is a data management platform that helps researchers organize, search and share their data. To get started with Ovation, sign up for an account on `ovation.io <http://ovation.io>`_. Once you've signed up for an account, you can `download <https://ovation.io/downloads>`_ the Ovation application and get started.
+|Ovation(TM)| is a data management platform that helps researchers organize, search and share their data. To get started with Ovation, sign up for an account on `ovation.io <http://ovation.io>`_. Once you've signed up for an account, you can download_ the Ovation application and get started.
+
+.. _download: http://ovation.io/downloads
 
 Requirements
 ============
@@ -14,7 +16,7 @@ Ovation supports the following operating systems and architectures:
 * OS X 10.8 and later
 * Windows 7 and later (64-bit)
 
-Ovation requires the Java runtime (JRE) version 7 or later. Please `download <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_ and install Java before installing Ovation.
+Ovation requires the Java runtime (JRE) version 7 or later. Please download_ and install Java before installing Ovation.
 
 
 Installation
@@ -85,11 +87,19 @@ Ovation's Python API supports CPython 2.7. Installation requires the `setuptools
 
      python ez_setup.py
 
-To install the Ovation Python API::
+Before installing the Ovation Python API, make sure you have these package dependencies installed:
 
-    easy_install ovation
+* NumPy
+* SciPy
 
-Installation will also install the following (required) packages:
+.. note::
+    Mac users may wish to install the SciPy `superpack <http://fonnesbeck.github.io/ScipySuperpack/>`_. Windows users can find unofficial binary installers for these and other common Python packages at "`Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_". 
+
+To install the Ovation Python API, download the Ovation Python API for Python 2.7 from the ovation.io download_ page and install the `egg`::
+
+    easy_install ovation-2.0_*-py2.7.egg
+
+Installation will also install (or verify) the following (required) packages:
 
 * numpy
 * scipy
