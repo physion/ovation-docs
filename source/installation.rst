@@ -85,10 +85,9 @@ Matlab
 Python
 ------
 
-Ovation's Python API supports CPython 2.7. Installation requires the `setuptools` package. If you don't have (or don't know if you have) `setuptools` and `pip` installed, download the `ez_setup.py <https://bitbucket.org/pypa/setuptools/raw/0.7.4/ez_setup.py>`_ tool and run it to install `setuptools` followed `pip`::
+Ovation's Python API supports CPython 2.7. Installation requires the `setuptools` package. If you don't have (or don't know if you have) `setuptools` installed, download the `ez_setup.py <https://bitbucket.org/pypa/setuptools/raw/0.7.4/ez_setup.py>`_ tool and run it to install `setuptools`::
 
      python ez_setup.py
-     easy_install pip
 
 Before installing the Ovation Python API, make sure you have these package dependencies installed:
 
@@ -98,9 +97,9 @@ Before installing the Ovation Python API, make sure you have these package depen
 .. note::
     Mac users may wish to install the SciPy `superpack <http://fonnesbeck.github.io/ScipySuperpack/>`_. Windows users can find unofficial binary installers for these and other common Python packages at "`Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_". 
 
-To install the Ovation Python API, download the Ovation Python API for Python 2.7 from the ovation.io download_ page and install the `egg`::
+To install the Ovation Python API::
 
-    easy_install ovation-2.0_*-py2.7.egg
+    easy_install ovation
 
 Installation will also install (or verify) the following (required) packages:
 

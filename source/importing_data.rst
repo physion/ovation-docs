@@ -55,7 +55,7 @@ The Ovation pClamp (ABF) importer is a command-line tool
     
 3. Install the :ref:`Ovation Python API <sec-python-installation>` and the Ovation Neo Importer::
 
-    pip install ovation-neo 
+    easy_install ovation-neo 
     
 The physiology data importer is run from the terminal command line::
 
