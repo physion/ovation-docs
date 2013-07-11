@@ -74,7 +74,7 @@
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">Installation</a><ul>
 <li><a class="reference internal" href="#requirements">Requirements</a></li>
-<li><a class="reference internal" href="#id2">Installation</a><ul>
+<li><a class="reference internal" href="#id1">Installation</a><ul>
 <li><a class="reference internal" href="#mac-os-x">Mac OS X</a></li>
 <li><a class="reference internal" href="#windows">Windows</a></li>
 </ul>
@@ -123,7 +123,7 @@
   
   <div class="section" id="installation">
 <span id="doc-installation"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
-<p>Ovation™ is a data management platform that helps researchers organize, search and share their data. To get started with Ovation, sign up for an account on <a class="reference external" href="http://ovation.io">ovation.io</a>. Once you&#8217;ve signed up for an account, you can <a class="reference external" href="https://ovation.io/downloads">download</a> the Ovation application and get started.</p>
+<p>Ovation™ is a data management platform that helps researchers organize, search and share their data. To get started with Ovation, sign up for an account on <a class="reference external" href="http://ovation.io">ovation.io</a>. Once you&#8217;ve signed up for an account, you can <a class="reference external" href="http://ovation.io/downloads">download</a> the Ovation application and get started.</p>
 <div class="section" id="requirements">
 <h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <p>Ovation supports the following operating systems and architectures:</p>
@@ -131,10 +131,10 @@
 <li>OS X 10.8 and later</li>
 <li>Windows 7 and later (64-bit)</li>
 </ul>
-<p>Ovation requires the Java runtime (JRE) version 7 or later. Please <a class="reference external" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download</a> and install Java before installing Ovation.</p>
+<p>Ovation requires the Java runtime (JRE) version 7 or later. Please <a class="reference external" href="http://ovation.io/downloads">download</a> and install Java before installing Ovation.</p>
 </div>
-<div class="section" id="id2">
-<h2>Installation<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>Installation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>To install the Ovation application, download the appropriate platform binary from <a class="reference external" href="http://ovation.io">ovation.io</a>.</p>
 <div class="section" id="mac-os-x">
 <h3>Mac OS X<a class="headerlink" href="#mac-os-x" title="Permalink to this headline">¶</a></h3>
@@ -190,14 +190,24 @@ import ovation.*</pre>
 </ol>
 </div>
 <div class="section" id="python">
-<h3>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h3>
-<p>Ovation&#8217;s Python API supports CPython 2.7. Installation requires the <cite>setuptools</cite> package. If you don&#8217;t have (or don&#8217;t know if you have) <cite>setuptools</cite> installed, download the <a class="reference external" href="https://bitbucket.org/pypa/setuptools/raw/0.7.4/ez_setup.py">ez_setup.py</a> tool and run it to install <cite>setuptools</cite>:</p>
-<div class="highlight-python"><pre>python ez_setup.py</pre>
+<span id="sec-python-installation"></span><h3>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h3>
+<p>Ovation&#8217;s Python API supports CPython 2.7. Installation requires the <cite>setuptools</cite> package. If you don&#8217;t have (or don&#8217;t know if you have) <cite>setuptools</cite> and <cite>pip</cite> installed, download the <a class="reference external" href="https://bitbucket.org/pypa/setuptools/raw/0.7.4/ez_setup.py">ez_setup.py</a> tool and run it to install <cite>setuptools</cite> followed <cite>pip</cite>:</p>
+<div class="highlight-python"><pre>python ez_setup.py
+easy_install pip</pre>
 </div>
-<p>To install the Ovation Python API:</p>
-<div class="highlight-python"><pre>easy_install ovation</pre>
+<p>Before installing the Ovation Python API, make sure you have these package dependencies installed:</p>
+<ul class="simple">
+<li>NumPy</li>
+<li>SciPy</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Mac users may wish to install the SciPy <a class="reference external" href="http://fonnesbeck.github.io/ScipySuperpack/">superpack</a>. Windows users can find unofficial binary installers for these and other common Python packages at &#8220;<a class="reference external" href="http://www.lfd.uci.edu/~gohlke/pythonlibs/">Unofficial Windows Binaries for Python Extension Packages</a>&#8221;.</p>
 </div>
-<p>Installation will also install the following (required) packages:</p>
+<p>To install the Ovation Python API, download the Ovation Python API for Python 2.7 from the ovation.io <a class="reference external" href="http://ovation.io/downloads">download</a> page and install the <cite>egg</cite>:</p>
+<div class="highlight-python"><pre>easy_install ovation-2.0_*-py2.7.egg</pre>
+</div>
+<p>Installation will also install (or verify) the following (required) packages:</p>
 <ul class="simple">
 <li>numpy</li>
 <li>scipy</li>

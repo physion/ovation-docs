@@ -124,6 +124,9 @@
 <div class="section" id="authentication">
 <h2>Authentication<a class="headerlink" href="#authentication" title="Permalink to this headline">¶</a></h2>
 <p>Before you can add data to your Ovation database, you must login using your email address and <a class="reference external" href="http://ovation.io">ovation.io</a> password.</p>
+<div class="figure" style="width: 50%">
+<img alt="_images/login_screen1.png" src="_images/login_screen1.png" />
+</div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">If you&#8217;ve forgotten your <a class="reference external" href="http://ovation.io">ovation.io</a> password, you can <a class="reference external" href="https://ovation.io/users/password/new">reset</a> it.</p>
@@ -140,7 +143,7 @@
 <p>Now that we have inserted a Project, it&#8217;s time to start adding Sources to the Project.</p>
 </div>
 <div class="section" id="adding-a-new-source">
-<h2>Adding a new <cite>Source</cite><a class="headerlink" href="#adding-a-new-source" title="Permalink to this headline">¶</a></h2>
+<span id="sec-new-source"></span><h2>Adding a new <cite>Source</cite><a class="headerlink" href="#adding-a-new-source" title="Permalink to this headline">¶</a></h2>
 <p>In life sciences, Sources can be thought of as the biological subject of an experiment. They are explicitly associated with the Epochs (or trials) they are involved in, and there can be many Sources associated with an Epoch. The Source object in the Ovation data model serves as the place to store any information that pertains to that Source, regardless of the conditions of an experiment it was involved in.</p>
 <a class="reference internal image-reference" href="_images/insert_source.png"><img alt="_images/insert_source.png" src="_images/insert_source.png" style="width: 60%;" /></a>
 <p>Let&#8217;s insert a Source object, by switching our view to the Source Navigator, and right clicking in the browser window.</p>
@@ -153,7 +156,7 @@
 <p>Now that we&#8217;ve created the Source object that we&#8217;ll use for the Experiment data we will add, we should add the Experiment.</p>
 </div>
 <div class="section" id="adding-an-experiment-s-worth-of-data">
-<h2>Adding an <cite>Experiment</cite>&#8216;s worth of data<a class="headerlink" href="#adding-an-experiment-s-worth-of-data" title="Permalink to this headline">¶</a></h2>
+<span id="sec-new-experiment"></span><h2>Adding an <cite>Experiment</cite>&#8216;s worth of data<a class="headerlink" href="#adding-an-experiment-s-worth-of-data" title="Permalink to this headline">¶</a></h2>
 <p>Experiments are entities in the Ovation data model that contain a number of trials (called Epochs), organized into a hierarchy of trial groups (called EpochGroups). Conceptually, you should use EpochGroups to group Epochs in a way thats meaningful to your experimental protocol. Raw data is then added to Epochs in the form of Measurements.</p>
 <div class="section" id="adding-an-experiment">
 <h3>Adding an Experiment<a class="headerlink" href="#adding-an-experiment" title="Permalink to this headline">¶</a></h3>
@@ -165,7 +168,7 @@
 <div class="figure" style="width: 60%">
 <img alt="_images/insert_experiment_wizard1.png" src="_images/insert_experiment_wizard1.png" />
 </div>
-<p>Now, lets add a couple EpochGroups to this experiment. Below, I&#8217;ll add two EpochGroups, one labeled &#8216;Control&#8217;, and the other labeled &#8216;Test&#8217;. To add an EpochGroup, right click the Experiment you just created, and select &#8216;Insert EpochGroup...&#8217;.</p>
+<p id="sec-new-epoch-groups">Now, lets add a couple EpochGroups to this experiment. Below, I&#8217;ll add two EpochGroups, one labeled &#8216;Control&#8217;, and the other labeled &#8216;Test&#8217;. To add an EpochGroup, right click the Experiment you just created, and select &#8216;Insert EpochGroup...&#8217;.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="33%" />
@@ -222,7 +225,7 @@
 <p>We are now ready to add the data to our Experiment!</p>
 </div>
 <div class="section" id="adding-data">
-<h3>Adding Data<a class="headerlink" href="#adding-data" title="Permalink to this headline">¶</a></h3>
+<span id="sec-new-data"></span><h3>Adding Data<a class="headerlink" href="#adding-data" title="Permalink to this headline">¶</a></h3>
 <p>Adding data is a two part process. First, we create an Epoch object. Each Epoch represents an event that happened during a specific time, involving a set of Sources. The next step is to add one or many Measurements to the newly created Epoch. To begin, right click on the &#8216;Control&#8217; EpochGroup and select &#8216;Insert Measurement...&#8217;. This wizard will create an Epoch object with one Measurement object. You may optionally add more measurements to the Epoch object after it has been created.</p>
 <p>Step 1 contains the start and end time for the Epoch.</p>
 <div class="figure" style="width: 60%">

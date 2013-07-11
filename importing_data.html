@@ -72,6 +72,7 @@
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">Selected Data Importers</a><ul>
 <li><a class="reference internal" href="#fenton-lab-dat-data">Fenton Lab .dat Data</a></li>
+<li><a class="reference internal" href="#pclamp-abf">pClamp ABF</a></li>
 <li><a class="reference internal" href="#import-csv-via-the-r-api">Import CSV via the R API</a></li>
 </ul>
 </li>
@@ -153,6 +154,30 @@
 </div>
 </li>
 </ol>
+</div>
+<div class="section" id="pclamp-abf">
+<h2>pClamp ABF<a class="headerlink" href="#pclamp-abf" title="Permalink to this headline">¶</a></h2>
+<p>The Ovation pClamp (ABF) importer is a command-line tool</p>
+<ol class="arabic">
+<li><p class="first">If needed, install Python 2.7 (download from <a class="reference external" href="http://python.org">http://python.org</a>)</p>
+</li>
+<li><p class="first">If needed, install the Python <cite>setuptools</cite> package. Download and run <a class="reference external" href="http://peak.telecommunity.com/dist/ez_setup.py">ez_setup.py</a>:</p>
+<blockquote>
+<div><p>python ez_setup.py</p>
+</div></blockquote>
+</li>
+<li><p class="first">Install the <a class="reference internal" href="installation.html#sec-python-installation"><em>Ovation Python API</em></a> and the Ovation Neo Importer:</p>
+<div class="highlight-python"><pre>pip install ovation-neo</pre>
+</div>
+</li>
+</ol>
+<p>The physiology data importer is run from the terminal command line:</p>
+<div class="highlight-python"><pre>python -m ovation_neo --timezone &lt;time zone ID&gt; --container &lt;experiment URI&gt; --protocol &lt;protocol URI&gt; --source &lt;source URI&gt; file1.abf file2.plx...</pre>
+</div>
+<p>You can get more information about the available arguments by running:</p>
+<div class="highlight-python"><pre>python -m ovation_neo -h</pre>
+</div>
+<p>To find the <cite>Experiment</cite>, <cite>Protocol</cite> and <cite>Source</cite> URIs, you can copy-and-paste the relevant object(s) from the Ovation application or call the <cite>getURI())</cite> method on the object within Python.</p>
 </div>
 <div class="section" id="import-csv-via-the-r-api">
 <h2>Import CSV via the R API<a class="headerlink" href="#import-csv-via-the-r-api" title="Permalink to this headline">¶</a></h2>
