@@ -36,3 +36,5 @@ nosetests.xml
 
 .DS_Store
 build/
+
+ovation.log

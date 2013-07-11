@@ -57,7 +57,15 @@ The Ovation pClamp (ABF) importer is a command-line tool
 
     pip install ovation-neo 
     
+The physiology data importer is run from the terminal command line::
 
+	python -m ovation_neo --timezone <time zone ID> --container <experiment URI> --protocol <protocol URI> --source <source URI> file1.abf file2.plx...
+
+You can get more information about the available arguments by running::
+
+	python -m ovation_neo -h
+
+To find the `Experiment`, `Protocol` and `Source` URIs, you can copy-and-paste the relevant object(s) from the Ovation application or call the `getURI())` method on the object within Python.
 
 
 Import CSV via the R API
