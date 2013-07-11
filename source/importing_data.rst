@@ -1,4 +1,4 @@
-=======================
+======================
 Selected Data Importers
 =======================
 
@@ -49,7 +49,7 @@ pClamp ABF
 The Ovation pClamp (ABF) importer is a command-line tool
 
 1. If needed, install Python 2.7 (download from http://python.org)
-2. If needed, install the Python `setuptools` package. Download and run `ez_setup.py <http://peak.telecommunity.com/dist/ez_setup.py>`_:
+2. If needed, install the Python `setuptools` package. Download and run `ez_setup.py <http://peak.telecommunity.com/dist/ez_setup.py>`_::
 
     python ez_setup.py
     
