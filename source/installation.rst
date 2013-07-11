@@ -70,7 +70,7 @@ Matlab
 .. note::
     You must add the Ovation jar to the top of Matlab's `classpath.txt`. The Ovation API will not function properly if you add the jar to Matlab's classpath via `javaaddpath`.
 
-2. Download the `Ovation Matlab API <https://github.com/physion/ovation-matlab/archive/master.zip>` package. Add the unzipped folder to the Matlab path. After unzipping `ovation-matlab-master`, you may add the following to Matlab's `startup.m` to autmatically load the Ovation API at startup::
+2. Download the `Ovation Matlab API <https://github.com/physion/ovation-matlab/archive/master.zip>`_ package. Add the unzipped folder to the Matlab path. After unzipping `ovation-matlab-master`, you may add the following to Matlab's `startup.m` to autmatically load the Ovation API at startup::
 
     addpath path/to/ovation-matlab-master
     import ovation.*
