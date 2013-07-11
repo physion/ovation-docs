@@ -12,7 +12,10 @@ Contents:
     :maxdepth: 1
     
     introduction
+    installation
     getting_started
+    
+.. importing_data
 	
 
 .. |(R)| unicode:: U+00AE
