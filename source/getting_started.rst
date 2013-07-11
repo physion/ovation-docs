@@ -9,7 +9,7 @@ Once you've signed up for an account, you can download the Ovation application a
 Requirements
 ============
 
-Ovation requires the Java JRE 6 or later (available from Oracle `Java SE Download <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_) and supports the following operating systems and architectures:
+Ovation requires the Java JRE 7 or later (available from Oracle `Java SE Download <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_) and supports the following operating systems and architectures:
 
 * OS X 10.8 and later
 * Windows 7 and later (64-bit)
