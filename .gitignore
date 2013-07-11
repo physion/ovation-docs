@@ -38,3 +38,6 @@ nosetests.xml
 build/
 
 ovation.log
+
+# Ignore the working TIFF directory
+tiff/
