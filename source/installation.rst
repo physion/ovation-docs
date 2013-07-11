@@ -80,12 +80,15 @@ Matlab
     >> context = NewDataContext()
 
 
+.. _sec-python-installation:
+
 Python
 ------
 
-Ovation's Python API supports CPython 2.7. Installation requires the `setuptools` package. If you don't have (or don't know if you have) `setuptools` installed, download the `ez_setup.py <https://bitbucket.org/pypa/setuptools/raw/0.7.4/ez_setup.py>`_ tool and run it to install `setuptools`::
+Ovation's Python API supports CPython 2.7. Installation requires the `setuptools` package. If you don't have (or don't know if you have) `setuptools` and `pip` installed, download the `ez_setup.py <https://bitbucket.org/pypa/setuptools/raw/0.7.4/ez_setup.py>`_ tool and run it to install `setuptools` followed `pip`::
 
      python ez_setup.py
+     easy_install pip
 
 Before installing the Ovation Python API, make sure you have these package dependencies installed:
 

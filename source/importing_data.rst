@@ -43,19 +43,21 @@ The Fenton Lab dat import script is a trio of Matlab functions. The top-level fu
         )
 
 
-.. pClamp ABF
-.. ==========
-.. 
-.. The Ovation pClamp (ABF) importer is a command-line tool
-.. 
-.. 1. If needed, install Python 2.7 (download from http://python.org)
-.. 2. Install the Python `setuptools` package. Download and run `ez_setup.py <http://peak.telecommunity.com/dist/ez_setup.py>`_:
-.. 
-..     python ez_setup.py
-..     
-.. 3. If needed, install the ovation-api and ovation python modules. Download the ovation-api and install with `easy_isntall`:
-.. 
-..     easy_install ovation-
+pClamp ABF
+==========
+
+The Ovation pClamp (ABF) importer is a command-line tool
+
+1. If needed, install Python 2.7 (download from http://python.org)
+2. If needed, install the Python `setuptools` package. Download and run `ez_setup.py <http://peak.telecommunity.com/dist/ez_setup.py>`_:
+
+    python ez_setup.py
+    
+3. Install the :ref:`Ovation Python API <sec-python-installation>` and the Ovation Neo Importer::
+
+    pip install ovation-neo 
+    
+
 
 
 Import CSV via the R API
