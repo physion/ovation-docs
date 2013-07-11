@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Selected Data Importers &mdash; Ovation Scientific Data Management System 2.0b1 documentation</title>
+    <title>Selected Data Importers &mdash; Ovation Scientific Data Management System 2.0b2 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '2.0b1',
+        VERSION:     '2.0b2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -29,7 +29,7 @@
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
-    <link rel="top" title="Ovation Scientific Data Management System 2.0b1 documentation" href="index.html" />
+    <link rel="top" title="Ovation Scientific Data Management System 2.0b2 documentation" href="index.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -72,7 +72,11 @@
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">Selected Data Importers</a><ul>
 <li><a class="reference internal" href="#fenton-lab-dat-data">Fenton Lab .dat Data</a></li>
-<li><a class="reference internal" href="#pclamp-abf">pClamp ABF</a></li>
+<li><a class="reference internal" href="#pclamp">pClamp</a><ul>
+<li><a class="reference internal" href="#axon-binary-format-abf">Axon Binary Format (.abf)</a></li>
+<li><a class="reference internal" href="#clampfit-atf">Clampfit (.atf)</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#import-csv-via-the-r-api">Import CSV via the R API</a></li>
 </ul>
 </li>
@@ -155,19 +159,20 @@
 </li>
 </ol>
 </div>
-<div class="section" id="pclamp-abf">
-<h2>pClamp ABF<a class="headerlink" href="#pclamp-abf" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pclamp">
+<h2>pClamp<a class="headerlink" href="#pclamp" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="axon-binary-format-abf">
+<h3>Axon Binary Format (.abf)<a class="headerlink" href="#axon-binary-format-abf" title="Permalink to this headline">¶</a></h3>
 <p>The Ovation pClamp (ABF) importer is a command-line tool</p>
 <ol class="arabic">
 <li><p class="first">If needed, install Python 2.7 (download from <a class="reference external" href="http://python.org">http://python.org</a>)</p>
 </li>
 <li><p class="first">If needed, install the Python <cite>setuptools</cite> package. Download and run <a class="reference external" href="http://peak.telecommunity.com/dist/ez_setup.py">ez_setup.py</a>:</p>
-<blockquote>
-<div><p>python ez_setup.py</p>
-</div></blockquote>
+<div class="highlight-python"><pre>python ez_setup.py</pre>
+</div>
 </li>
 <li><p class="first">Install the <a class="reference internal" href="installation.html#sec-python-installation"><em>Ovation Python API</em></a> and the Ovation Neo Importer:</p>
-<div class="highlight-python"><pre>pip install ovation-neo</pre>
+<div class="highlight-python"><pre>easy_install ovation-neo</pre>
 </div>
 </li>
 </ol>
@@ -178,6 +183,50 @@
 <div class="highlight-python"><pre>python -m ovation_neo -h</pre>
 </div>
 <p>To find the <cite>Experiment</cite>, <cite>Protocol</cite> and <cite>Source</cite> URIs, you can copy-and-paste the relevant object(s) from the Ovation application or call the <cite>getURI())</cite> method on the object within Python.</p>
+</div>
+<div class="section" id="clampfit-atf">
+<h3>Clampfit (.atf)<a class="headerlink" href="#clampfit-atf" title="Permalink to this headline">¶</a></h3>
+<p>Post-experiment analysis are stored as <cite>AnalysisRecords</cite> in Ovation. These instructions describe adding an <cite>AnalysisRecord</cite> with a single Clampfi analysis as the analysis output.</p>
+<ol class="arabic simple">
+<li>Export the analysis from Clampfit as an <cite>.atf</cite> file. The <cite>.atf</cite> format is really tab-delimited text</li>
+<li>Open the .atf file in Excel and re-save as Comma-separated value (CSV)</li>
+<li>In the Ovation application, select the <cite>Project</cite> containing the raw traces used in the analysis. Right-click on this <cite>Project</cite> and select &#8220;Insert Analysis Record...&#8221;</li>
+<li>Enter the name for the new <cite>AnalysisRecord</cite>. We recommend that you choose a descriptive name such as the subject&#8217;s ID or the &#8220;name&#8221; of the cell that you recorded.</li>
+</ol>
+<div class="figure">
+<img alt="_images/add-atf-analysis-record1.png" src="_images/add-atf-analysis-record1.png" />
+<p class="caption">Insert a new <cite>AnalysisRecord</cite> to hold the Clampfit analysis</p>
+</div>
+<ol class="arabic simple" start="5">
+<li>Select the <cite>Protocol</cite> for this <cite>AnalysisRecord</cite>.</li>
+</ol>
+<div class="figure">
+<img alt="_images/add-atf-analysis-record1.png" src="_images/add-atf-analysis-record1.png" />
+<p class="caption">Select the <cite>Protocol</cite> for the Clampfit analysis. You can create a new <cite>Protocol</cite> by entering the name of the new protocol and pressing the &#8220;+&#8221; button. If there are &#8220;variables&#8221; in the protocol that are set for each analysis, surround the variable name with curly braces (<cite>{</cite> and <cite>}</cite>) in the protocol document. For example, the a variable describing a detection threshold might be annotated as <cite>{THRESHOLD_mV}</cite> in the protocol document.</p>
+</div>
+<ol class="arabic simple" start="6">
+<li>Enter any protocol parameters for this analysis (i.e. values for any variables in the protocol document)</li>
+</ol>
+<div class="figure">
+<img alt="_images/add-atf-analysisrecord3.png" src="_images/add-atf-analysisrecord3.png" />
+<p class="caption">Enter protocol parameters for the analysis. For each variable in the analysis&#8217; protocol document (e.g. <cite>{THRESHOLD_mV}</cite>), you should enter a value here (e.g. key = <cite>THRESHOLD_mV</cite>, value = <cite>1</cite>).</p>
+</div>
+<ol class="arabic simple" start="7">
+<li>Select the <cite>Measurements</cite> that were used in this analysis. From the Project browser, select the <cite>EpochGroup</cite> imported from the corresponding pClamp <cite>.abf</cite> file and press the &#8220;+&#8221; button to add <cite>Measurements</cite> from this <cite>EpochGroup</cite> to the <cite>AnalysisRecord</cite>. Press the &#8220;Finish Button&#8221; to add the Analysis Record.</li>
+</ol>
+<div class="figure">
+<img alt="_images/add-atf-analysisrecord4.png" src="_images/add-atf-analysisrecord4.png" />
+<p class="caption">Select the <cite>EpochGroup</cite> imported from the corresponding pClamp <cite>.abf</cite> file and press the &#8220;+&#8221; button to add <cite>Measurements</cite> from this <cite>EpochGroup</cite> to the <cite>AnalysisRecord</cite>.</p>
+</div>
+<ol class="arabic simple" start="8">
+<li>Right-click on the newly inserted Analsys Record in the Project Navigator and select &#8220;Insert Analysis Output...&#8221;. In the wizard, press the &#8221;...&#8221; button and locate the CSV file generated in step 2 above. Note that we&#8217;ve entered &#8220;application/csv&#8221; for the &#8220;Content Type&#8221; of this analysis output. Press the &#8220;Finish&#8221; button to add the analysis output to the Analysis Record.</li>
+<li>You can view the calculated slopes in the Ovation application data viewer (as well as open them in Excel) by selecting the analysis output (or the entire Analysis Record) in the Ovation Project Navigator.</li>
+</ol>
+<div class="figure">
+<img alt="_images/atf-analysis-record.png" src="_images/atf-analysis-record.png" />
+<p class="caption">Select the newly inserted analsyis output (e.g. &#8220;slope.csv&#8221;) or the entire Analysis Record to display the analysis results.</p>
+</div>
+</div>
 </div>
 <div class="section" id="import-csv-via-the-r-api">
 <h2>Import CSV via the R API<a class="headerlink" href="#import-csv-via-the-r-api" title="Permalink to this headline">¶</a></h2>

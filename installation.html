@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Installation &mdash; Ovation Scientific Data Management System 2.0b1 documentation</title>
+    <title>Installation &mdash; Ovation Scientific Data Management System 2.0b2 documentation</title>
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '2.0b1',
+        VERSION:     '2.0b2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -29,7 +29,7 @@
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
-    <link rel="top" title="Ovation Scientific Data Management System 2.0b1 documentation" href="index.html" />
+    <link rel="top" title="Ovation Scientific Data Management System 2.0b2 documentation" href="index.html" />
     <link rel="next" title="Getting Started" href="getting_started.html" />
     <link rel="prev" title="Introduction" href="introduction.html" />
 <meta charset='utf-8'>
@@ -178,7 +178,7 @@
 <p class="last">You must add the Ovation jar to the top of Matlab&#8217;s <cite>classpath.txt</cite>. The Ovation API will not function properly if you add the jar to Matlab&#8217;s classpath via <cite>javaaddpath</cite>.</p>
 </div>
 <ol class="arabic" start="2">
-<li><p class="first">Download the <cite>Ovation Matlab API &lt;https://github.com/physion/ovation-matlab/archive/master.zip&gt;</cite> package. Add the unzipped folder to the Matlab path. After unzipping <cite>ovation-matlab-master</cite>, you may add the following to Matlab&#8217;s <cite>startup.m</cite> to autmatically load the Ovation API at startup:</p>
+<li><p class="first">Download the <a class="reference external" href="https://github.com/physion/ovation-matlab/archive/master.zip">Ovation Matlab API</a> package. Add the unzipped folder to the Matlab path. After unzipping <cite>ovation-matlab-master</cite>, you may add the following to Matlab&#8217;s <cite>startup.m</cite> to autmatically load the Ovation API at startup:</p>
 <div class="highlight-python"><pre>addpath path/to/ovation-matlab-master
 import ovation.*</pre>
 </div>
@@ -191,9 +191,8 @@ import ovation.*</pre>
 </div>
 <div class="section" id="python">
 <span id="sec-python-installation"></span><h3>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h3>
-<p>Ovation&#8217;s Python API supports CPython 2.7. Installation requires the <cite>setuptools</cite> package. If you don&#8217;t have (or don&#8217;t know if you have) <cite>setuptools</cite> and <cite>pip</cite> installed, download the <a class="reference external" href="https://bitbucket.org/pypa/setuptools/raw/0.7.4/ez_setup.py">ez_setup.py</a> tool and run it to install <cite>setuptools</cite> followed <cite>pip</cite>:</p>
-<div class="highlight-python"><pre>python ez_setup.py
-easy_install pip</pre>
+<p>Ovation&#8217;s Python API supports CPython 2.7. Installation requires the <cite>setuptools</cite> package. If you don&#8217;t have (or don&#8217;t know if you have) <cite>setuptools</cite> installed, download the <a class="reference external" href="https://bitbucket.org/pypa/setuptools/raw/0.7.4/ez_setup.py">ez_setup.py</a> tool and run it to install <cite>setuptools</cite>:</p>
+<div class="highlight-python"><pre>python ez_setup.py</pre>
 </div>
 <p>Before installing the Ovation Python API, make sure you have these package dependencies installed:</p>
 <ul class="simple">
@@ -204,8 +203,8 @@ easy_install pip</pre>
 <p class="first admonition-title">Note</p>
 <p class="last">Mac users may wish to install the SciPy <a class="reference external" href="http://fonnesbeck.github.io/ScipySuperpack/">superpack</a>. Windows users can find unofficial binary installers for these and other common Python packages at &#8220;<a class="reference external" href="http://www.lfd.uci.edu/~gohlke/pythonlibs/">Unofficial Windows Binaries for Python Extension Packages</a>&#8221;.</p>
 </div>
-<p>To install the Ovation Python API, download the Ovation Python API for Python 2.7 from the ovation.io <a class="reference external" href="http://ovation.io/downloads">download</a> page and install the <cite>egg</cite>:</p>
-<div class="highlight-python"><pre>easy_install ovation-2.0_*-py2.7.egg</pre>
+<p>To install the Ovation Python API:</p>
+<div class="highlight-python"><pre>easy_install ovation</pre>
 </div>
 <p>Installation will also install (or verify) the following (required) packages:</p>
 <ul class="simple">
