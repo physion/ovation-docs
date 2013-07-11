@@ -194,30 +194,24 @@ import ovation.*</pre>
 <p>Ovation&#8217;s Python API supports CPython 2.7. Installation requires the <cite>setuptools</cite> package. If you don&#8217;t have (or don&#8217;t know if you have) <cite>setuptools</cite> installed, download the <a class="reference external" href="https://bitbucket.org/pypa/setuptools/raw/0.7.4/ez_setup.py">ez_setup.py</a> tool and run it to install <cite>setuptools</cite>:</p>
 <div class="highlight-python"><pre>python ez_setup.py</pre>
 </div>
-<p>Before installing the Ovation Python API, make sure you have these package dependencies installed:</p>
-<ul class="simple">
-<li>NumPy</li>
-<li>SciPy</li>
-</ul>
+<p>Ovation&#8217;s Python API depends on the <a class="reference external" href="http://www.numpy.org">NumPy</a> and <a class="reference external" href="http://www.scipy.org">SciPy</a> packages. Before installing the <cite>ovation</cite> package, make sure that both NumPy and SciPy are installed:</p>
+<div class="highlight-python"><pre>easy_install numpy scipy</pre>
+</div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Mac users may wish to install the SciPy <a class="reference external" href="http://fonnesbeck.github.io/ScipySuperpack/">superpack</a>. Windows users can find unofficial binary installers for these and other common Python packages at &#8220;<a class="reference external" href="http://www.lfd.uci.edu/~gohlke/pythonlibs/">Unofficial Windows Binaries for Python Extension Packages</a>&#8221;.</p>
+<p class="last">If you experience trouble installing NumPy or SciPy, there are a number of pre-built distributions provided by 3rd parties. Mac users may wish to install the SciPy <a class="reference external" href="http://fonnesbeck.github.io/ScipySuperpack/">superpack</a>. Windows users can find unofficial binary installers for these and other common Python packages at &#8220;<a class="reference external" href="http://www.lfd.uci.edu/~gohlke/pythonlibs/">Unofficial Windows Binaries for Python Extension Packages</a>&#8221;.</p>
 </div>
 <p>To install the Ovation Python API:</p>
 <div class="highlight-python"><pre>easy_install ovation</pre>
 </div>
-<p>Installation will also install (or verify) the following (required) packages:</p>
-<ul class="simple">
-<li>numpy</li>
-<li>scipy</li>
-<li>pandas</li>
-<li>quantities</li>
-</ul>
 <div class="admonition tip">
 <p class="first admonition-title">Tip</p>
 <p>Although not required, we recommend the following additional packages:</p>
-<ul class="last simple">
-<li><a class="reference external" href="http://ipython.scipy.org">ipython</a></li>
+<ul class="last">
+<li><p class="first"><a class="reference external" href="http://ipython.scipy.org">ipython</a>:</p>
+<div class="highlight-python"><pre>easy_install ipython</pre>
+</div>
+</li>
 </ul>
 </div>
 </div>

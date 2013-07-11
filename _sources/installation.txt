@@ -89,28 +89,23 @@ Ovation's Python API supports CPython 2.7. Installation requires the `setuptools
 
      python ez_setup.py
 
-Before installing the Ovation Python API, make sure you have these package dependencies installed:
+Ovation's Python API depends on the `NumPy <http://www.numpy.org>`_ and `SciPy <http://www.scipy.org>`_ packages. Before installing the `ovation` package, make sure that both NumPy and SciPy are installed::
 
-* NumPy
-* SciPy
-
+    easy_install numpy scipy
+    
 .. note::
-    Mac users may wish to install the SciPy `superpack <http://fonnesbeck.github.io/ScipySuperpack/>`_. Windows users can find unofficial binary installers for these and other common Python packages at "`Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_". 
+    If you experience trouble installing NumPy or SciPy, there are a number of pre-built distributions provided by 3rd parties. Mac users may wish to install the SciPy `superpack <http://fonnesbeck.github.io/ScipySuperpack/>`_. Windows users can find unofficial binary installers for these and other common Python packages at "`Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_". 
 
 To install the Ovation Python API::
 
     easy_install ovation
 
-Installation will also install (or verify) the following (required) packages:
-
-* numpy
-* scipy
-* pandas
-* quantities
 
 .. tip:: Although not required, we recommend the following additional packages:
 
-    * `ipython <http://ipython.scipy.org>`_
+    * `ipython <http://ipython.scipy.org>`_::
+    
+        easy_install ipython
 
 
 
