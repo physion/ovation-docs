@@ -24,7 +24,7 @@ Before installing Rovation, install these required packages from the CRAN reposi
 OS X users also should install the following prerequisites:
 
 * `XQuartz <http://xquartz.macosforge.org/landing/>`_
-* **[For R version 2.15 only]** Tcl/Tk 8.5.0 X11 `libraries <http://cran.r-project.org/bin/macosx/tools/>`_. The R 3.0 installer for OS X will install the Tcl/Tk 8.6.0 X11 libraries by default and a separate download is not required.
+* **[For R version 2.15 only]** `Tcl/Tk 8.5.0 X11  <http://cran.r-project.org/bin/macosx/tools/>`_. The R 3.0 installer for OS X will install the Tcl/Tk 8.6.0 X11 libraries by default and a separate download is *not* required.
 
 Rovation
 --------
