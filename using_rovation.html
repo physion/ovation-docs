@@ -74,7 +74,11 @@
   <ul class="dropdown-menu localtoc"><ul>
 <li><a class="reference internal" href="#">Using the Rovation client API</a><ul>
 <li><a class="reference internal" href="#requirements">Requirements</a></li>
-<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#installation">Installation</a><ul>
+<li><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li><a class="reference internal" href="#rovation">Rovation</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#usage">Usage</a><ul>
 <li><a class="reference internal" href="#os-x">OS X</a></li>
 </ul>
@@ -124,9 +128,22 @@
 </div>
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="prerequisites">
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<p>Before installing Rovation, install these required packages from the CRAN repository:</p>
+<ul class="simple">
+<li>rJava</li>
+<li>tcltk</li>
+</ul>
+<p>OS X users with R version 2.15 also should install the Tcl/Tk 8.5.0 X11 <a class="reference external" href="http://cran.r-project.org/bin/macosx/tools/">libraries</a>. The R 3.0 installer for OS X will install the Tcl/Tk 8.6.0 X11 libraries by default and a separate download is not required.</p>
+<p>OS X users should also install <a class="reference external" href="http://xquartz.macosforge.org/landing/">XQuartz</a></p>
+</div>
+<div class="section" id="rovation">
+<h3>Rovation<a class="headerlink" href="#rovation" title="Permalink to this headline">¶</a></h3>
 <p>Download the Ovation R library from <a class="reference external" href="http://ovation.io/downloads">http://ovation.io/downloads</a>. You can install the library archive directly via the R package manager or at the R command line:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="n">pathToOvationR</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span><span class="p">,</span> <span class="n">repos</span><span class="o">=</span><span class="n">NULL</span><span class="p">)</span>
 </pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="usage">
