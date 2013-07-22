@@ -11,9 +11,10 @@ Fenton Lab .dat Data
 The Fenton Lab dat import script is a trio of Matlab functions. The top-level function is `import_fenton_dat`. The `import_fenton_dat` script requires the :ref:`Ovation Matlab API <sec-matlab-installation>`.
 
 1. Add a Project and Experiment to the databse (if needed)
-2. Set the Experiment equipment setup::
+2. Set the Experiment equipment setup (this only needs to be done once per experiment)::
 
-    >> exp.setEquipmentSetup(config2map('<cfg file>', 'Arena'))
+    >> exp = context.getObjectWithURI('<pasted URI from Ovation application'>);
+    >> exp.setEquipmentSetup(config2map('<cfg file>', 'Arena'));
 
 
 .. note::
