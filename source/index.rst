@@ -14,6 +14,7 @@ Contents:
     introduction
     installation
     getting_started
+    tabular_data
     using_rovation
     
 .. importing_data

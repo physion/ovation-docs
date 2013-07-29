@@ -71,8 +71,9 @@ Enter the Source's label (the displayed name of the Source) and its identifier (
 
 .. figure:: _static/insert_source_wizard1.png
    :width: 60%
+   
+   Entering information for a new Source object. Here, the Source is given a label 'Mouse', and an identifier corresponding to the ID of the mouse in an external animal database.
 
-    Entering information for a new Source object. Here, the Source is given a label 'Mouse', and an identifier corresponding to the ID of the mouse in an external animal database.
 
 You may want to store additional information about the individual, such as sex, birth date, etc. as annotations on the Source object. To add annotations to the newly created Source, select the Source in the "Source Navigator" window and enter the annotations in the "Properties View" window (on the right side of the screen):
 
