@@ -59,7 +59,7 @@ gh-pages:
 	mv -fv build/html/* ./
 	rm -rf $(GH_PAGES_SOURCES) build
 	git add -A
-	git ci -m "Generated gh-pages for `git log master -1 --pretty=short --abbrev-commit`" && git push origin gh-pages && git clean -fdx; git checkout master
+	git ci -m "Generated gh-pages for `git log master -1 --pretty=short --abbrev-commit`" && git push origin gh-pages; git clean -fdx; git checkout master
 
 clean:
 	rm -rf $(BUILDDIR)/*
