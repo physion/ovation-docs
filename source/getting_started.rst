@@ -29,23 +29,23 @@ Before you can add data to your Ovation database, you must login using your emai
 Adding a new `Project`
 ######################
 
-This section shows you how to add a new `Project` object to the database. Projects are top-level entities in the Ovation data model, and are used to organize Experiment data. Projects may contain many Experiments, and Experiments can belong to many Projects. 
+This section shows you how to add a new `Project` object to the database. Projects are top-level entities in the Ovation data model, and are used to organize related Experiments. Projects may contain many Experiments, and Experiments can belong to more than one Project. 
 
 .. image:: _static/full_screen_before_project_insert_project1.png
    :width: 60%
 
 
-To add a new `Project`, right click on the Ovation browser window and select 'Insert Project..'.
+To add a new `Project`, right click on the "Project Navigator" browser window and select 'Insert Project..'.
 
 .. image:: _static/insert_project_wizard1.png
    :width: 60%
 
-Follow the wizard to set the name, start time, and purpose for your Project. The purpose may be as general or specific as you want, although it generally should correspond to the hypothesis being tested in this Project.
+Follow the wizard to set the name, start time, and purpose for your Project.
 
 .. image:: _static/full_screen_after_project1.png
    :width: 60%
-
-Now that we have inserted a Project, it's time to start adding Sources to the Project.
+   
+If you do not see the new Project in the "Project Navigator" after finishing the project insertion wizzard, choose :menuselection:`Tools --> Reset Query` to refresh the display.
 
 
 .. _sec-new-source:
@@ -53,41 +53,40 @@ Now that we have inserted a Project, it's time to start adding Sources to the Pr
 Adding a new `Source`
 #####################
 
-In life sciences, Sources can be thought of as the biological subject of an experiment. They are explicitly associated with the Epochs (or trials) they are involved in, and there can be many Sources associated with an Epoch. The Source object in the Ovation data model serves as the place to store any information that pertains to that Source, regardless of the conditions of an experiment it was involved in. 
+Sources represent the subject of a Measurement. One or more Measurements are made within an Epoch, a region of time on the Experimental timeline during which a procedure was performed. Each Epoch has one or more named "Input Sources" and Measurements made during that Epoch may refer to these Sources by name, explcitly linking the Measurement to the Source(s).
 
+Epochs may also have "Output Sources", new Sources that are derived from the Epoch's input Sources. For example, a Source representing an individual cell might be the output of an Epoch in which the Source object representing the source tissue for the cell was disassociated into individual cells. A Measurement made from this newly disassociated cell would be associated with the Source object representing that cell. That Source object would be linked in the Ovation database to its "parent" Source object (representing the tissue), which may in turn might be linked to a "parent" Source representing the subject from which that tissue was harvested.
+
+.. tip::
+    You may want to store additional information about the individual, such as sex, birth date, etc. as annotations on the Source object.
+
+
+Insert a Source object by right-clicking in the "Source Navigator" and choosing :guilabel:`Insert Source...`:
 
 .. image:: _static/insert_source.png
    :width: 60%
 
 
-Let's insert a Source object, by switching our view to the Source Navigator, and right clicking in the browser window. 
+Enter the Source's label (the displayed name of the Source) and its identifier (e.g. an identification number within an animal facility database or in an other subject registration system).
 
-.. image:: _static/insert_source_wizard1.png
+.. figure:: _static/insert_source_wizard1.png
    :width: 60%
 
-Here, I've given the Source a name of 'Mouse', and an id corresponding to the id in my animal database.
+    Entering information for a new Source object. Here, the Source is given a label 'Mouse', and an identifier corresponding to the ID of the mouse in an external animal database.
 
-Since I've created two sources with the same label (Mouse), I should add some properties to them to distinguish them. I will do this by selecting my newly created Source, and switching to the properties view on the right side of my screen.
-
-.. image:: _static/source_property_panel.png
-   :width: 60%
-
-Here, I'll add a few things that I know about this source.
-
+You may want to store additional information about the individual, such as sex, birth date, etc. as annotations on the Source object. To add annotations to the newly created Source, select the Source in the "Source Navigator" window and enter the annotations in the "Properties View" window (on the right side of the screen):
 
 .. image:: _static/source_with_properties.png 
    :width: 60%
 
 
-Now that we've created the Source object that we'll use for the Experiment data we will add, we should add the Experiment.
-
 
 .. _sec-new-experiment:
 
-Adding an `Experiment`'s worth of data
+Adding `Experiment` data
 ######################################
 
-Experiments are entities in the Ovation data model that contain a number of trials (called Epochs), organized into a hierarchy of trial groups (called EpochGroups). Conceptually, you should use EpochGroups to group Epochs in a way thats meaningful to your experimental protocol. Raw data is then added to Epochs in the form of Measurements.
+Experiments are entities in the Ovation data model that contain a number of Epochs, optionally organized into a hierarchy of groups (called EpochGroups). Conceptually, you should use EpochGroups to group Epochs in a way thats meaningful to your experimental protocol. Raw data is then added to Epochs in the form of Measurements.
 
 Adding an Experiment
 ====================
