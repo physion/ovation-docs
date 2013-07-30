@@ -35,8 +35,6 @@
     jQuery(function() { Search.loadIndex("searchindex.js"); });
   </script>
   
-  <script type="text/javascript" id="searchindexloader"></script>
-  
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -63,6 +61,7 @@
           <ul class="nav">
             <li class="divider-vertical"></li>
             
+            
               <li class="dropdown globaltoc-container">
   <a href="index.html"
      class="dropdown-toggle"
@@ -72,6 +71,7 @@
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tabular_data.html">Importing and analyzing tabular (CSV) data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using_rovation.html">Using the Rovation client API</a></li>
 </ul>
 </ul>
@@ -113,11 +113,13 @@
     function will automatically search for all of the words. Pages
     containing fewer words won't appear in the result list.
   </p>
-  <form action="" method="get">
-    <input type="text" name="q" value="" />
-    <input type="submit" value="search" />
+
+  <form class="form-search" action="" method="get">
+    <input type="text" name="q" class="input-medium search-query">
+    <button type="submit" class="btn">search</button>
     <span id="search-progress" style="padding-left: 10px"></span>
   </form>
+
   
   <div id="search-results">
   

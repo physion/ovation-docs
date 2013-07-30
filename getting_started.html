@@ -30,7 +30,7 @@
     <script type="text/javascript" src="_static/bootstrap-2.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Ovation Scientific Data Management System 2.0 Beta documentation" href="index.html" />
-    <link rel="next" title="Using the Rovation client API" href="using_rovation.html" />
+    <link rel="next" title="Importing and analyzing tabular (CSV) data" href="tabular_data.html" />
     <link rel="prev" title="Installation" href="installation.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -57,6 +57,7 @@
           <ul class="nav">
             <li class="divider-vertical"></li>
             
+            
               <li class="dropdown globaltoc-container">
   <a href="index.html"
      class="dropdown-toggle"
@@ -66,6 +67,7 @@
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tabular_data.html">Importing and analyzing tabular (CSV) data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using_rovation.html">Using the Rovation client API</a></li>
 </ul>
 </ul>
@@ -77,7 +79,7 @@
 <li><a class="reference internal" href="#authentication">Authentication</a></li>
 <li><a class="reference internal" href="#adding-a-new-project">Adding a new <cite>Project</cite></a></li>
 <li><a class="reference internal" href="#adding-a-new-source">Adding a new <cite>Source</cite></a></li>
-<li><a class="reference internal" href="#adding-an-experiment-s-worth-of-data">Adding an <cite>Experiment</cite>&#8216;s worth of data</a><ul>
+<li><a class="reference internal" href="#adding-experiment-data">Adding <cite>Experiment</cite> data</a><ul>
 <li><a class="reference internal" href="#adding-an-experiment">Adding an Experiment</a></li>
 <li><a class="reference internal" href="#adding-data">Adding Data</a></li>
 </ul>
@@ -91,9 +93,9 @@
             
               
   <li><a href="installation.html"
-         title="previous chapter">&laquo; Installation</a></li>
-  <li><a href="using_rovation.html"
-         title="next chapter">Using the Rovation client API &raquo;</a></li>
+         title="Previous Chapter: Installation">&laquo; Installation</a></li>
+  <li><a href="tabular_data.html"
+         title="Next Chapter: Importing and analyzing tabular (CSV) data">Importing and an... &raquo;</a></li>
             
             
               <li>
@@ -138,30 +140,35 @@
 </div>
 <div class="section" id="adding-a-new-project">
 <span id="sec-new-project"></span><h2>Adding a new <cite>Project</cite><a class="headerlink" href="#adding-a-new-project" title="Permalink to this headline">¶</a></h2>
-<p>This section shows you how to add a new <cite>Project</cite> object to the database. Projects are top-level entities in the Ovation data model, and are used to organize Experiment data. Projects may contain many Experiments, and Experiments can belong to many Projects.</p>
+<p>This section shows you how to add a new <cite>Project</cite> object to the database. Projects are top-level entities in the Ovation data model, and are used to organize related Experiments. Projects may contain many Experiments, and Experiments can belong to more than one Project.</p>
 <a class="reference internal image-reference" href="_images/full_screen_before_project_insert_project1.png"><img alt="_images/full_screen_before_project_insert_project1.png" src="_images/full_screen_before_project_insert_project1.png" style="width: 60%;" /></a>
-<p>To add a new <cite>Project</cite>, right click on the Ovation browser window and select &#8216;Insert Project..&#8217;.</p>
+<p>To add a new <cite>Project</cite>, right click on the &#8220;Project Navigator&#8221; browser window and select &#8216;Insert Project..&#8217;.</p>
 <a class="reference internal image-reference" href="_images/insert_project_wizard1.png"><img alt="_images/insert_project_wizard1.png" src="_images/insert_project_wizard1.png" style="width: 60%;" /></a>
-<p>Follow the wizard to set the name, start time, and purpose for your Project. The purpose may be as general or specific as you want, although it generally should correspond to the hypothesis being tested in this Project.</p>
+<p>Follow the wizard to set the name, start time, and purpose for your Project.</p>
 <a class="reference internal image-reference" href="_images/full_screen_after_project1.png"><img alt="_images/full_screen_after_project1.png" src="_images/full_screen_after_project1.png" style="width: 60%;" /></a>
-<p>Now that we have inserted a Project, it&#8217;s time to start adding Sources to the Project.</p>
+<p>If you do not see the new Project in the &#8220;Project Navigator&#8221; after finishing the project insertion wizzard, choose <em class="menuselection">Tools ‣ Reset Query</em> to refresh the display.</p>
 </div>
 <div class="section" id="adding-a-new-source">
 <span id="sec-new-source"></span><h2>Adding a new <cite>Source</cite><a class="headerlink" href="#adding-a-new-source" title="Permalink to this headline">¶</a></h2>
-<p>In life sciences, Sources can be thought of as the biological subject of an experiment. They are explicitly associated with the Epochs (or trials) they are involved in, and there can be many Sources associated with an Epoch. The Source object in the Ovation data model serves as the place to store any information that pertains to that Source, regardless of the conditions of an experiment it was involved in.</p>
-<a class="reference internal image-reference" href="_images/insert_source.png"><img alt="_images/insert_source.png" src="_images/insert_source.png" style="width: 60%;" /></a>
-<p>Let&#8217;s insert a Source object, by switching our view to the Source Navigator, and right clicking in the browser window.</p>
-<a class="reference internal image-reference" href="_images/insert_source_wizard1.png"><img alt="_images/insert_source_wizard1.png" src="_images/insert_source_wizard1.png" style="width: 60%;" /></a>
-<p>Here, I&#8217;ve given the Source a name of &#8216;Mouse&#8217;, and an id corresponding to the id in my animal database.</p>
-<p>Since I&#8217;ve created two sources with the same label (Mouse), I should add some properties to them to distinguish them. I will do this by selecting my newly created Source, and switching to the properties view on the right side of my screen.</p>
-<a class="reference internal image-reference" href="_images/source_property_panel.png"><img alt="_images/source_property_panel.png" src="_images/source_property_panel.png" style="width: 60%;" /></a>
-<p>Here, I&#8217;ll add a few things that I know about this source.</p>
-<a class="reference internal image-reference" href="_images/source_with_properties.png"><img alt="_images/source_with_properties.png" src="_images/source_with_properties.png" style="width: 60%;" /></a>
-<p>Now that we&#8217;ve created the Source object that we&#8217;ll use for the Experiment data we will add, we should add the Experiment.</p>
+<p>Sources represent the subject of a Measurement. One or more Measurements are made within an Epoch, a region of time on the Experimental timeline during which a procedure was performed. Each Epoch has one or more named &#8220;Input Sources&#8221; and Measurements made during that Epoch may refer to these Sources by name, explcitly linking the Measurement to the Source(s).</p>
+<p>Epochs may also have &#8220;Output Sources&#8221;, new Sources that are derived from the Epoch&#8217;s input Sources. For example, a Source representing an individual cell might be the output of an Epoch in which the Source object representing the source tissue for the cell was disassociated into individual cells. A Measurement made from this newly disassociated cell would be associated with the Source object representing that cell. That Source object would be linked in the Ovation database to its &#8220;parent&#8221; Source object (representing the tissue), which may in turn might be linked to a &#8220;parent&#8221; Source representing the subject from which that tissue was harvested.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">You may want to store additional information about the individual, such as sex, birth date, etc. as annotations on the Source object.</p>
 </div>
-<div class="section" id="adding-an-experiment-s-worth-of-data">
-<span id="sec-new-experiment"></span><h2>Adding an <cite>Experiment</cite>&#8216;s worth of data<a class="headerlink" href="#adding-an-experiment-s-worth-of-data" title="Permalink to this headline">¶</a></h2>
-<p>Experiments are entities in the Ovation data model that contain a number of trials (called Epochs), organized into a hierarchy of trial groups (called EpochGroups). Conceptually, you should use EpochGroups to group Epochs in a way thats meaningful to your experimental protocol. Raw data is then added to Epochs in the form of Measurements.</p>
+<p>Insert a Source object by right-clicking in the &#8220;Source Navigator&#8221; and choosing <em class="guilabel">Insert Source...</em>:</p>
+<a class="reference internal image-reference" href="_images/insert_source.png"><img alt="_images/insert_source.png" src="_images/insert_source.png" style="width: 60%;" /></a>
+<p>Enter the Source&#8217;s label (the displayed name of the Source) and its identifier (e.g. an identification number within an animal facility database or in an other subject registration system).</p>
+<div class="figure">
+<a class="reference internal image-reference" href="_images/insert_source_wizard1.png"><img alt="_images/insert_source_wizard1.png" src="_images/insert_source_wizard1.png" style="width: 60%;" /></a>
+<p class="caption">Entering information for a new Source object. Here, the Source is given a label &#8216;Mouse&#8217;, and an identifier corresponding to the ID of the mouse in an external animal database.</p>
+</div>
+<p>You may want to store additional information about the individual, such as sex, birth date, etc. as annotations on the Source object. To add annotations to the newly created Source, select the Source in the &#8220;Source Navigator&#8221; window and enter the annotations in the &#8220;Properties View&#8221; window (on the right side of the screen):</p>
+<a class="reference internal image-reference" href="_images/source_with_properties.png"><img alt="_images/source_with_properties.png" src="_images/source_with_properties.png" style="width: 60%;" /></a>
+</div>
+<div class="section" id="adding-experiment-data">
+<span id="sec-new-experiment"></span><h2>Adding <cite>Experiment</cite> data<a class="headerlink" href="#adding-experiment-data" title="Permalink to this headline">¶</a></h2>
+<p>Experiments are entities in the Ovation data model that contain a number of Epochs, optionally organized into a hierarchy of groups (called EpochGroups). Conceptually, you should use EpochGroups to group Epochs in a way thats meaningful to your experimental protocol. Raw data is then added to Epochs in the form of Measurements.</p>
 <div class="section" id="adding-an-experiment">
 <h3>Adding an Experiment<a class="headerlink" href="#adding-an-experiment" title="Permalink to this headline">¶</a></h3>
 <p>Experiments also contain the general setup and protocol information for all of the Epochs (or trials) contained in the Experiment. Information about the equipment used, including make, model, software version, as well as global settings of that equipment all belong in the EquipmentSetup entity attached to the Experiment. Information about the protocol for the Experiment belongs in the Protocol entity attached to this Experiment. Both the protocol and equipment setup information can be added after the fact, so we will not add it now.</p>
