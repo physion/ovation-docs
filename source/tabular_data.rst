@@ -19,13 +19,90 @@ This chapter also describes the `Rovation.csv` tools for collecting tabular `Mea
 Importing tabular (CSV) data
 ============================
 
-Ovation
-
 .. _sec-importing-csv-data-app:
 
 Importing CSV data via the Ovation application
 **********************************************
 
+This section describes the steps for importing a tabular (CSV) data file as a single `Measurement` (with its own `Epoch`) into an existing `Experiment` or `EpochGroup`. 
+
+.. note::
+    To add a CSV as a `Measurement` to an existing `Epoch`, right-click on the `Epoch` in the :guilabel:`Project Navigator` window, then select :menuselection:`Insert Measurement…`, select the CSV file from the file choooser dialog and set the content type to `text/csv`.
+    
+
+
+1. In the :guilabel:`Project Navigator` window, right-click on an `Experiment` or `EpochGroup` and choose :menuselection:`Insert Measurement…`
+
+2. Enter the start and end times for the `Epoch` of time in which the tabular data was measured
+
+.. figure:: _static/ui_insert_measurement_panel1.png
+   :width: 60%
+   :align: center
+   
+   Enter the start and end times for the `Epoch` that describes the period of the experimental timeline in which the tabular data was measured. The :menuselection:`Insert Measurement…` wizard will add the tabular data as a `Measurement` to this newly inserted `Epoch`
+   
+3. Select the `Source(s)` that represent subjects of the measurements described in the tabular data
+
+.. figure:: _static/ui_insert_measurement_panel2.png
+    :width: 60%
+    :align: center
+    
+    Select each `Source` that represents a subject of the measurements in the tabular data in the left-hand panel, then click the :guilabel:`+` button to add the `Source` as an Input Source of the `Epoch`. The `Epoch's` Input Sources are shown in the right-hand panel. You can remove a `Source` from the right-hand panel by selecting the `Source` and clicking the :guilabel:`-` button.
+    
+4. Select the `Protocol` describing the procedure for collecting the tabular data. To add a new `Protocol`, enter the new `Protocol's` name and click the :guilabel:`+` button. Select the new `Protocol` in the left-hand panel and enter the procedure information in the `Protocol's` procedure document in the right-hand panel.
+
+.. tip::
+    If the `Protocol's` procedure has "variables" (i.e. values or substitutions such as a reagent's lot number or concentration), you can represent those variables as `{REAGENT_CONCENTRATION}` in the `Protocol's` procedure document. You will be able to supply values for each variable (e.g. the `REAGENT_CONCENTRATION` variable), the "Protocol Parameters" for the `Epoch` later in the wizard.
+
+.. note::
+    If there is no `Protocol`, you may select :guilabel:`<none>`. But you wouldn't make a `Measurement` without recording the procedure, right?
+    
+.. figure:: _static/ui_insert_measurement_panel3.png
+    :width: 60%
+    :align: center
+    
+    Select the `Protocol` describing the procedure for collecting the measurements in the tabular data.
+
+5. Enter any "Protocol Parameters" for the `Epoch's` procedure. For each variable (e.g. `REAGENT_CONCENTRATION` in the example above), enter the variable's name as the :guilabel:`Key` and the variable's value for this `Epoch` as the :guilabel:`Value`.
+
+.. figure:: _static/ui_insert_measurement_panel4.png
+    :width: 60%
+    :align: center
+    
+    For each variable (e.g. `REAGENT_CONCENTRATION` in the example above) in the `Epoch's` `Protocol`, enter the variable's name as the :guilabel:`Key` and the variable's value for this `Epoch` as the :guilabel:`Value`. You can double-click in the appropriate column to enter a value or use the :kbd:`tab` key to move between fields.
+    
+6. Enter any "Device Parameters" for the `Epoch`. For each variable parameter of the device(s) used to make the `Measurements` in the `Epoch`, enter the parameter's name as the :guilabel:`Key` and the parameter's value for this `Epoch` as the :guilabel:`Value`.
+
+.. figure:: _static/ui_insert_measurement_panel5.png
+    :width: 60%
+    :align: center
+    
+    For each variable parameter of the device(s) used to make the `Measurements` in the `Epoch`, enter the parameter's name as the :guilabel:`Key` and the parameter's value for this `Epoch` as the :guilabel:`Value`. You can double-click in the appropriate column to enter a value or use the :kbd:`tab` key to move between fields.
+    
+7. Select the `Sources`, from the `Epoch's` Input Sources, that are represented in the tabular data.
+
+.. figure:: _static/ui_insert_measurement_panel7.png
+    :width: 60%
+    :align: center
+    
+    Select the `Sources`, from the `Epoch's` Input Sources, that are represented in the tabular data. In this example, there is only one Input Source.
+     
+8. Select the Devices, from amongst the `Experiment's` `EquipmentSetup` description used to make the measurements described by the tabular data. 
+
+.. figure:: _static/ui_insert_measurement_panel8.png
+    :width: 60%
+    :align: center
+    
+    Select the Devices, from amongst the `Experiment's` `EquipmentSetup` description used to make the measurements described by the tabular data. In this example, there are no Devices in the `Experiment's` `EquipmentSetup` (and none used to make the measurements), so the selection is left blank.
+     
+9. Click :guilabel:`Finish` to insert the tabular measurement data.
+
+.. figure:: _static/ui_tabular_data_display.png
+    :width: 60%
+    :align: center
+    
+    Tabular data is displayed in the Ovation application by selecting the `Epoch` (or individual `Measurement`) containing the data. The data table is displayed in the :guilabel:`Data Viewer` window.
+    
 
 .. _sec-importing-csv-data-rovation:
 
