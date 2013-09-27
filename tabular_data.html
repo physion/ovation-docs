@@ -1,0 +1,437 @@
+
+
+  
+  
+ 
+  
+  
+ 
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Importing and analyzing tabular (CSV) data &mdash; Ovation Scientific Data Management System 2.0 Beta documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '2.0 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Ovation Scientific Data Management System 2.0 Beta documentation" href="index.html" />
+    <link rel="next" title="Using the Rovation client API" href="using_rovation.html" />
+    <link rel="prev" title="Getting Started" href="getting_started.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Ovation</a>
+        <span class="navbar-text navbar-version pull-left"><b>2.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Importing and analyzing tabular (CSV) data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_rovation.html">Using the Rovation client API</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Importing and analyzing tabular (CSV) data</a><ul>
+<li><a class="reference internal" href="#importing-tabular-csv-data">Importing tabular (CSV) data</a><ul>
+<li><a class="reference internal" href="#importing-csv-data-via-the-ovation-application">Importing CSV data via the Ovation application</a></li>
+<li><a class="reference internal" href="#importing-csv-data-using-rovation-csv">Importing CSV data using <cite>Rovation.csv</cite></a><ul>
+<li><a class="reference internal" href="#example-usage">Example Usage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#retrieving-tabular-csv-data">Retrieving tabular (CSV) data</a><ul>
+<li><a class="reference internal" href="#collecting-all-epochs-from-an-experiment-or-epochgroup">Collecting all <cite>Epochs</cite> from an <cite>Experiment</cite> or <cite>EpochGroup</cite></a></li>
+<li><a class="reference internal" href="#collecting-measurements-from-a-list-of-epochs">Collecting <cite>Measurements</cite> from a list of <cite>Epochs</cite></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="getting_started.html"
+         title="Previous Chapter: Getting Started">&laquo; Getting Started</a></li>
+  <li><a href="using_rovation.html"
+         title="Next Chapter: Using the Rovation client API">Using the Rovati... &raquo;</a></li>
+              
+            
+            
+            
+            
+              <li>
+<div id="sourcelink">
+  <a href="_sources/tabular_data.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="importing-and-analyzing-tabular-csv-data">
+<span id="ch-getting-started"></span><h1>Importing and analyzing tabular (CSV) data<a class="headerlink" href="#importing-and-analyzing-tabular-csv-data" title="Permalink to this headline">¶</a></h1>
+<p>This chapter describes methods for importing and analyzign tabular <cite>Measurement</cite> data in Comma Separated Value (CSV) format with Ovation and the <a class="reference external" href="https://github.com/physion/ovation-R-tabular-data">Rovation.csv</a> package for R. Two methods for importing tabular data are described:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#sec-importing-csv-data-app"><em>Importing tabular (CSV) data via the Ovation application</em></a></li>
+<li><a class="reference internal" href="#sec-importing-csv-data-rovation"><em>Importing tabular (CSV) data from R using the Rovation.csv package</em></a></li>
+</ul>
+<p>This chapter also describes the <cite>Rovation.csv</cite> tools for collecting tabular <cite>Measurements</cite> as an R <cite>DataFrame</cite> object:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#sec-retrieving-csv-data-rovation"><em>Retrieving tabular (CSV) data with Rovation.csv</em></a></li>
+</ul>
+<div class="section" id="importing-tabular-csv-data">
+<span id="sec-importing-csv-data"></span><h2>Importing tabular (CSV) data<a class="headerlink" href="#importing-tabular-csv-data" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="importing-csv-data-via-the-ovation-application">
+<span id="sec-importing-csv-data-app"></span><h3>Importing CSV data via the Ovation application<a class="headerlink" href="#importing-csv-data-via-the-ovation-application" title="Permalink to this headline">¶</a></h3>
+<p>This section describes the steps for importing a tabular (CSV) data file as a single <cite>Measurement</cite> (with its own <cite>Epoch</cite>) into an existing <cite>Experiment</cite> or <cite>EpochGroup</cite>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To add a CSV as a <cite>Measurement</cite> to an existing <cite>Epoch</cite>, right-click on the <cite>Epoch</cite> in the <em class="guilabel">Project Navigator</em> window, then select <em class="menuselection">Insert Measurement…</em>, select the CSV file from the file choooser dialog and set the content type to <cite>text/csv</cite>.</p>
+</div>
+<ol class="arabic simple">
+<li>In the <em class="guilabel">Project Navigator</em> window, right-click on an <cite>Experiment</cite> or <cite>EpochGroup</cite> and choose <em class="menuselection">Insert Measurement…</em></li>
+<li>Enter the start and end times for the <cite>Epoch</cite> of time in which the tabular data was measured</li>
+</ol>
+<div class="figure align-center">
+<img alt="_images/ui_insert_measurement_panel1.png" src="_images/ui_insert_measurement_panel1.png" style="width: 60%;" />
+<p class="caption">Enter the start and end times for the <cite>Epoch</cite> that describes the period of the experimental timeline in which the tabular data was measured. The <em class="menuselection">Insert Measurement…</em> wizard will add the tabular data as a <cite>Measurement</cite> to this newly inserted <cite>Epoch</cite></p>
+</div>
+<ol class="arabic simple" start="3">
+<li>Select the <cite>Source(s)</cite> that represent subjects of the measurements described in the tabular data</li>
+</ol>
+<div class="figure align-center">
+<img alt="_images/ui_insert_measurement_panel2.png" src="_images/ui_insert_measurement_panel2.png" style="width: 60%;" />
+<p class="caption">Select each <cite>Source</cite> that represents a subject of the measurements in the tabular data in the left-hand panel, then click the <em class="guilabel">+</em> button to add the <cite>Source</cite> as an Input Source of the <cite>Epoch</cite>. The <cite>Epoch&#8217;s</cite> Input Sources are shown in the right-hand panel. You can remove a <cite>Source</cite> from the right-hand panel by selecting the <cite>Source</cite> and clicking the <em class="guilabel">-</em> button.</p>
+</div>
+<ol class="arabic simple" start="4">
+<li>Select the <cite>Protocol</cite> describing the procedure for collecting the tabular data. To add a new <cite>Protocol</cite>, enter the new <cite>Protocol&#8217;s</cite> name and click the <em class="guilabel">+</em> button. Select the new <cite>Protocol</cite> in the left-hand panel and enter the procedure information in the <cite>Protocol&#8217;s</cite> procedure document in the right-hand panel.</li>
+</ol>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">If the <cite>Protocol&#8217;s</cite> procedure has &#8220;variables&#8221; (i.e. values or substitutions such as a reagent&#8217;s lot number or concentration), you can represent those variables as <cite>{REAGENT_CONCENTRATION}</cite> in the <cite>Protocol&#8217;s</cite> procedure document. You will be able to supply values for each variable (e.g. the <cite>REAGENT_CONCENTRATION</cite> variable), the &#8220;Protocol Parameters&#8221; for the <cite>Epoch</cite> later in the wizard.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If there is no <cite>Protocol</cite>, you may select <em class="guilabel">&lt;none&gt;</em>. But you wouldn&#8217;t make a <cite>Measurement</cite> without recording the procedure, right?</p>
+</div>
+<div class="figure align-center">
+<img alt="_images/ui_insert_measurement_panel3.png" src="_images/ui_insert_measurement_panel3.png" style="width: 60%;" />
+<p class="caption">Select the <cite>Protocol</cite> describing the procedure for collecting the measurements in the tabular data.</p>
+</div>
+<ol class="arabic simple" start="5">
+<li>Enter any &#8220;Protocol Parameters&#8221; for the <cite>Epoch&#8217;s</cite> procedure. For each variable (e.g. <cite>REAGENT_CONCENTRATION</cite> in the example above), enter the variable&#8217;s name as the <em class="guilabel">Key</em> and the variable&#8217;s value for this <cite>Epoch</cite> as the <em class="guilabel">Value</em>.</li>
+</ol>
+<div class="figure align-center">
+<img alt="_images/ui_insert_measurement_panel4.png" src="_images/ui_insert_measurement_panel4.png" style="width: 60%;" />
+<p class="caption">For each variable (e.g. <cite>REAGENT_CONCENTRATION</cite> in the example above) in the <cite>Epoch&#8217;s</cite> <cite>Protocol</cite>, enter the variable&#8217;s name as the <em class="guilabel">Key</em> and the variable&#8217;s value for this <cite>Epoch</cite> as the <em class="guilabel">Value</em>. You can double-click in the appropriate column to enter a value or use the <tt class="kbd docutils literal"><span class="pre">tab</span></tt> key to move between fields.</p>
+</div>
+<ol class="arabic simple" start="6">
+<li>Enter any &#8220;Device Parameters&#8221; for the <cite>Epoch</cite>. For each variable parameter of the device(s) used to make the <cite>Measurements</cite> in the <cite>Epoch</cite>, enter the parameter&#8217;s name as the <em class="guilabel">Key</em> and the parameter&#8217;s value for this <cite>Epoch</cite> as the <em class="guilabel">Value</em>.</li>
+</ol>
+<div class="figure align-center">
+<img alt="_images/ui_insert_measurement_panel5.png" src="_images/ui_insert_measurement_panel5.png" style="width: 60%;" />
+<p class="caption">For each variable parameter of the device(s) used to make the <cite>Measurements</cite> in the <cite>Epoch</cite>, enter the parameter&#8217;s name as the <em class="guilabel">Key</em> and the parameter&#8217;s value for this <cite>Epoch</cite> as the <em class="guilabel">Value</em>. You can double-click in the appropriate column to enter a value or use the <tt class="kbd docutils literal"><span class="pre">tab</span></tt> key to move between fields.</p>
+</div>
+<ol class="arabic simple" start="7">
+<li>Select the <cite>Sources</cite>, from the <cite>Epoch&#8217;s</cite> Input Sources, that are represented in the tabular data.</li>
+</ol>
+<div class="figure align-center">
+<img alt="_images/ui_insert_measurement_panel7.png" src="_images/ui_insert_measurement_panel7.png" style="width: 60%;" />
+<p class="caption">Select the <cite>Sources</cite>, from the <cite>Epoch&#8217;s</cite> Input Sources, that are represented in the tabular data. In this example, there is only one Input Source.</p>
+</div>
+<ol class="arabic simple" start="8">
+<li>Select the Devices, from amongst the <cite>Experiment&#8217;s</cite> <cite>EquipmentSetup</cite> description used to make the measurements described by the tabular data.</li>
+</ol>
+<div class="figure align-center">
+<img alt="_images/ui_insert_measurement_panel8.png" src="_images/ui_insert_measurement_panel8.png" style="width: 60%;" />
+<p class="caption">Select the Devices, from amongst the <cite>Experiment&#8217;s</cite> <cite>EquipmentSetup</cite> description used to make the measurements described by the tabular data. In this example, there are no Devices in the <cite>Experiment&#8217;s</cite> <cite>EquipmentSetup</cite> (and none used to make the measurements), so the selection is left blank.</p>
+</div>
+<ol class="arabic simple" start="9">
+<li>Click <em class="guilabel">Finish</em> to insert the tabular measurement data.</li>
+</ol>
+<div class="figure align-center">
+<img alt="_images/ui_tabular_data_display.png" src="_images/ui_tabular_data_display.png" style="width: 60%;" />
+<p class="caption">Tabular data is displayed in the Ovation application by selecting the <cite>Epoch</cite> (or individual <cite>Measurement</cite>) containing the data. The data table is displayed in the <em class="guilabel">Data Viewer</em> window.</p>
+</div>
+</div>
+<div class="section" id="importing-csv-data-using-rovation-csv">
+<span id="sec-importing-csv-data-rovation"></span><h3>Importing CSV data using <cite>Rovation.csv</cite><a class="headerlink" href="#importing-csv-data-using-rovation-csv" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://github.com/physion/ovation-R-tabular-data">Rovation.csv</a> package provides an <cite>ImportCSV</cite> for importing tabular data in CSV format. The <cite>ImportCSV</cite> function expects tabular data with the <cite>Source</cite> label and identifier listed in columns within the dataset. <cite>ImportCSV</cite> provides a more &#8220;granular&#8221; import than adding an entire table as a single measurement from the Ovation application (see <a class="reference internal" href="#sec-importing-csv-data-app"><em>above</em></a>). For each <cite>Source</cite> (identified by label and identifier), <cite>ImportCSV</cite> adds a single <cite>Measurement</cite> with just the data for that <cite>Source</cite> from the table.</p>
+<p>In this example, we use the following <cite>example.csv</cite>:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="17%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Source Label</th>
+<th class="head">Source ID</th>
+<th class="head">Col1</th>
+<th class="head">Col2</th>
+<th class="head">Col3</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>label.1</td>
+<td>id.1</td>
+<td>0.378515032</td>
+<td>0.4803887</td>
+<td>0.278347607</td>
+</tr>
+<tr class="row-odd"><td>label.2</td>
+<td>id.2</td>
+<td>0.752476952</td>
+<td>0.464187255</td>
+<td>0.769815514</td>
+</tr>
+<tr class="row-even"><td>label.3</td>
+<td>id.3</td>
+<td>0.715810992</td>
+<td>0.510631993</td>
+<td>0.404061552</td>
+</tr>
+<tr class="row-odd"><td>label.3</td>
+<td>id.3</td>
+<td>0.464187255</td>
+<td>0.378515032</td>
+<td>0.464187255</td>
+</tr>
+</tbody>
+</table>
+<p>Given this table, <cite>ImportCSV</cite> will update the Ovation database, adding <cite>Source</cite> objects as needed and will then import a single <cite>Epoch</cite> with three <cite>Measurements</cite> containing the following individual tables:</p>
+<p><strong>label.1-id.1</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="17%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Source Label</th>
+<th class="head">Source ID</th>
+<th class="head">Col1</th>
+<th class="head">Col2</th>
+<th class="head">Col3</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>label.1</td>
+<td>id.1</td>
+<td>0.378515032</td>
+<td>0.4803887</td>
+<td>0.278347607</td>
+</tr>
+</tbody>
+</table>
+<p><strong>label.2-id.2</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="17%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Source Label</th>
+<th class="head">Source ID</th>
+<th class="head">Col1</th>
+<th class="head">Col2</th>
+<th class="head">Col3</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>label.2</td>
+<td>id.2</td>
+<td>0.752476952</td>
+<td>0.464187255</td>
+<td>0.769815514</td>
+</tr>
+</tbody>
+</table>
+<p><strong>label.3-id.3</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="17%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Source Label</th>
+<th class="head">Source ID</th>
+<th class="head">Col1</th>
+<th class="head">Col2</th>
+<th class="head">Col3</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>label.3</td>
+<td>id.3</td>
+<td>0.715810992</td>
+<td>0.510631993</td>
+<td>0.404061552</td>
+</tr>
+<tr class="row-odd"><td>label.3</td>
+<td>id.3</td>
+<td>0.464187255</td>
+<td>0.378515032</td>
+<td>0.464187255</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="example-usage">
+<h4>Example Usage<a class="headerlink" href="#example-usage" title="Permalink to this headline">¶</a></h4>
+<p>This example shows the <cite>ImportCSV</cite> function in action. The <cite>EXPERIMENT.URI</cite> and <cite>PROTOCOL.URI</cite> variables should be replaced with the Ovation URI of an <cite>Experiment</cite> or <cite>EpochGroup</cite> and a <cite>Protocol</cite> respectively and <cite>EMAIL</cite> with your <a class="reference external" href="https://ovation.io">ovation.io</a> registered email. You can find the URI of an object by calling the <cite>getURI()</cite> method on that object from Ovation&#8217;s API or selecting the object in the Ovation application and choosing <em class="menuselection">Edit ‣ Copy</em> to copy the object&#8217;s URI to the clipboard:</p>
+<div class="highlight-python"><pre>library(Rovation)
+library(Rovation.csv)
+
+ctx &lt;- NewDataContext("EMAIL")
+protocol.parameters = list(param.1=1, param.2="abc") # Replace with your Protocol's parameters here
+device.parameters = list(param.1=10, param.2="xyz") # Replace with your devices' parameters here
+devices &lt;- c("device.1", "device.2") # Replace with a vector the names of any devices used to make the measurements
+
+start.time &lt;- Datetime(2013,1,1) # Replace with the Epoch start time
+end.time &lt;- Datetime(2013,1,2) # Replace with the Epoch end time
+
+epoch &lt;- ImportCSV(ctx,
+                   "example_fixture.csv", # Replace with the path to your .csv file
+                   start.time,
+                   end.time,
+                   "PROTOCOL.URI",
+                   protocol.parameters,
+                   devices,
+                   device.parameters,
+                   "EXPERIMENT.URI")</pre>
+</div>
+<p>Upon completion, <cite>epoch</cite> is a reference to the newly inserted <cite>Epoch</cite> object.</p>
+</div>
+</div>
+</div>
+<div class="section" id="retrieving-tabular-csv-data">
+<span id="sec-retrieving-csv-data-rovation"></span><h2>Retrieving tabular (CSV) data<a class="headerlink" href="#retrieving-tabular-csv-data" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/physion/ovation-R-tabular-data">Rovation.csv</a> package provides <cite>CollectEpochs</cite> and <cite>CollectMeasurements</cite> functions for building an R <cite>DataFrame</cite> object from the collected <cite>Measurements</cite> of an <cite>Experiment</cite> or <cite>EpochGroup</cite>. Only <cite>Measurements</cite> whose data is Comma Separated Value (i.e. type <cite>text/csv</cite> or <cite>application/csv</cite>) are collected.</p>
+<div class="section" id="collecting-all-epochs-from-an-experiment-or-epochgroup">
+<span id="ssec-collecting-epochs"></span><h3>Collecting all <cite>Epochs</cite> from an <cite>Experiment</cite> or <cite>EpochGroup</cite><a class="headerlink" href="#collecting-all-epochs-from-an-experiment-or-epochgroup" title="Permalink to this headline">¶</a></h3>
+<p>To collect all of the <cite>Epochs</cite> belonging to an <cite>Experiment</cite> or <cite>EpochGroup</cite>, use the <cite>CollectEpochs</cite> function. In the example below, replace <cite>EMAIL</cite> with your <a class="reference external" href="https://ovation.io">ovation.io</a> registered email, and <cite>CONTAINER.URI</cite> with the URI of the container (<cite>Experiment</cite> or <cite>EpochGroup</cite> from which you wish to collect Epochs):</p>
+<div class="highlight-python"><pre>library(Rovation.csv)
+ctx &lt;- NewDataContext("EMAIL")
+container &lt;- ctx$getObjectWithURI("CONTAINER.URI")
+
+epochs &lt;- CollectEpochs(container)</pre>
+</div>
+</div>
+<div class="section" id="collecting-measurements-from-a-list-of-epochs">
+<h3>Collecting <cite>Measurements</cite> from a list of <cite>Epochs</cite><a class="headerlink" href="#collecting-measurements-from-a-list-of-epochs" title="Permalink to this headline">¶</a></h3>
+<p>To collect a <cite>DataFrame</cite> containing the tabular data from a list of <cite>Epochs</cite>, use the <cite>CollectMeasurements</cite> function. You may build a list of <cite>Epochs</cite> manually or from the output of the <cite>CollectEpochs</cite> function (see <a class="reference internal" href="#ssec-collecting-epochs"><em>above</em></a>). Continuing the example from <a class="reference internal" href="#ssec-collecting-epochs"><em>above</em></a>, this example shows how to reconstruct a <cite>DataFrame</cite> from the list of <cite>Epochs</cite> returned by <cite>CollectEpochs</cite>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">library</span><span class="p">(</span><span class="n">Rovation</span><span class="o">.</span><span class="n">csv</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">&lt;-</span> <span class="n">CollectMeasurements</span><span class="p">(</span><span class="n">epochs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013, Physion.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
