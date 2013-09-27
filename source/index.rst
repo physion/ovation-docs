@@ -14,7 +14,9 @@ Contents:
     introduction
     installation
     getting_started
+    data_model
     using_rovation
+    using_ovation_python
     
 .. importing_data
 	

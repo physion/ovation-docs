@@ -43,7 +43,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Ovation Scientific Data Management System'
-copyright = u'2013, Physion'
+copyright = u'2013, Physion LLC'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -107,11 +107,11 @@ html_theme_options = {
     'navbar_title': "Ovation",
 
     # Tab name for entire site. (Default: "Site")
-    #'navbar_site_name': "Site",
+    'navbar_site_name': "Contents",
 
     # Global TOC depth for "site" navbar tab. (Default: 1)
     # Switching to -1 shows all levels.
-    #'globaltoc_depth': 2,
+    'globaltoc_depth': 2,
 
     # Include hidden TOCs in Site navbar?
     #
@@ -128,11 +128,11 @@ html_theme_options = {
 
     # Fix navigation bar to top of page?
     # Values: "true" (default) or "false"
-    #'navbar_fixed_top': "true",
+    'navbar_fixed_top': "true",
 
     # Location of link to source.
     # Options are "nav" (default), "footer" or anything else to exclude.
-    #'source_link_position': "nav",
+    'source_link_position': "footer",
 
     # Bootswatch (http://bootswatch.com/) theme.
     #
