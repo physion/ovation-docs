@@ -65,7 +65,7 @@ Ovation integrates with several scientific programming environments. Follow the 
 Matlab
 ------
 
-1. `Download <http://ovation.io/downloads>`_ the the "Ovation API all-in-one Jar". Add the path to the all-in-one jar file to the *top* of the `${matlabroot}/toolbox/local/classpath.txt` file.
+1. `Download <http://ovation.io/downloads>`_ the the "Ovation Matlab API Core". Add the path to the downloaded "ovation-with-dependencies" `.jar` file to the *top* of the `${matlabroot}/toolbox/local/classpath.txt` file.
 
 .. note::
     You must add the Ovation jar to the top of Matlab's `classpath.txt`. The Ovation API will not function properly if you add the jar to Matlab's classpath via `javaaddpath`.
