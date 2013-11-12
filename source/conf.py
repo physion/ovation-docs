@@ -107,11 +107,11 @@ html_theme_options = {
     'navbar_title': "Ovation",
 
     # Tab name for entire site. (Default: "Site")
-    #'navbar_site_name': "Site",
+    'navbar_site_name': "Docs",
 
     # Global TOC depth for "site" navbar tab. (Default: 1)
     # Switching to -1 shows all levels.
-    #'globaltoc_depth': 2,
+    'globaltoc_depth': 2,
 
     # Include hidden TOCs in Site navbar?
     #
@@ -128,11 +128,11 @@ html_theme_options = {
 
     # Fix navigation bar to top of page?
     # Values: "true" (default) or "false"
-    #'navbar_fixed_top': "true",
+    'navbar_fixed_top': "false",
 
     # Location of link to source.
     # Options are "nav" (default), "footer" or anything else to exclude.
-    #'source_link_position': "nav",
+    'source_link_position': "exclude",
 
     # Bootswatch (http://bootswatch.com/) theme.
     #
@@ -140,7 +140,7 @@ html_theme_options = {
     # such as "amelia" or "cosmo".
     #
     # Note that this is served off CDN, so won't be available offline.
-    #'bootswatch_theme': "united",
+    'bootswatch_theme': "cerulean",
 }
 
 # Add any paths that contain custom themes here, relative to this directory.

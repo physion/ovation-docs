@@ -3,30 +3,43 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-|Ovation(TM)|
-=============
+*******
+Ovation
+*******
 
-Contents:
+Welcome to `Ovation <http://ovation.io>`_! If you're new to the Ovation system, you may find the :ref:`Getting Started Guide <doc-getting-started>` the best place to start. You can always reach us at `support@ovation.io <mailto:support@ovation.io>`_ if you have any questions.
+
+
+Getting Started
+===============
+
+.. toctree::
+    :maxdepth: 1
+
+    installation
+    quick_start
+
+
+Guides
+======
 
 .. toctree::
     :maxdepth: 1
     
-    introduction
-    installation
-    getting_started
+    guides/*
     tabular_data
-    using_rovation
     
-.. importing_data
-	
+Using Ovation With…
+===================
+
+.. toctree::
+    :maxdepth: 1
+    
+    R <using_rovation>
+
+
+
+If you’re having trouble and you can't find a solution here, let us know! Post a question on StackOverflow, or send us a note at `support@ovation.io <mailto:support@ovation.io>`_
 
 .. |(R)| unicode:: U+00AE
 .. |Ovation(TM)| unicode:: Ovation U+2122
-
-.. Indices and tables
-.. ==================
-.. 
-.. * :ref:`genindex`
-.. * :ref:`modindex`
-.. * :ref:`search`
-
