@@ -108,10 +108,25 @@ html_theme_options = {
 
     # Tab name for entire site. (Default: "Site")
     'navbar_site_name': "Docs",
+    
+    # A list of tuples containing pages or urls to link to.
+        # Valid tuples should be in the following forms:
+        #    (name, page)                 # a link to a page
+        #    (name, "/aa/bb", 1)          # a link to an arbitrary relative url
+        #    (name, "http://example.com", True) # arbitrary absolute url
+        # Note the "1" or "True" value above as the third argument to indicate
+        # an arbitrary url.
+        'navbar_links': [
+            ("Dashboard", "http://ovation.io", True),
+        ],
+    
 
     # Global TOC depth for "site" navbar tab. (Default: 1)
     # Switching to -1 shows all levels.
     'globaltoc_depth': 2,
+    
+    # Render the current pages TOC in the navbar. (Default: true)
+    'navbar_pagenav': False,
 
     # Include hidden TOCs in Site navbar?
     #
@@ -169,11 +184,11 @@ html_static_path = ['_static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
-#html_last_updated_fmt = '%b %d, %Y'
+html_last_updated_fmt = '%b %d, %Y'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
-#html_use_smartypants = True
+html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
 #html_sidebars = {}
@@ -195,7 +210,7 @@ html_static_path = ['_static']
 #html_show_sourcelink = True
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-#html_show_sphinx = True
+html_show_sphinx = True
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 #html_show_copyright = True
