@@ -26,7 +26,7 @@ Guides
 .. toctree::
     :maxdepth: 1
     
-    guides/*
+    guides/source_guide
     tabular_data
     
 Using Ovation With…

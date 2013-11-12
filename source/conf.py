@@ -118,13 +118,13 @@ html_theme_options = {
     # Note: If this is "false", you cannot have mixed ``:hidden:`` and
     # non-hidden ``toctree`` directives in the same page, or else the build
     # will break.
-    #
+    #'
     # Values: "true" (default) or "false"
     #'globaltoc_includehidden': "true",
 
     # HTML navbar class (Default: "navbar") to attach to <div> element.
     # For black navbar, do "navbar navbar-inverse"
-    #'navbar_class': "navbar navbar-inverse",
+    'navbar_class': "navbar",
 
     # Fix navigation bar to top of page?
     # Values: "true" (default) or "false"
@@ -140,7 +140,7 @@ html_theme_options = {
     # such as "amelia" or "cosmo".
     #
     # Note that this is served off CDN, so won't be available offline.
-    'bootswatch_theme': "cerulean",
+    # 'bootswatch_theme': "cerulean",
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
@@ -151,7 +151,7 @@ html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 #html_title = None
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-#html_short_title = None
+html_short_title = "Ovation"
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
