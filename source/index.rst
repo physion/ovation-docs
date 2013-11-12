@@ -29,6 +29,7 @@ Guides
     :maxdepth: 1
     
     guides/source_guide
+    guides/procedure_guide
     tabular_data
     
 Using Ovation With…
