@@ -107,32 +107,47 @@ html_theme_options = {
     'navbar_title': "Ovation",
 
     # Tab name for entire site. (Default: "Site")
-    #'navbar_site_name': "Site",
+    'navbar_site_name': "Docs",
+    
+    # A list of tuples containing pages or urls to link to.
+        # Valid tuples should be in the following forms:
+        #    (name, page)                 # a link to a page
+        #    (name, "/aa/bb", 1)          # a link to an arbitrary relative url
+        #    (name, "http://example.com", True) # arbitrary absolute url
+        # Note the "1" or "True" value above as the third argument to indicate
+        # an arbitrary url.
+        'navbar_links': [
+            ("Dashboard", "http://ovation.io", True),
+        ],
+    
 
     # Global TOC depth for "site" navbar tab. (Default: 1)
     # Switching to -1 shows all levels.
-    #'globaltoc_depth': 2,
+    'globaltoc_depth': 2,
+    
+    # Render the current pages TOC in the navbar. (Default: true)
+    'navbar_pagenav': False,
 
     # Include hidden TOCs in Site navbar?
     #
     # Note: If this is "false", you cannot have mixed ``:hidden:`` and
     # non-hidden ``toctree`` directives in the same page, or else the build
     # will break.
-    #
+    #'
     # Values: "true" (default) or "false"
     #'globaltoc_includehidden': "true",
 
     # HTML navbar class (Default: "navbar") to attach to <div> element.
     # For black navbar, do "navbar navbar-inverse"
-    #'navbar_class': "navbar navbar-inverse",
+    'navbar_class': "navbar",
 
     # Fix navigation bar to top of page?
     # Values: "true" (default) or "false"
-    #'navbar_fixed_top': "true",
+    'navbar_fixed_top': "false",
 
     # Location of link to source.
     # Options are "nav" (default), "footer" or anything else to exclude.
-    #'source_link_position': "nav",
+    'source_link_position': "exclude",
 
     # Bootswatch (http://bootswatch.com/) theme.
     #
@@ -140,7 +155,7 @@ html_theme_options = {
     # such as "amelia" or "cosmo".
     #
     # Note that this is served off CDN, so won't be available offline.
-    #'bootswatch_theme': "united",
+    # 'bootswatch_theme': "cerulean",
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
@@ -151,7 +166,7 @@ html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 #html_title = None
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-#html_short_title = None
+html_short_title = "Ovation"
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -169,11 +184,11 @@ html_static_path = ['_static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
-#html_last_updated_fmt = '%b %d, %Y'
+html_last_updated_fmt = '%b %d, %Y'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
-#html_use_smartypants = True
+html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
 #html_sidebars = {}
@@ -195,7 +210,7 @@ html_static_path = ['_static']
 #html_show_sourcelink = True
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-#html_show_sphinx = True
+html_show_sphinx = True
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 #html_show_copyright = True

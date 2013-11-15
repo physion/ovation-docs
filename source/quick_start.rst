@@ -1,8 +1,8 @@
 .. _doc-getting-started:
 
-***************
-Getting Started
-***************
+*******************
+Ovation Quick Start
+*******************
 
 Once you've :ref:`installed <doc-installation>` Ovation, you're ready to start organizing your data. Ovation organizes data using entities ("nouns") that are familiar to scientists: Projects, Experiments, Protocols, Measurements, etc. Each instance of these (and other) entities stored in the are called "objects".
 
@@ -29,7 +29,7 @@ Before you can add data to your Ovation database, you must login using your emai
 Adding a new `Project`
 ######################
 
-This section shows you how to add a new `Project` object to the database. Projects are top-level entities in the Ovation data model, and are used to organize related Experiments. Projects may contain many Experiments, and Experiments can belong to more than one Project. 
+This section shows you how to add a new `Project` object to the database. Projects are top-level entities in the Ovation data model, and are used to organize related Experiments. Projects may contain many Experiments, and Experiments can belong to more than one Project.
 
 .. image:: _static/full_screen_before_project_insert_project1.png
    :width: 60%
@@ -44,7 +44,7 @@ Follow the wizard to set the name, start time, and purpose for your Project.
 
 .. image:: _static/full_screen_after_project1.png
    :width: 60%
-   
+
 If you do not see the new Project in the "Project Navigator" after finishing the project insertion wizzard, choose :menuselection:`Tools --> Reset Query` to refresh the display.
 
 
@@ -71,13 +71,13 @@ Enter the Source's label (the displayed name of the Source) and its identifier (
 
 .. figure:: _static/insert_source_wizard1.png
    :width: 60%
-   
+
    Entering information for a new Source object. Here, the Source is given a label 'Mouse', and an identifier corresponding to the ID of the mouse in an external animal database.
 
 
 You may want to store additional information about the individual, such as sex, birth date, etc. as annotations on the Source object. To add annotations to the newly created Source, select the Source in the "Source Navigator" window and enter the annotations in the "Properties View" window (on the right side of the screen):
 
-.. image:: _static/source_with_properties.png 
+.. image:: _static/source_with_properties.png
    :width: 60%
 
 
@@ -108,7 +108,7 @@ To add a new `Experiment`, right click on a Project entity, and select 'Insert E
 
 .. _sec-new-epoch-groups:
 
-Now, lets add a couple EpochGroups to this experiment. Below, I'll add two EpochGroups, one labeled 'Control', and the other labeled 'Test'. To add an EpochGroup, right click the Experiment you just created, and select 'Insert EpochGroup...'. 
+Now, lets add a couple EpochGroups to this experiment. Below, I'll add two EpochGroups, one labeled 'Control', and the other labeled 'Test'. To add an EpochGroup, right click the Experiment you just created, and select 'Insert EpochGroup...'.
 
 +----------------------------------------------------------+----------------------------------------------------------+-----------------------------------------------------------+
 | .. figure:: _static/insert_control_protocol_wizard1.png  | .. figure:: _static/insert_control_protocol_wizard2.png  |  .. figure:: _static/insert_control_protocol_wizard3.png  |
@@ -120,14 +120,14 @@ The first three panels of the wizard are related to an EpochGroup protocol. You 
 .. figure:: _static/insert_control_epoch_group.png
 
 
-The last panel contains the information for the EpochGroup object. I will set the label to 'Control' to indicate that all the Epochs found in this EpochGroup are control trials. 
+The last panel contains the information for the EpochGroup object. I will set the label to 'Control' to indicate that all the Epochs found in this EpochGroup are control trials.
 
 +-------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------+
 | .. figure:: _static/insert_test_protocol_wizard1.png  | .. figure:: _static/insert_test_protocol_wizard2.png  |  .. figure:: _static/insert_test_protocol_wizard3.png  |
 +-------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------+
 
 
-I will then create another EpochGroup with label 'Test'. Again, the labeling of 'Control' and 'Test' are arbitrary, I chose them because it fit my experiment structure. 
+I will then create another EpochGroup with label 'Test'. Again, the labeling of 'Control' and 'Test' are arbitrary, I chose them because it fit my experiment structure.
 
 
 .. figure:: _static/epoch_groups_inserted.png
@@ -141,7 +141,7 @@ We are now ready to add the data to our Experiment!
 Adding Data
 ===========
 
-Adding data is a two part process. First, we create an Epoch object. Each Epoch represents an event that happened during a specific time, involving a set of Sources. The next step is to add one or many Measurements to the newly created Epoch. To begin, right click on the 'Control' EpochGroup and select 'Insert Measurement...'. This wizard will create an Epoch object with one Measurement object. You may optionally add more measurements to the Epoch object after it has been created. 
+Adding data is a two part process. First, we create an Epoch object. Each Epoch represents an event that happened during a specific time, involving a set of Sources. The next step is to add one or many Measurements to the newly created Epoch. To begin, right click on the 'Control' EpochGroup and select 'Insert Measurement...'. This wizard will create an Epoch object with one Measurement object. You may optionally add more measurements to the Epoch object after it has been created.
 
 Step 1 contains the start and end time for the Epoch.
 
@@ -157,7 +157,7 @@ Step 2 allows you to select the sources that are present during this Epoch. For 
    :figwidth: 60%
 
 
-Sources are named within the scope of the Epoch. If you don't set a name, the default is created of the form 'label | id'. However, I'd like to rename the Source 'first mouse'. 
+Sources are named within the scope of the Epoch. If you don't set a name, the default is created of the form 'label | id'. However, I'd like to rename the Source 'first mouse'.
 
 .. figure:: _static/select_source_wizard2.png
    :figwidth: 60%
@@ -173,13 +173,13 @@ Step 6 is where I choose the data file to add. I chose to add an image here, but
    :figwidth: 60%
 
 
-The next two steps allow you to select which among the sources and devices associated with the Epoch should be associated with this particular measurement. By default, all sources and devices are associated with all measurements; however, if a measurement is associated with just one source, or just one device, you may uncheck the irrelevant sources and devices here. Since I have not added any devices to this Experiment's EquipmentSetup, my device list below is empty.  
+The next two steps allow you to select which among the sources and devices associated with the Epoch should be associated with this particular measurement. By default, all sources and devices are associated with all measurements; however, if a measurement is associated with just one source, or just one device, you may uncheck the irrelevant sources and devices here. Since I have not added any devices to this Experiment's EquipmentSetup, my device list below is empty.
 
 +------------------------------------------------------------+------------------------------------------------------------------+
 | .. figure:: _static/insert_meausrement_select_sources.png  | .. figure:: _static/insert_meausrement_select_empty_devices.png  |
 +------------------------------------------------------------+------------------------------------------------------------------+
 
-Great, we have now inserted our first Measurement! Follow either the 'Insert Measurement...', 'Insert Numeric Measurement...', or 'Insert Image...' wizards to insert more data. 
+Great, we have now inserted our first Measurement! Follow either the 'Insert Measurement...', 'Insert Numeric Measurement...', or 'Insert Image...' wizards to insert more data.
 
 
 .. figure:: _static/measurement_inserted.png
