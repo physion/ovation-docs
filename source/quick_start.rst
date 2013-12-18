@@ -22,21 +22,22 @@ Adding a new `Project`
 
 This section shows you how to add a new `Project` object to the database. Projects are top-level entities in the Ovation data model, and are used to organize related Experiments. Projects may contain many Experiments, and Experiments can belong to more than one Project.
 
+To add a new `Project`, right click on the "Project Navigator" browser window and select 'Insert Project..'.
 .. image:: _static/full_screen_before_project_insert_project1.png
    :width: 60%
 
 
-To add a new `Project`, right click on the "Project Navigator" browser window and select 'Insert Project..'.
 
+Follow the wizard to set the name, start time, and purpose for your Project.
 .. image:: _static/insert_project_wizard1.png
    :width: 60%
 
-Follow the wizard to set the name, start time, and purpose for your Project.
 
+TIP:  If you do not see the new Project in the "Project Navigator" after finishing the project insertion wizzard, choose :menuselection:`Tools --> Reset Query` to refresh the display.
 .. image:: _static/full_screen_after_project1.png
    :width: 60%
 
-If you do not see the new Project in the "Project Navigator" after finishing the project insertion wizzard, choose :menuselection:`Tools --> Reset Query` to refresh the display.
+
 
 
 .. _sec-new-source:
