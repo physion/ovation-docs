@@ -6,17 +6,8 @@ Ovation Quick Start
 
 Once you've :ref:`installed <doc-installation>` Ovation, you're ready to start organizing your data. Ovation organizes data in a fashion familiar to scientists - projects, experiments, measurements, etc.  The best way to get started is to create a project.
 
-.. sidebar:: Object identity
 
-    Every object in the Ovation database has a unique identity—a globally unique identifier such as `C3617DF6-3296-434E-890D-4AA730A80431`.
-
-This tutorial will demonstrate adding numeric, image and tabular `Measurements` to a new `Project`.
-
-
-Authentication
-##############
-
-Before you can add data to your Ovation database, you must login using your email address and `ovation.io`_ password.
+Before you can add data to your Ovation database, you must login using your email address and `ovation.io`_ password.  Open Ovation and click "file" then "login".
 
 .. figure:: _static/login_screen1.png
    :figwidth: 50%
