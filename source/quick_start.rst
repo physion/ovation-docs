@@ -48,7 +48,9 @@ TIP:  If you do not see the new Project in the "Project Navigator" after finishi
 Create an `Experiment`
 ######################################
 
-Now that you have created a Project, you can create individual Experiments within that Project.  Experiments will contain all the measurements collected or trials conducted as part of that specific Experiment.  Experiments can also contain the general setup and protocol information for these same Measurement and trials.  Information about the equipment used, including make, model, software version, as well as global settings of that equipment all belong in the EquipmentSetup entity attached to the Experiment. Information about the protocol for the Experiment belongs in the Protocol entity attached to this Experiment. Both the protocol and equipment setup information can be added after the fact, so we will not add it now.
+Now that you have created a Project, you can create individual Experiments within that Project.  Experiments will contain all the measurements collected or trials conducted as part of that specific Experiment.  Experiments can also contain the general setup and protocol information for these same Measurement and trials.  
+
+TIP:  Information about the equipment used, including make, model, software version, as well as global settings of that equipment all belong in the EquipmentSetup entity attached to the Experiment. Information about the protocol for the Experiment belongs in the Protocol entity attached to this Experiment. Both the protocol and equipment setup information can be added after the fact, so we will not add it now.
 
 
 .. figure:: _static/insert_experiment1.png
