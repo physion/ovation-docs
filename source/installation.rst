@@ -4,7 +4,7 @@
 Installation
 ************
 
-|Ovation(TM)| is a data management platform that helps researchers organize, search and share their data. To get started with Ovation, sign up for an account on `ovation.io <http://ovation.io>`_. Once you've signed up for an account, you can download_ the Ovation application and get started.
+|Ovation(TM)| is a data management platform that helps researchers organize, track, search and share their data. Your data is stored in the cloud, but you get the added advantage of a local interface that will sync your activity and data seamlessly.  To get started with Ovation, sign up for an account on `ovation.io <http://ovation.io>`_. Once you've signed up for an account, you can download_ the Ovation application and get started.
 
 .. _download: http://ovation.io/downloads
 
