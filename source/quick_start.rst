@@ -20,7 +20,7 @@ Before you can add data to your Ovation database, you must login using your emai
 Adding a new `Project`
 ######################
 
-This section shows you how to add a new `Project` object to the database. Projects are top-level entities in the Ovation data model, and are used to organize related Experiments. Projects may contain many Experiments, and Experiments can belong to more than one Project.
+This section shows you how to add a new `Project` to the database. Projects are top-level entities in the Ovation data model, and are used to organize related Experiments. Projects may contain many Experiments, and Experiments can belong to more than one Project.
 
 To add a new `Project`, right click on the "Project Navigator" browser window and select 'Insert Project..'.
 
