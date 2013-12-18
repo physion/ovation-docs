@@ -4,7 +4,7 @@
 Ovation Quick Start
 *******************
 
-Once you've :ref:`installed <doc-installation>` Ovation, you're ready to start organizing your data. Ovation organizes data using entities ("nouns") that are familiar to scientists: Projects, Experiments, Protocols, Measurements, etc. Each instance of these (and other) entities stored in the are called "objects".
+Once you've :ref:`installed <doc-installation>` Ovation, you're ready to start organizing your data. Ovation organizes data in a fashion familiar to scientists - projects, experiments, measurements, etc.  The best way to get started is to create a project.
 
 .. sidebar:: Object identity
 
