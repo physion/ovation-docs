@@ -1,7 +1,7 @@
 .. _doc-getting-started:
 
 *******************
-Ovation Quick Start
+Getting Started:  Create a Project
 *******************
 
 Once you've :ref:`installed <doc-installation>` Ovation, you're ready to start organizing your data. Ovation organizes data in a fashion familiar to scientists - projects, experiments, measurements, etc.  The best way to get started is to create a project.
