@@ -45,7 +45,7 @@ TIP:  If you do not see the new Project in the "Project Navigator" after finishi
 
 .. _sec-new-source:
 
-Adding a `Source`
+Add a `Source`
 #####################
 
 Sources represent the subject of a Measurement. A Source may be a cell line, tissue, specific animal or any other object from which you have taken a measurement.
