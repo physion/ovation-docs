@@ -45,15 +45,10 @@ TIP:  If you do not see the new Project in the "Project Navigator" after finishi
 
 .. _sec-new-experiment:
 
-Adding `Experiment` data
+Create an `Experiment`
 ######################################
 
-Experiments are entities in the Ovation data model that contain a number of Epochs, optionally organized into a hierarchy of groups (called EpochGroups). Conceptually, you should use EpochGroups to group Epochs in a way thats meaningful to your experimental protocol. Raw data is then added to Epochs in the form of Measurements.
-
-Adding an Experiment
-====================
-
-Experiments also contain the general setup and protocol information for all of the Epochs (or trials) contained in the Experiment. Information about the equipment used, including make, model, software version, as well as global settings of that equipment all belong in the EquipmentSetup entity attached to the Experiment. Information about the protocol for the Experiment belongs in the Protocol entity attached to this Experiment. Both the protocol and equipment setup information can be added after the fact, so we will not add it now.
+Now that you have created a Project, you can create individual Experiments within that Project.  Experiments will contain all the measurements collected or trials conducted as part of that specific Experiment.  Experiments can also contain the general setup and protocol information for these same Measurement and trials.  Information about the equipment used, including make, model, software version, as well as global settings of that equipment all belong in the EquipmentSetup entity attached to the Experiment. Information about the protocol for the Experiment belongs in the Protocol entity attached to this Experiment. Both the protocol and equipment setup information can be added after the fact, so we will not add it now.
 
 
 .. figure:: _static/insert_experiment1.png
