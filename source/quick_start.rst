@@ -45,12 +45,10 @@ TIP:  If you do not see the new Project in the "Project Navigator" after finishi
 
 .. _sec-new-source:
 
-Adding a new `Source`
+Adding a `Source`
 #####################
 
-Sources represent the subject of a Measurement. One or more Measurements are made within an Epoch, a region of time on the Experimental timeline during which a procedure was performed. Each Epoch has one or more named "Input Sources" and Measurements made during that Epoch may refer to these Sources by name, explcitly linking the Measurement to the Source(s).
-
-Epochs may also have "Output Sources", new Sources that are derived from the Epoch's input Sources. For example, a Source representing an individual cell might be the output of an Epoch in which the Source object representing the source tissue for the cell was disassociated into individual cells. A Measurement made from this newly disassociated cell would be associated with the Source object representing that cell. That Source object would be linked in the Ovation database to its "parent" Source object (representing the tissue), which may in turn might be linked to a "parent" Source representing the subject from which that tissue was harvested.
+Sources represent the subject of a Measurement. A Source may be a cell line, tissue, specific animal or any other object from which you have taken a measurement.
 
 .. tip::
     You may want to store additional information about the individual, such as sex, birth date, etc. as annotations on the Source object.
