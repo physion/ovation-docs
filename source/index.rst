@@ -9,7 +9,7 @@
     
 |
 
-Welcome to `Ovation <http://ovation.io>`_! The workflow below will walk you through the Ovation installation and help you get started.  You can always reach us at `support@ovation.io <mailto:support@ovation.io>`_ if you have any questions.
+Welcome to `Ovation <http://ovation.io>`_! The workflow below will walk you through the Ovation installation and help you get started with your data.  You can always reach us at `support@ovation.io <mailto:support@ovation.io>`_ if you have any questions.
 
 
 Getting Started
