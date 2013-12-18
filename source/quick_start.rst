@@ -43,38 +43,6 @@ TIP:  If you do not see the new Project in the "Project Navigator" after finishi
 
 
 
-.. _sec-new-source:
-
-Add a `Source`
-#####################
-
-Sources represent the subject of a Measurement. A Source may be a cell line, tissue, specific animal or any other object from which you have taken a measurement.
-
-.. tip::
-    You may want to store additional information about the individual, such as sex, birth date, etc. as annotations on the Source object.
-
-
-Insert a Source object by right-clicking in the "Source Navigator" and choosing :guilabel:`Insert Source...`:
-
-.. image:: _static/insert_source.png
-   :width: 60%
-
-
-Enter the Source's label (the displayed name of the Source) and its identifier (e.g. an identification number within an animal facility database or in an other subject registration system).
-
-.. figure:: _static/insert_source_wizard1.png
-   :width: 60%
-
-   Entering information for a new Source object. Here, the Source is given a label 'Mouse', and an identifier corresponding to the ID of the mouse in an external animal database.
-
-
-You may want to store additional information about the individual, such as sex, birth date, etc. as annotations on the Source object. To add annotations to the newly created Source, select the Source in the "Source Navigator" window and enter the annotations in the "Properties View" window (on the right side of the screen):
-
-.. image:: _static/source_with_properties.png
-   :width: 60%
-
-
-
 .. _sec-new-experiment:
 
 Adding `Experiment` data
@@ -177,6 +145,38 @@ Great, we have now inserted our first Measurement! Follow either the 'Insert Mea
 
 .. figure:: _static/measurement_inserted.png
    :figwidth: 60%
+
+
+
+.. _sec-new-source:
+
+Add a `Source`
+#####################
+
+Sources represent the subject of a Measurement. A Source may be a cell line, tissue, specific animal or any other object from which you have taken a measurement.
+
+.. tip::
+    You may want to store additional information about the individual, such as sex, birth date, etc. as annotations on the Source object.
+
+
+Insert a Source object by right-clicking in the "Source Navigator" and choosing :guilabel:`Insert Source...`:
+
+.. image:: _static/insert_source.png
+   :width: 60%
+
+
+Enter the Source's label (the displayed name of the Source) and its identifier (e.g. an identification number within an animal facility database or in an other subject registration system).
+
+.. figure:: _static/insert_source_wizard1.png
+   :width: 60%
+
+   Entering information for a new Source object. Here, the Source is given a label 'Mouse', and an identifier corresponding to the ID of the mouse in an external animal database.
+
+
+You may want to store additional information about the individual, such as sex, birth date, etc. as annotations on the Source object. To add annotations to the newly created Source, select the Source in the "Source Navigator" window and enter the annotations in the "Properties View" window (on the right side of the screen):
+
+.. image:: _static/source_with_properties.png
+   :width: 60%
 
 
 .. _ovation.io: http://ovation.io
