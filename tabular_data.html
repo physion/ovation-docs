@@ -1,5 +1,4 @@
 
-
   
   
  
@@ -25,7 +24,7 @@
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '',
+        URL_ROOT:    './',
         VERSION:     '2.0 Beta',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -41,7 +40,7 @@
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Ovation Scientific Data Management System 2.0 Beta documentation" href="index.html" />
     <link rel="next" title="Using the Rovation client API" href="using_rovation.html" />
-    <link rel="prev" title="Getting Started" href="getting_started.html" />
+    <link rel="prev" title="Sources" href="guides/source_guide.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -50,7 +49,7 @@
   </head>
   <body>
 
-  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div id="navbar" class="navbar navbar-default ">
     <div class="container">
       <div class="navbar-header">
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -67,39 +66,46 @@
           <ul class="nav navbar-nav">
             <li class="divider-vertical"></li>
             
+                <li><a href="http://ovation.io">Dashboard</a></li>
+            
             
               <li class="dropdown globaltoc-container">
   <a href="index.html"
      class="dropdown-toggle"
-     data-toggle="dropdown">Site <b class="caret"></b></a>
+     data-toggle="dropdown">Topics <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
-    ><ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Importing and analyzing tabular (CSV) data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="using_rovation.html">Using the Rovation client API</a></li>
+    ><ul>
+<li class="toctree-l1"><a class="reference internal" href="about_ovation.html">Getting Started</a></li>
 </ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="guides/source_guide.html">Sources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guides/source_guide.html#metadata">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guides/source_guide.html#derived-sources">Derived Sources</a></li>
 </ul>
 </li>
-              
-                <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
-  <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Importing and analyzing tabular (CSV) data</a><ul>
-<li><a class="reference internal" href="#importing-tabular-csv-data">Importing tabular (CSV) data</a><ul>
-<li><a class="reference internal" href="#importing-csv-data-via-the-ovation-application">Importing CSV data via the Ovation application</a></li>
-<li><a class="reference internal" href="#importing-csv-data-using-rovation-csv">Importing CSV data using <cite>Rovation.csv</cite></a><ul>
-<li><a class="reference internal" href="#example-usage">Example Usage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Importing and analyzing tabular (CSV) data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#importing-tabular-csv-data">Importing tabular (CSV) data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#retrieving-tabular-csv-data">Retrieving tabular (CSV) data</a></li>
 </ul>
 </li>
 </ul>
-</li>
-<li><a class="reference internal" href="#retrieving-tabular-csv-data">Retrieving tabular (CSV) data</a><ul>
-<li><a class="reference internal" href="#collecting-all-epochs-from-an-experiment-or-epochgroup">Collecting all <cite>Epochs</cite> from an <cite>Experiment</cite> or <cite>EpochGroup</cite></a></li>
-<li><a class="reference internal" href="#collecting-measurements-from-a-list-of-epochs">Collecting <cite>Measurements</cite> from a list of <cite>Epochs</cite></a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="using_rovation.html">R</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_rovation.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_rovation.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_rovation.html#usage">Usage</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="using_ovation_python.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_python.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_python.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_python.html#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="using_ovation_matlab.html">Matlab</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_matlab.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_matlab.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_matlab.html#usage">Usage</a></li>
 </ul>
 </li>
 </ul>
@@ -110,20 +116,14 @@
             
               
                 
-  <li><a href="getting_started.html"
-         title="Previous Chapter: Getting Started">&laquo; Getting Started</a></li>
+  <li><a href="guides/source_guide.html"
+         title="Previous Chapter: Sources">&laquo; Sources</a></li>
   <li><a href="using_rovation.html"
          title="Next Chapter: Using the Rovation client API">Using the Rovati... &raquo;</a></li>
               
             
             
             
-            
-              <li>
-<div id="sourcelink">
-  <a href="_sources/tabular_data.txt"
-     rel="nofollow">Source</a>
-</div></li>
             
           </ul>
 
@@ -170,14 +170,14 @@
 <li>Enter the start and end times for the <cite>Epoch</cite> of time in which the tabular data was measured</li>
 </ol>
 <div class="figure align-center">
-<img alt="_images/ui_insert_measurement_panel1.png" src="_images/ui_insert_measurement_panel1.png" style="width: 60%;" />
+<a class="reference internal image-reference" href="_images/ui_insert_measurement_panel1.png"><img alt="_images/ui_insert_measurement_panel1.png" src="_images/ui_insert_measurement_panel1.png" style="width: 60%;" /></a>
 <p class="caption">Enter the start and end times for the <cite>Epoch</cite> that describes the period of the experimental timeline in which the tabular data was measured. The <em class="menuselection">Insert Measurement…</em> wizard will add the tabular data as a <cite>Measurement</cite> to this newly inserted <cite>Epoch</cite></p>
 </div>
 <ol class="arabic simple" start="3">
 <li>Select the <cite>Source(s)</cite> that represent subjects of the measurements described in the tabular data</li>
 </ol>
 <div class="figure align-center">
-<img alt="_images/ui_insert_measurement_panel2.png" src="_images/ui_insert_measurement_panel2.png" style="width: 60%;" />
+<a class="reference internal image-reference" href="_images/ui_insert_measurement_panel2.png"><img alt="_images/ui_insert_measurement_panel2.png" src="_images/ui_insert_measurement_panel2.png" style="width: 60%;" /></a>
 <p class="caption">Select each <cite>Source</cite> that represents a subject of the measurements in the tabular data in the left-hand panel, then click the <em class="guilabel">+</em> button to add the <cite>Source</cite> as an Input Source of the <cite>Epoch</cite>. The <cite>Epoch&#8217;s</cite> Input Sources are shown in the right-hand panel. You can remove a <cite>Source</cite> from the right-hand panel by selecting the <cite>Source</cite> and clicking the <em class="guilabel">-</em> button.</p>
 </div>
 <ol class="arabic simple" start="4">
@@ -192,42 +192,42 @@
 <p class="last">If there is no <cite>Protocol</cite>, you may select <em class="guilabel">&lt;none&gt;</em>. But you wouldn&#8217;t make a <cite>Measurement</cite> without recording the procedure, right?</p>
 </div>
 <div class="figure align-center">
-<img alt="_images/ui_insert_measurement_panel3.png" src="_images/ui_insert_measurement_panel3.png" style="width: 60%;" />
+<a class="reference internal image-reference" href="_images/ui_insert_measurement_panel3.png"><img alt="_images/ui_insert_measurement_panel3.png" src="_images/ui_insert_measurement_panel3.png" style="width: 60%;" /></a>
 <p class="caption">Select the <cite>Protocol</cite> describing the procedure for collecting the measurements in the tabular data.</p>
 </div>
 <ol class="arabic simple" start="5">
 <li>Enter any &#8220;Protocol Parameters&#8221; for the <cite>Epoch&#8217;s</cite> procedure. For each variable (e.g. <cite>REAGENT_CONCENTRATION</cite> in the example above), enter the variable&#8217;s name as the <em class="guilabel">Key</em> and the variable&#8217;s value for this <cite>Epoch</cite> as the <em class="guilabel">Value</em>.</li>
 </ol>
 <div class="figure align-center">
-<img alt="_images/ui_insert_measurement_panel4.png" src="_images/ui_insert_measurement_panel4.png" style="width: 60%;" />
+<a class="reference internal image-reference" href="_images/ui_insert_measurement_panel4.png"><img alt="_images/ui_insert_measurement_panel4.png" src="_images/ui_insert_measurement_panel4.png" style="width: 60%;" /></a>
 <p class="caption">For each variable (e.g. <cite>REAGENT_CONCENTRATION</cite> in the example above) in the <cite>Epoch&#8217;s</cite> <cite>Protocol</cite>, enter the variable&#8217;s name as the <em class="guilabel">Key</em> and the variable&#8217;s value for this <cite>Epoch</cite> as the <em class="guilabel">Value</em>. You can double-click in the appropriate column to enter a value or use the <tt class="kbd docutils literal"><span class="pre">tab</span></tt> key to move between fields.</p>
 </div>
 <ol class="arabic simple" start="6">
 <li>Enter any &#8220;Device Parameters&#8221; for the <cite>Epoch</cite>. For each variable parameter of the device(s) used to make the <cite>Measurements</cite> in the <cite>Epoch</cite>, enter the parameter&#8217;s name as the <em class="guilabel">Key</em> and the parameter&#8217;s value for this <cite>Epoch</cite> as the <em class="guilabel">Value</em>.</li>
 </ol>
 <div class="figure align-center">
-<img alt="_images/ui_insert_measurement_panel5.png" src="_images/ui_insert_measurement_panel5.png" style="width: 60%;" />
+<a class="reference internal image-reference" href="_images/ui_insert_measurement_panel5.png"><img alt="_images/ui_insert_measurement_panel5.png" src="_images/ui_insert_measurement_panel5.png" style="width: 60%;" /></a>
 <p class="caption">For each variable parameter of the device(s) used to make the <cite>Measurements</cite> in the <cite>Epoch</cite>, enter the parameter&#8217;s name as the <em class="guilabel">Key</em> and the parameter&#8217;s value for this <cite>Epoch</cite> as the <em class="guilabel">Value</em>. You can double-click in the appropriate column to enter a value or use the <tt class="kbd docutils literal"><span class="pre">tab</span></tt> key to move between fields.</p>
 </div>
 <ol class="arabic simple" start="7">
 <li>Select the <cite>Sources</cite>, from the <cite>Epoch&#8217;s</cite> Input Sources, that are represented in the tabular data.</li>
 </ol>
 <div class="figure align-center">
-<img alt="_images/ui_insert_measurement_panel7.png" src="_images/ui_insert_measurement_panel7.png" style="width: 60%;" />
+<a class="reference internal image-reference" href="_images/ui_insert_measurement_panel7.png"><img alt="_images/ui_insert_measurement_panel7.png" src="_images/ui_insert_measurement_panel7.png" style="width: 60%;" /></a>
 <p class="caption">Select the <cite>Sources</cite>, from the <cite>Epoch&#8217;s</cite> Input Sources, that are represented in the tabular data. In this example, there is only one Input Source.</p>
 </div>
 <ol class="arabic simple" start="8">
 <li>Select the Devices, from amongst the <cite>Experiment&#8217;s</cite> <cite>EquipmentSetup</cite> description used to make the measurements described by the tabular data.</li>
 </ol>
 <div class="figure align-center">
-<img alt="_images/ui_insert_measurement_panel8.png" src="_images/ui_insert_measurement_panel8.png" style="width: 60%;" />
+<a class="reference internal image-reference" href="_images/ui_insert_measurement_panel8.png"><img alt="_images/ui_insert_measurement_panel8.png" src="_images/ui_insert_measurement_panel8.png" style="width: 60%;" /></a>
 <p class="caption">Select the Devices, from amongst the <cite>Experiment&#8217;s</cite> <cite>EquipmentSetup</cite> description used to make the measurements described by the tabular data. In this example, there are no Devices in the <cite>Experiment&#8217;s</cite> <cite>EquipmentSetup</cite> (and none used to make the measurements), so the selection is left blank.</p>
 </div>
 <ol class="arabic simple" start="9">
 <li>Click <em class="guilabel">Finish</em> to insert the tabular measurement data.</li>
 </ol>
 <div class="figure align-center">
-<img alt="_images/ui_tabular_data_display.png" src="_images/ui_tabular_data_display.png" style="width: 60%;" />
+<a class="reference internal image-reference" href="_images/ui_tabular_data_display.png"><img alt="_images/ui_tabular_data_display.png" src="_images/ui_tabular_data_display.png" style="width: 60%;" /></a>
 <p class="caption">Tabular data is displayed in the Ovation application by selecting the <cite>Epoch</cite> (or individual <cite>Measurement</cite>) containing the data. The data table is displayed in the <em class="guilabel">Data Viewer</em> window.</p>
 </div>
 </div>
@@ -429,7 +429,8 @@ epochs &lt;- CollectEpochs(container)</pre>
     </p>
     <p>
         &copy; Copyright 2013, Physion.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.<br/>
+      Last updated on Dec 19, 2013.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2b3.<br/>
     </p>
   </div>
 </footer>
