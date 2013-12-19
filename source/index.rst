@@ -11,7 +11,6 @@
 
 Welcome to `Ovation <http://ovation.io>`_! The workflow below will walk you through the Ovation installation and help you get started with your data.  You can always reach us at `support@ovation.io <mailto:support@ovation.io>`_ if you have any questions.
 
-Want to learn more about Ovation before you get started?
 
 .. raw:: html
 
@@ -19,6 +18,8 @@ Want to learn more about Ovation before you get started?
     <br/>
     <div class="span12 text-center">
         <ul class="nav nav-pills" style="display: inline-block">
+            <li><a href="about_ovation.html">About Ovation</a></li>
+            <li class="disabled"><a href="#">&raquo;</a></li>
             <li><a href="installation.html">Install</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
             <li><a href="create_project.html">Create a Project</a></li>
@@ -43,8 +44,8 @@ Resources
     :maxdepth: 1
 
     guides/source_guide
-    guides/procedure_guide
     tabular_data
+..    guides/procedure_guide
 
 Integration
 ===========

@@ -4,6 +4,8 @@
 
     <div class="span12 text-center">
         <ul class="nav nav-pills" style="display: inline-block">
+            <li><a href="about_ovation.html">About Ovation</a></li>
+            <li class="disabled"><a href="#">&raquo;</a></li>
             <li class="active"><a href="installation.html">Install</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
             <li><a href="create_project.html">Create a Project</a></li>
