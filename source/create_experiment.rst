@@ -1,6 +1,6 @@
 .. _doc-getting-started-create-experiment:
 
-******************
+********************
 Create an Experiment
 ********************
 
