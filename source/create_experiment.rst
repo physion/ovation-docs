@@ -2,12 +2,14 @@
 
 .. raw:: html
 
-    <ul class="nav nav-pills">
-      <li><a href="installation.html">Install</a></li>
-      <li><a href="create_project.html">Create a Project</a></li>
-      <li class="active"><a href="#">Create an Experiment</a></li>
-      <li><a href="create_measurement_and_source.html">Add a Measurement</a></li>
-    </ul>
+    <div class="span12 text-center">
+        <ul class="nav nav-pills" style="display: inline-block">
+            <li><a href="installation.html">Install</a></li>
+            <li><a href="create_project.html">Create a Project</a></li>
+            <li class="active"><a href="#">Create an Experiment</a></li>
+            <li><a href="create_measurement_and_source.html">Add a Measurement</a></li>
+        </ul>
+    </div>
     
 ********************
 Create an Experiment

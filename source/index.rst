@@ -18,12 +18,14 @@ Getting Started
 
 .. raw:: html
 
-    <ul class="nav nav-pills center-block">
-      <li><a href="installation.html">Install</a></li>
-      <li><a href="create_project.html">Create a Project</a></li>
-      <li><a href="create_experiment.html">Create an Experiment</a></li>
-      <li><a href="create_measurement_and_source.html">Add a Measurement</a></li>
-    </ul>
+    <div class="span12 text-center">
+        <ul class="nav nav-pills" style="display: inline-block">
+            <li><a href="installation.html">Install</a></li>
+            <li><a href="create_project.html">Create a Project</a></li>
+            <li><a href="create_experiment.html">Create an Experiment</a></li>
+            <li><a href="create_measurement_and_source.html">Add a Measurement</a></li>
+        </ul>
+    </div>
     
 .. .. toctree::
 ..     :maxdepth: 1
