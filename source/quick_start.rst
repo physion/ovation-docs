@@ -55,44 +55,14 @@ Now that you have created a Project, you can create individual Experiments withi
 
 TIP:  Information about the equipment used, including make, model, software version, as well as global settings of that equipment all belong in the EquipmentSetup entity attached to the Experiment. Information about the protocol for the Experiment belongs in the Protocol entity attached to this Experiment. Both the protocol and equipment setup information can be added after the fact, so we will not add it now.
 
+To add a new `Experiment`, right click on a Project entity, and select 'Insert Experiment...'
 
 .. figure:: _static/insert_experiment1.png
-   :figwidth: 60%
-
-
-To add a new `Experiment`, right click on a Project entity, and select 'Insert Experiment...'
+   :figwidth: 40%
 
 
 .. figure:: _static/insert_experiment_wizard1.png
-   :figwidth: 60%
-
-
-.. _sec-new-epoch-groups:
-
-Now, lets add a couple EpochGroups to this experiment. Below, I'll add two EpochGroups, one labeled 'Control', and the other labeled 'Test'. To add an EpochGroup, right click the Experiment you just created, and select 'Insert EpochGroup...'.
-
-+----------------------------------------------------------+----------------------------------------------------------+-----------------------------------------------------------+
-| .. figure:: _static/insert_control_protocol_wizard1.png  | .. figure:: _static/insert_control_protocol_wizard2.png  |  .. figure:: _static/insert_control_protocol_wizard3.png  |
-+----------------------------------------------------------+----------------------------------------------------------+-----------------------------------------------------------+
-
-The first three panels of the wizard are related to an EpochGroup protocol. You may select an existing protocol at this stage, create a new one, or choose not to select one. I will choose to create a protocol named 'Demo Protocol' by typing 'Demo Protocol' in the text box below, and clicking on the plus button. Then I will edit the corresponding text box, to add my protocol document text. On the next panel, I will choose to add the protocol parameters {control, true}, because this is the protocol for my 'control' EpochGroup. I have no device parameters at this time, so I'll leave that table blank.
-
-
-.. figure:: _static/insert_control_epoch_group.png
-
-
-The last panel contains the information for the EpochGroup object. I will set the label to 'Control' to indicate that all the Epochs found in this EpochGroup are control trials.
-
-+-------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------+
-| .. figure:: _static/insert_test_protocol_wizard1.png  | .. figure:: _static/insert_test_protocol_wizard2.png  |  .. figure:: _static/insert_test_protocol_wizard3.png  |
-+-------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------+
-
-
-I will then create another EpochGroup with label 'Test'. Again, the labeling of 'Control' and 'Test' are arbitrary, I chose them because it fit my experiment structure.
-
-
-.. figure:: _static/epoch_groups_inserted.png
-   :figwidth: 60%
+   :figwidth: 40%
 
 
 We are now ready to add the data to our Experiment!
