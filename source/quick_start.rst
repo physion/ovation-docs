@@ -72,7 +72,7 @@ We are now ready to add the data to our Experiment!
 Create a Measurement and add a Source
 ===========
 
-Now it's time to add data to our Experiment.  This is done by creating a Measurement and subsequently attaching that Measurement to a Source or subject.  To begin, right click on the Experiment and select 'Insert Measurement...'. This wizard will create a trial with one Measurement. You may optionally add more measurements to this same trial after it has been created.
+Now it's time to add data to our Experiment.  This is done by creating a Measurement and subsequently attaching that Measurement to the Source or subject on which it was performed (cell line, animal, tissue sample, etc).  To begin, right click on the Experiment and select 'Insert Measurement...'. This wizard will create a trial with one Measurement. You may optionally add more measurements to this same trial after it has been created.
 
 Step 1 contains the start and end time for the Epoch.
 
