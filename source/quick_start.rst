@@ -74,37 +74,37 @@ Create a Measurement and add a Source
 
 Now it's time to add data to our Experiment.  This is done by creating a Measurement and subsequently attaching that Measurement to the Source, or subject, from which it was collected (cell line, animal, tissue sample, etc).  To begin, right click on the Experiment and select 'Insert Measurement...'. This wizard will create a trial with one Measurement. You may optionally add more measurements to this same trial after it has been created.
 
-Step 1 contains the start and end time for the Epoch.
+Step 1 contains the start and end time for the trial, referred to in Ovation as an Epoch.
 
 
 .. figure:: _static/insert_epoch_wizard1.png
    :figwidth: 60%
 
 
-Step 2 allows you to select the sources that are present during this Epoch. For this example, I will add the Source I created earlier, by selecting it on the left, and clicking the + button.
+Step 2 allows you to select the sources that were used in this trial, or add a new Source.  Select the Source on the left and click the + button.
 
 
 .. figure:: _static/select_source_wizard1.png
    :figwidth: 60%
 
 
-Sources are named within the scope of the Epoch. If you don't set a name, the default is created of the form 'label | id'. However, I'd like to rename the Source 'first mouse'.
+Next, you'll want to give a name to your Source.
 
 .. figure:: _static/select_source_wizard2.png
    :figwidth: 60%
 
 
-Steps 3-5 correspond to the protocol for this Epoch. I've chosen to skip that information, because my EpochGroup protocol document contains all the information I need.
+The next few steps are optional and will allow you to enter any relevant information on the protocol or instrumentation used to gather your measurements in this particular trial.
 
 
-Step 6 is where I choose the data file to add. I chose to add an image here, but I could have chosen a csv file, or any other single file of data. For image formats that contain important metadata or span multiple files, choose 'Insert Image...' instead of 'Insert Measurement...'.
+Step 6 is where you will choose the data file from your Measurment to add.  Some files will be available for view directly in Ovation and others will contain a link to their native application for viewing.
 
 
 .. figure:: _static/insert_meausrement_image.png
    :figwidth: 60%
 
 
-The next two steps allow you to select which among the sources and devices associated with the Epoch should be associated with this particular measurement. By default, all sources and devices are associated with all measurements; however, if a measurement is associated with just one source, or just one device, you may uncheck the irrelevant sources and devices here. Since I have not added any devices to this Experiment's EquipmentSetup, my device list below is empty.
+The next two steps allow you to select which among the sources and devices associated with the trial (Epoch) should be associated with this particular Measurement. 
 
 +------------------------------------------------------------+------------------------------------------------------------------+
 | .. figure:: _static/insert_meausrement_select_sources.png  | .. figure:: _static/insert_meausrement_select_empty_devices.png  |
