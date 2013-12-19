@@ -7,7 +7,7 @@
             <li><a href="installation.html">Install</a></li>
             <li class="active"><a href="#">Create a Project</a></li>
             <li><a href="create_experiment.html">Create an Experiment</a></li>
-            <li><a href="create_measurement_and_source.html">Add a Measurement</a></li>
+            <li><a href="create_measurement_and_source.html">Create a Measurement and add a Source</a></li>
         </ul>
     </div>
 

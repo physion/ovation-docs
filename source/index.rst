@@ -23,17 +23,16 @@ Getting Started
             <li><a href="installation.html">Install</a></li>
             <li><a href="create_project.html">Create a Project</a></li>
             <li><a href="create_experiment.html">Create an Experiment</a></li>
-            <li><a href="create_measurement_and_source.html">Add a Measurement</a></li>
+            <li><a href="create_measurement_and_source.html">Create a Measurement and add a Source</a></li>
         </ul>
     </div>
     
-.. .. toctree::
-..     :maxdepth: 1
-.. 
-..     installation
-..     create_project
-..     create_experiment
-..     create_measurement_and_source
+.. toctree::
+     :maxdepth: 1
+     :hidden:
+     
+     Getting Started <installation>
+
 
 
 Resources
