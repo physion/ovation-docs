@@ -6,7 +6,7 @@
 .. image:: _static/physion_ovation_logo.png
     :alt: Physion Ovation
     :height: 120
-    
+
 |
 
 Welcome to `Ovation <http://ovation.io>`_! The workflow below will walk you through the Ovation installation and help you get started with your data.  You can always reach us at `support@ovation.io <mailto:support@ovation.io>`_ if you have any questions.
@@ -23,23 +23,25 @@ Getting Started
     quick_start
 
 
-Guides
-======
+Resources
+=========
 
 .. toctree::
     :maxdepth: 1
-    
+
     guides/source_guide
     guides/procedure_guide
     tabular_data
-    
-Using Ovation With…
-===================
+
+Integration
+===========
 
 .. toctree::
     :maxdepth: 1
-    
+
     R <using_rovation>
+    Python <using_ovation_python>
+    Matlab <using_ovation_matlab>
 
 
 
