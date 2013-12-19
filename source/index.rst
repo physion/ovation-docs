@@ -13,11 +13,10 @@ Welcome to `Ovation <http://ovation.io>`_! The workflow below will walk you thro
 
 Want to learn more about Ovation before you get started?
 
-Getting Started
-===============
-
 .. raw:: html
 
+    <br/>
+    <br/>
     <div class="span12 text-center">
         <ul class="nav nav-pills" style="display: inline-block">
             <li><a href="installation.html">Install</a></li>
@@ -28,7 +27,6 @@ Getting Started
     </div>
     
 .. toctree::
-     :maxdepth: 1
      :hidden:
      
      Getting Started <installation>
@@ -56,8 +54,10 @@ Integration
     Matlab <using_ovation_matlab>
 
 
-
 If you’re having trouble and you can't find a solution here, let us know! Post a question on StackOverflow, or send us a note at `support@ovation.io <mailto:support@ovation.io>`_
+
+*Matlab is a registered trademark of The Mathworks, Inc.*
 
 .. |(R)| unicode:: U+00AE
 .. |Ovation(TM)| unicode:: Ovation U+2122
+.. |Matlab(TM)| unicode:: Matlab U+2122
