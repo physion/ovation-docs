@@ -27,13 +27,15 @@ Welcome to `Ovation <http://ovation.io>`_! The workflow below will walk you thro
             <li><a href="create_experiment.html">Create an Experiment</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
             <li><a href="create_measurement_and_source.html">Create a Measurement and add a Source</a></li>
+            <li class="disabled"><a href="#">&raquo;</a></li>
+            <li><a href="create_team.html">Create a Team</a></li>
         </ul>
     </div>
     
 .. toctree::
      :hidden:
      
-     Getting Started <installation>
+     Getting Started <about_ovation>
 
 
 

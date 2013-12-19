@@ -13,6 +13,8 @@
             <li><a href="create_experiment.html">Create an Experiment</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
             <li  class="active"><a href="#">Create a Measurement and add a Source</a></li>
+            <li class="disabled"><a href="#">&raquo;</a></li>
+            <li><a href="create_team.html">Create a Team</a></li>
         </ul>
     </div>
     

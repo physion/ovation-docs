@@ -1,10 +1,10 @@
-.. _doc-about-ovation:
+.. _doc-create-team:
 
 .. raw:: html
 
     <div class="span12 text-center">
         <ul class="nav nav-pills" style="display: inline-block">
-            <li class="active"><a href="#">About Ovation</a></li>
+            <li><a href="about_ovation.html">About Ovation</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
             <li><a href="installation.html">Install</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
@@ -14,16 +14,10 @@
             <li class="disabled"><a href="#">&raquo;</a></li>
             <li><a href="create_measurement_and_source.html">Create a Measurement and add a Source</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
-            <li><a href="create_team.html">Create a Team</a></li>
+            <li class="active"><a href="#">Create a Team</a></li>
         </ul>
     </div>
-
-*************
-About Ovation
-*************
-
-Ovation is the revolutionary data management service that empowers researchers through the seamless organization of multiple data formats and sources, preservation of the link between raw data and analyses and the ability to securely share of all of this with colleagues and collaborators.
-
     
-.. figure:: _static/data_model.png
-    :align: center
+***************************
+Create a Collaborative Team
+***************************
