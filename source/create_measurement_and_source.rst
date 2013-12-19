@@ -1,5 +1,14 @@
 .. _doc-getting-started-create-measurement-and-source:
 
+.. raw:: html
+
+    <ul class="nav nav-pills">
+      <li><a href="installation.html">Install</a></li>
+      <li><a href="create_project.html">Create a Project</a></li>
+      <li><a href="create_experiment.html">Create an Experiment</a></li>
+      <li  class="active"><a href="#">Add a Measurement</a></li>
+    </ul>
+    
 *************************************
 Create a Measurement and add a Source
 *************************************

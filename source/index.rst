@@ -16,13 +16,22 @@ Want to learn more about Ovation before you get started?
 Getting Started
 ===============
 
-.. toctree::
-    :maxdepth: 1
+.. raw:: html
 
-    installation
-    create_project
-    create_experiment
-    create_measurement_and_source
+    <ul class="nav nav-pills center-block">
+      <li><a href="installation.html">Install</a></li>
+      <li><a href="create_project.html">Create a Project</a></li>
+      <li><a href="create_experiment.html">Create an Experiment</a></li>
+      <li><a href="create_measurement_and_source.html">Add a Measurement</a></li>
+    </ul>
+    
+.. .. toctree::
+..     :maxdepth: 1
+.. 
+..     installation
+..     create_project
+..     create_experiment
+..     create_measurement_and_source
 
 
 Resources

@@ -1,5 +1,14 @@
 .. _doc-getting-started-create-project:
 
+.. raw:: html
+
+    <ul class="nav nav-pills">
+      <li><a href="installation.html">Install</a></li>
+      <li class="active"><a href="#">Create a Project</a></li>
+      <li><a href="create_experiment.html">Create an Experiment</a></li>
+      <li><a href="create_measurement_and_source.html">Add a Measurement</a></li>
+    </ul>
+
 ****************
 Create a Project
 ****************
@@ -42,3 +51,7 @@ TIP:  If you do not see the new Project in the "Project Navigator" after finishi
 
 .. image:: _static/full_screen_after_project1.png
    :width: 60%
+   
+   
+.. _ovation.io: http://ovation.io
+  

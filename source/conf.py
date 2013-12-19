@@ -107,7 +107,7 @@ html_theme_options = {
     'navbar_title': "Ovation",
 
     # Tab name for entire site. (Default: "Site")
-    'navbar_site_name': "Docs",
+    'navbar_site_name': "Topics",
     
     # A list of tuples containing pages or urls to link to.
         # Valid tuples should be in the following forms:

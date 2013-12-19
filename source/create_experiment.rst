@@ -1,5 +1,14 @@
 .. _doc-getting-started-create-experiment:
 
+.. raw:: html
+
+    <ul class="nav nav-pills">
+      <li><a href="installation.html">Install</a></li>
+      <li><a href="create_project.html">Create a Project</a></li>
+      <li class="active"><a href="#">Create an Experiment</a></li>
+      <li><a href="create_measurement_and_source.html">Add a Measurement</a></li>
+    </ul>
+    
 ********************
 Create an Experiment
 ********************
