@@ -69,10 +69,10 @@ We are now ready to add the data to our Experiment!
 
 .. _sec-new-data:
 
-Adding Data
+Create a Measurement and add a Source
 ===========
 
-Adding data is a two part process. First, we create an Epoch object. Each Epoch represents an event that happened during a specific time, involving a set of Sources. The next step is to add one or many Measurements to the newly created Epoch. To begin, right click on the 'Control' EpochGroup and select 'Insert Measurement...'. This wizard will create an Epoch object with one Measurement object. You may optionally add more measurements to the Epoch object after it has been created.
+Now it's time to add data to our Experiment.  This is done by creating a Measurement and subsequently attaching that Measurement to a Source or subject.  To begin, right click on the Experiment and select 'Insert Measurement...'. This wizard will create a trial with one Measurement. You may optionally add more measurements to this same trial after it has been created.
 
 Step 1 contains the start and end time for the Epoch.
 
