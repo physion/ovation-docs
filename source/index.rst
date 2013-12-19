@@ -20,7 +20,9 @@ Getting Started
     :maxdepth: 1
 
     installation
-    quick_start
+    create_project
+    create_experiment
+    create_measurement_and_source
 
 
 Resources
