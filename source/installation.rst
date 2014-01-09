@@ -22,9 +22,8 @@
 Installation
 ************
 
-|Ovation(TM)| is a data management platform that helps researchers organize, track, search and share their data. Your data is stored in the cloud, but you get the added advantage of a local interface that will sync your activity and data seamlessly.  To get started with Ovation, sign up for an account on `ovation.io <http://ovation.io>`_. Once you've signed up for an account, you can download_ the Ovation application and get started.
+|Ovation(TM)| is a data management platform that helps researchers organize, track, search and share their data. Your data is stored in the cloud, but you get the added advantage of a local interface that will sync your activity and data seamlessly.  To get started with Ovation, sign up for an account on `ovation.io <http://ovation.io>`_. Once you've signed up for an account, you can `download <http://ovation.io/downloads>`_ the Ovation application and get started.
 
-.. _download: http://ovation.io/downloads
 
 Requirements
 ============
@@ -34,7 +33,7 @@ Ovation supports the following operating systems and architectures:
 * OS X 10.8 and later
 * Windows 7 and later (64-bit)
 
-Ovation requires the Java runtime (JRE) version 7 or later. Please download_ and install Java before installing Ovation.
+Ovation requires the Java runtime (JRE) version 7 or later. Please `download <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_ and install Java before installing Ovation.
 
 
 Installation
@@ -62,6 +61,7 @@ These instructions detail installation on Mac OS X 10.8 or later.
     :align: center
 
     Double-click the Ovation application in the "Applications/" folder to start Ovation
+    
 
 Windows
 -------
