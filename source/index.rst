@@ -46,6 +46,7 @@ Resources
     :maxdepth: 1
 
     guides/source_guide
+    guides/procedure_guide
     tabular_data
 ..    guides/procedure_guide
 
