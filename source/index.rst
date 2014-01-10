@@ -45,9 +45,9 @@ Resources
 .. toctree::
     :maxdepth: 1
 
-    guides/source_guide
-    guides/procedure_guide
-    guides/analysis_records_guide
+    source_guide
+    procedure_guide
+    analysis_records_guide
     tabular_data
 ..    guides/procedure_guide
 

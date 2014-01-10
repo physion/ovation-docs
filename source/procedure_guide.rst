@@ -20,14 +20,14 @@ Ovation's data model contains a number of *Procedure* elements that describe how
 
 .. _fig-expanded-data-model:
 
-.. figure:: ../_static/expanded-data-model.png
+.. figure:: _static/expanded-data-model.png
    :align: left
    
    **Expanded Structural Data Model**
    
 *Epochs* deserve a bit of special attention because they represent Ovation's "unit of scientific work". During an *Epoch* a procedure is performed, one or more named *Measurements* are made and/or one or more *Sources* are derived. 
 
-.. figure:: ../_static/epoch-data-model.png
+.. figure:: _static/epoch-data-model.png
    :align: right
    
    **Epoch Data Model**
@@ -36,7 +36,7 @@ An *Epoch* contains references to the *Sources* from which *Measurements* were m
 
 Each of the ``Epoch > EpochGroup > Experiment`` elements may be associated with a *Protocol*. It's up to you to determine where it makes most sense to attach the protocol for your experiment. If you have a protocol that describes the entire experiment, it makes sense to attach it at the ``Experiment``. If you have a potentially different protocol describing the measurements made in each Epoch, the ``Protocol(s)`` should be associated with the ``Epochs``.
 
-.. figure:: ../_static/source-derivation.png
+.. figure:: _static/source-derivation.png
     :align: right
     
     **Source Derivation**
@@ -53,7 +53,7 @@ Analysis Records
 
 :ref:`AnalysisRecords <doc-analysis-records-guide>` also have a *Protocol*. Instead of describing how a *Measurement* is made, an *AnalysisRecord's* *Protocol* describes how the analysis was performed—the procedure for deriving the results from the inputs.
 
-.. figure:: ../_static/protocol-analysisrecord.png
+.. figure:: _static/protocol-analysisrecord.png
     :align: left
     
     **Analysis procedure is described by a Protocol**
