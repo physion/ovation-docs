@@ -31,7 +31,8 @@ Before you can add data to your Ovation database, you must login using your emai
    :figwidth: 50%
 .. :padding: 10px
 
-.. note:: If you've forgotten your `ovation.io`_ password, you can `reset <https://ovation.io/users/password/new>`_ it.
+If you've forgotten your `ovation.io`_ password, you can `reset <https://ovation.io/users/password/new>`_ it.
+
 
 .. _sec-new-project:
 

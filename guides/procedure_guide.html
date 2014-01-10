@@ -1,12 +1,3 @@
-
-  
-  
- 
-  
-  
- 
-
-
 <!DOCTYPE html>
 
 
@@ -39,6 +30,8 @@
     <script type="text/javascript" src="../_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Ovation Scientific Data Management System 2.0 Beta documentation" href="../index.html" />
+    <link rel="next" title="Analysis Records" href="analysis_records_guide.html" />
+    <link rel="prev" title="Sources" href="source_guide.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -56,7 +49,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../index.html">Ovation</a>
+        <a class="navbar-brand" href="../index.html"><img src="_static/ovation_logo.png">
+          Ovation</a>
         <span class="navbar-text navbar-version pull-left"><b>2.0</b></span>
       </div>
 
@@ -75,12 +69,19 @@
     ><ul>
 <li class="toctree-l1"><a class="reference internal" href="../about_ovation.html">Getting Started</a></li>
 </ul>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="source_guide.html">Sources</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="source_guide.html#metadata">Metadata</a></li>
 <li class="toctree-l2"><a class="reference internal" href="source_guide.html#derived-sources">Derived Sources</a></li>
 </ul>
 </li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Protocols and Procedures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#making-measurements">Making Measurements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#source-derivation">Source derivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#analysis-records">Analysis Records</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_records_guide.html">Analysis Records</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tabular_data.html">Importing and analyzing tabular (CSV) data</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tabular_data.html#importing-tabular-csv-data">Importing tabular (CSV) data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tabular_data.html#retrieving-tabular-csv-data">Retrieving tabular (CSV) data</a></li>
@@ -114,6 +115,10 @@
             
               
                 
+  <li><a href="source_guide.html"
+         title="Previous Chapter: Sources">&laquo; Sources</a></li>
+  <li><a href="analysis_records_guide.html"
+         title="Next Chapter: Analysis Records">Analysis Records &raquo;</a></li>
               
             
             
@@ -141,16 +146,39 @@
       
   <div class="section" id="protocols-and-procedures">
 <span id="doc-procedure-guide"></span><h1>Protocols and Procedures<a class="headerlink" href="#protocols-and-procedures" title="Permalink to this headline">¶</a></h1>
-<p><tt class="docutils literal"><span class="pre">Protocols</span></tt> describe a <tt class="docutils literal"><span class="pre">Procedure</span></tt> for making a <em>Measurement</em>, creating a new <em>Source</em> or performing an <em>Analysis</em>. Ovation <tt class="docutils literal"><span class="pre">Protocol</span></tt> objects may contain written textual description. They may also contain a reference to computer code describing the process. Each <tt class="docutils literal"><span class="pre">Protocol</span></tt> should be represented only once in the Ovation database, even if the Procedure it describes is performed many times.</p>
-<p>A <tt class="docutils literal"><span class="pre">Procedure</span></tt> references the <tt class="docutils literal"><span class="pre">Protocol</span></tt> object and stores <em>protocol parameter</em> values, the values of any <em>variables</em> in the Procedure description such as reagent concentration, lot number, time intervals, etc.</p>
-<div class="section" id="epochs">
-<h2>Epochs<a class="headerlink" href="#epochs" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="source-derivation">
-<h3>Source Derivation<a class="headerlink" href="#source-derivation" title="Permalink to this headline">¶</a></h3>
+<p><tt class="docutils literal"><span class="pre">Protocols</span></tt> describe a <tt class="docutils literal"><span class="pre">Procedure</span></tt> for making a <em>Measurement</em>, creating a new <em>Source</em> or performing an <em>Analysis</em>. Ovation <em>Protocol</em> objects may contain written textual description or a reference to computer code that describes the protocol. They may also contain a reference to computer code describing the process. Each <em>Protocol</em> should be represented only once in the Ovation database, even if the <em>Procedure</em> it describes is performed many times.</p>
+<p>A <em>Procedure</em> references the <em>Protocol</em> object and stores <em>protocol parameter</em> values, the values of any <em>variables</em> in the <em>Procedure</em> description such as reagent concentration, lot number, time intervals, etc.</p>
+<div class="section" id="making-measurements">
+<span id="sec-procedures-measurements"></span><h2>Making Measurements<a class="headerlink" href="#making-measurements" title="Permalink to this headline">¶</a></h2>
+<p>Ovation&#8217;s data model contains a number of <em>Procedure</em> elements that describe how <em>Measurement(s)</em> are made during an experiment. As shown in the <a class="reference internal" href="#fig-expanded-data-model"><em>Expanded Structural Model</em></a> <em>Measurements</em> are made during an <tt class="docutils literal"><span class="pre">Experiment</span></tt>. An <em>Experiment</em> may be subdivided into one or more <em>Epochs</em>. An <tt class="docutils literal"><span class="pre">Epoch</span></tt> represents a segment of the experimental timeline with a known start and end time. In trial-based experiments, each trial is one <em>Epoch</em>. <em>Epochs</em> may be (optionally) grouped into <tt class="docutils literal"><span class="pre">EpochGroups</span></tt> to describe the experimental structure. In a trial-based experiment, <em>EpochGroups</em> would represent blocks of trials, such as &#8220;control&#8221;, &#8220;treament&#8221; and &#8220;recovery&#8221; blocks of a pharmacological study.</p>
+<div class="figure align-left" id="fig-expanded-data-model">
+<img alt="../_images/expanded-data-model.png" src="../_images/expanded-data-model.png" />
+<p class="caption"><strong>Expanded Structural Data Model</strong></p>
 </div>
+<p><em>Epochs</em> deserve a bit of special attention because they represent Ovation&#8217;s &#8220;unit of scientific work&#8221;. During an <em>Epoch</em> a procedure is performed, one or more named <em>Measurements</em> are made and/or one or more <em>Sources</em> are derived.</p>
+<div class="figure align-right">
+<img alt="../_images/epoch-data-model.png" src="../_images/epoch-data-model.png" />
+<p class="caption"><strong>Epoch Data Model</strong></p>
+</div>
+<p>An <em>Epoch</em> contains references to the <em>Sources</em> from which <em>Measurements</em> were made during that epoch (the &#8220;input sources&#8221;). Each input source may have a name within the <em>Epoch</em>. For example, a mouse in a behavioral experiment may have a <em>Source</em> identifier of <strong>xyz123</strong>, but within an <em>Epoch</em> of a behavioral experiment be referred to as the <strong>subject</strong> within the <em>Epoch&#8217;s</em> protocol. Each <em>Measurement</em> references one or more of its <em>Epoch&#8217;s</em> input sources by name to denote from which of the <em>Epoch&#8217;s</em> input sources were the <em>Measurement&#8217;s</em> data were taken.</p>
+<p>Each of the <tt class="docutils literal"><span class="pre">Epoch</span> <span class="pre">&gt;</span> <span class="pre">EpochGroup</span> <span class="pre">&gt;</span> <span class="pre">Experiment</span></tt> elements may be associated with a <em>Protocol</em>. It&#8217;s up to you to determine where it makes most sense to attach the protocol for your experiment. If you have a protocol that describes the entire experiment, it makes sense to attach it at the <tt class="docutils literal"><span class="pre">Experiment</span></tt>. If you have a potentially different protocol describing the measurements made in each Epoch, the <tt class="docutils literal"><span class="pre">Protocol(s)</span></tt> should be associated with the <tt class="docutils literal"><span class="pre">Epochs</span></tt>.</p>
+<div class="figure align-right">
+<img alt="../_images/source-derivation.png" src="../_images/source-derivation.png" />
+<p class="caption"><strong>Source Derivation</strong></p>
+</div>
+</div>
+<div class="section" id="source-derivation">
+<h2>Source derivation<a class="headerlink" href="#source-derivation" title="Permalink to this headline">¶</a></h2>
+<p>Top-level <tt class="docutils literal"><span class="pre">Source</span></tt> objects in Ovation should represent individuals (animals, humans etc.). What about experiments performed on a derived tissue or an other &#8220;part&#8221; of a <em>Source</em>? In Ovation these &#8220;derived&#8221; <em>Sources</em> are children of their <em>parent</em> <em>Source</em>. Ovation can record information about the <em>Protocol</em> used to derive children <em>Sources</em> from their parent(s). Ovation stores an <em>Epoch</em> that describes the derivation procedure. The <em>parent</em> <em>Sources</em> are the input sources to this <em>Epoch</em> and the derived children <em>Sources</em> are the output sources of this <em>Epoch</em>. Any quality control or other <em>Measurements</em> made during the procedure may be recorded as <em>Measurements</em> on this <em>Epoch</em> as well.</p>
 </div>
 <div class="section" id="analysis-records">
 <h2>Analysis Records<a class="headerlink" href="#analysis-records" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="analysis_records_guide.html#doc-analysis-records-guide"><em>AnalysisRecords</em></a> also have a <em>Protocol</em>. Instead of describing how a <em>Measurement</em> is made, an <em>AnalysisRecord&#8217;s</em> <em>Protocol</em> describes how the analysis was performed—the procedure for deriving the results from the inputs.</p>
+<div class="figure align-left">
+<img alt="../_images/protocol-analysisrecord.png" src="../_images/protocol-analysisrecord.png" />
+<p class="caption"><strong>Analysis procedure is described by a Protocol</strong></p>
+</div>
+<p>It is common for <em>AnalysisRecords&#8217;</em> <em>Protocol</em> to be described by computer code (e.g. R or Python code) which can be referenced by the URL and revision of the code in a source repository (e.g. <a class="reference external" href="http://github.com">GitHub</a>).</p>
 </div>
 </div>
 
@@ -167,8 +195,8 @@
     </p>
     <p>
         &copy; Copyright 2013, Physion.<br/>
-      Last updated on Dec 19, 2013.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2b3.<br/>
+      Last updated on Jan 10, 2014.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.<br/>
     </p>
   </div>
 </footer>
