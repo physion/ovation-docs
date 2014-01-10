@@ -55,6 +55,7 @@ gh-pages:
 	rm -rf build _sources _static _images guides
 	git checkout master $(GH_PAGES_SOURCES)
 	git reset HEAD
+	make clean
 	make html
 	mv -fv build/html/* .
 	rm -rf $(GH_PAGES_SOURCES) build
