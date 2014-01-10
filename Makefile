@@ -52,11 +52,11 @@ help:
 
 gh-pages:
 	git checkout gh-pages
-	rm -rf build _sources _static _images
+	rm -rf build _sources _static _images guides
 	git checkout master $(GH_PAGES_SOURCES)
 	git reset HEAD
 	make html
-	mv -fv build/html/* ./
+	mv -fv build/html/* .
 	rm -rf $(GH_PAGES_SOURCES) build
 	git add -A
 	git commit -m "Deploying gh-pages for `git log master -1 --pretty=short --abbrev-commit`" && git push origin gh-pages
