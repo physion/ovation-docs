@@ -43,7 +43,7 @@ Each of the ``Epoch > EpochGroup > Experiment`` elements may be associated with 
 
 Source derivation
 =================
-    
+
 Top-level ``Source`` objects in Ovation should represent individuals (animals, humans etc.). What about experiments performed on a derived tissue or an other "part" of a *Source*? In Ovation these "derived" *Sources* are children of their *parent* *Source*. Ovation can record information about the *Protocol* used to derive children *Sources* from their parent(s). Ovation stores an *Epoch* that describes the derivation procedure. The *parent* *Sources* are the input sources to this *Epoch* and the derived children *Sources* are the output sources of this *Epoch*. Any quality control or other *Measurements* made during the procedure may be recorded as *Measurements* on this *Epoch* as well.
 
 

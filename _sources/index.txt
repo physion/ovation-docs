@@ -49,7 +49,7 @@ Resources
     procedure_guide
     analysis_records_guide
     tabular_data
-..    guides/procedure_guide
+    
 
 Integration
 ===========
