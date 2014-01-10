@@ -5,13 +5,13 @@
 Analysis Records
 ************************
 
-.. figure:: ../_static/protocol-analysisrecord.png
+.. figure:: _static/protocol-analysisrecord.png
     :align: right
 
 ``AnalysisRecords`` describe a single step of analysis in the chain from *Measurements* to “final” result (yeah, we know—science is never really done!). An ``AnalysisRecord`` associates inputs—*Measurements* or the outputs of other *AnalysisRecords*, a *Protocol*, ``analysisParameters`` (like ``protocolParameters`` for a *Procedure*) and the results (“outputs”).
 
 
-.. figure:: ../_static/chained-analysis-records.png
+.. figure:: _static/chained-analysis-records.png
     :align: center
     
     **AnalysisRecords can be chained**

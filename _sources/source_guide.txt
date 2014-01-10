@@ -6,13 +6,13 @@ Sources
 
 ``Sources`` represent the subjects of experimental measurements. For example, each patient in a clinincal trial would be represented by a single ``Source`` object. Likewise each mouse in a laboratory study or each field site in a field ecology study would be represented by a single ``Source`` object. 
 
-.. figure:: ../_static/subject-mri.png
+.. figure:: _static/subject-mri.png
     :align: right
     
-.. figure:: ../_static/mouse.png
+.. figure:: _static/mouse.png
     :align: right
 
-.. figure:: ../_static/field-ecology-site-rmbl.png
+.. figure:: _static/field-ecology-site-rmbl.png
     :align: right
 
 
