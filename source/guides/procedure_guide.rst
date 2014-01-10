@@ -15,17 +15,21 @@ A *Procedure* references the *Protocol* object and stores *protocol parameter* v
 Making Measurements
 ===================
 
-Ovation's data model contains a number of *Procedure* elements that describe how *Measurement(s)* are made during an experiment. As shown in the :ref:`Expanded Structural Model <fig-expanded-data-model>` *Measurements* are made during an ``Experiment``. An *Experiment* may be subdivided into one or more ``Epochs``. An :ref:`Epoch <sec-procedures-epochs>` represents a segment of the experimental timeline with a known start and end time. In trial-based experiments, each trial is one *Epoch*. *Epochs* may be (optionally) grouped into ``EpochGroups`` to describe the experimental structure. In a trial-based experiment, *EpochGroups* would represent blocks of trials, such as "control", "treament" and "recovery" blocks of a pharmacological study.
+Ovation's data model contains a number of *Procedure* elements that describe how *Measurement(s)* are made during an experiment. As shown in the :ref:`Expanded Structural Model <fig-expanded-data-model>` *Measurements* are made during an ``Experiment``. An *Experiment* may be subdivided into one or more *Epochs*. An ``Epoch`` represents a segment of the experimental timeline with a known start and end time. In trial-based experiments, each trial is one *Epoch*. *Epochs* may be (optionally) grouped into ``EpochGroups`` to describe the experimental structure. In a trial-based experiment, *EpochGroups* would represent blocks of trials, such as "control", "treament" and "recovery" blocks of a pharmacological study.
 
-.. figure:: _static/expanded-data-model.png
-   :figwidth: 50%
-   :align: right
+.. _fig-expanded-data-model:
+
+.. figure:: ../_static/expanded-data-model.png
+   :align: left
+   
+   **Expanded Structural Data Model**
    
 *Epochs* deserve a bit of special attention because they represent Ovation's "unit of scientific work". During an *Epoch* a procedure is performed, one or more named *Measurements* are made and/or one or more *Sources* are derived. 
 
-.. figure:: _static/epoch-data-model.png
-   :figwidth: 50%
+.. figure:: ../_static/epoch-data-model.png
    :align: right
+   
+   **Epoch Data Model**
 
 An *Epoch* contains references to the *Sources* from which *Measurements* were made during that epoch (the "input sources"). Each input source may have a name within the *Epoch*. For example, a mouse in a behavioral experiment may have a *Source* identifier of **xyz123**, but within an *Epoch* of a behavioral experiment be referred to as the **subject** within the *Epoch's* protocol. Each *Measurement* references one or more of its *Epoch's* input sources by name to denote from which of the *Epoch's* input sources were the *Measurement's* data were taken.
 
@@ -35,26 +39,21 @@ Each of the ``Epoch > EpochGroup > Experiment`` elements may be associated with 
 Source derivation
 =================
 
+.. figure:: ../_static/source-derivation.png
+    :align: right
+    
+    **Source Derivation**
+    
 Top-level ``Source`` objects in Ovation should represent individuals (animals, humans etc.). What about experiments performed on a derived tissue or an other "part" of a *Source*? In Ovation these "derived" *Sources* are children of their *parent* *Source*. Ovation can record information about the *Protocol* used to derive children *Sources* from their parent(s). Ovation stores an *Epoch* that describes the derivation procedure. The *parent* *Sources* are the input sources to this *Epoch* and the derived children *Sources* are the output sources of this *Epoch*. Any quality control or other *Measurements* made during the procedure may be recorded as *Measurements* on this *Epoch* as well.
-
-.. figure:: _static/source-derivation.png
-    :figwidth: 50%
-    :aligh: right
 
 
 Analysis Records
 ================
 
-AnalysisRecords describe a single step of analysis in the chain from *Measurements* to “final” result (yeah, we know—science is never really done!). An ``AnalysisRecord`` associates inputs—*Measurements* or the outputs of other *AnalysisRecords*, a *Protocol*, ``analysisParameters`` (like ``protocolParameters`` for a *Procedure*) and the results (“outputs”).
 
-.. figure:: _static/protocol-analysisrecord.png
-    :figwidth: 50%
+.. figure:: ../_static/protocol-analysisrecord.png
     :align: right
 
 
-*AnalysisRecords* can be chained using the output of one *AnalysisRecord* as the input to “downstream” *AnalysisRecords*. Use chained records to keep track of how you got from your (awesome) *Measurements* to your (awesome) results! And just in case you realize that you need to redo part of an analysis (we’ve been there!), you can use these *AnalysisRecord* chains to find all of the downstream analyses that should also be revisited.
+:ref:`AnalysisRecords <doc-analysis-records-guide>` also have a *Protocol*.
 
-.. figure:: _static/chained-analysis-records.png
-    :figwidth: 50%
-    :align: right
-    

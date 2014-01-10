@@ -47,6 +47,7 @@ Resources
 
     guides/source_guide
     guides/procedure_guide
+    guides/analysis_records_guide
     tabular_data
 ..    guides/procedure_guide
 
