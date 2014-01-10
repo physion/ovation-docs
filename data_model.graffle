@@ -26,7 +26,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2014-01-10 04:55:05 +0000</string>
+	<string>2014-01-10 06:02:38 +0000</string>
 	<key>Modifier</key>
 	<string>Barry Wark</string>
 	<key>NotesVisible</key>
@@ -1021,13 +1021,67 @@
 							</dict>
 							<key>Text</key>
 							<dict>
+								<key>RTFD</key>
+								<data>
+								BAtzdHJlYW10
+								eXBlZIHoA4QB
+								QISEhBJOU0F0
+								dHJpYnV0ZWRT
+								dHJpbmcAhIQI
+								TlNPYmplY3QA
+								hZKEhIQITlNT
+								dHJpbmcBlIQB
+								KwtNZWFzdXJl
+								bWVudIaEAmlJ
+								AQuShISEDE5T
+								RGljdGlvbmFy
+								eQCUhAFpA5KE
+								lpYHTlNDb2xv
+								coaShISEB05T
+								Q29sb3IAlIQB
+								YwKEBGZmZmaD
+								2tjYPYOLigo/
+								g9bUVD4BhpKE
+								lpYQTlNQYXJh
+								Z3JhcGhTdHls
+								ZYaShISEEE5T
+								UGFyYWdyYXBo
+								U3R5bGUAlIQE
+								Q0NAUwIAhISE
+								B05TQXJyYXkA
+								lJkMkoSEhAlO
+								U1RleHRUYWIA
+								lIQCQ2YAHIaS
+								hKKhADiGkoSi
+								oQBUhpKEoqEA
+								cIaShKKhAIGM
+								AIaShKKhAIGo
+								AIaShKKhAIHE
+								AIaShKKhAIHg
+								AIaShKKhAIH8
+								AIaShKKhAIEY
+								AYaShKKhAIE0
+								AYaShKKhAIFQ
+								AYaGAIaShJaW
+								Bk5TRm9udIaS
+								hISEBk5TRm9u
+								dB6UmTCEBVs0
+								OGNdBgAAACgA
+								AAD//kgAZQBs
+								AHYAZQB0AGkA
+								YwBhAE4AZQB1
+								AGUALQBMAGkA
+								ZwBoAHQAhAFm
+								DJsAmwGbAJsA
+								hoaG
+								</data>
 								<key>Text</key>
 								<string>{\rtf1\ansi\ansicpg1252\cocoartf1265
 \cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Light;}
-{\colortbl;\red255\green255\blue255;}
+{\colortbl;\red255\green255\blue255;\red27\green122\blue40;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\fs24 \cf1 Measurement}</string>
+\f0\fs24 \cf2 Measurement}</string>
 								<key>VerticalPad</key>
 								<integer>0</integer>
 							</dict>
@@ -2463,7 +2517,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{287.20630273647879, 195.15402885887545}, {60, 25}}</string>
+					<string>{{291.46408933186689, 195.12603815751677}, {60, 25}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -2523,7 +2577,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{288.51052937050736, 148.18712673120604}, {60, 25}}</string>
+					<string>{{294.24955203413765, 148.18712673120604}, {60, 25}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -2608,7 +2662,7 @@
 					<real>-1</real>
 					<key>Points</key>
 					<array>
-						<string>{270.70689929716605, 130.11759291861657}</string>
+						<string>{287.06221060259929, 130.11759291861657}</string>
 						<string>{310.28327517379518, 207.69954086204041}</string>
 						<string>{360.87793809147877, 207.41952342516515}</string>
 					</array>
@@ -3036,7 +3090,7 @@ source: "B"}</string>
 					<real>-1</real>
 					<key>Points</key>
 					<array>
-						<string>{270.70689929716605, 130.11759291861657}</string>
+						<string>{287.06221060259929, 130.11759291861657}</string>
 						<string>{360.87795224779524, 160.68712673120604}</string>
 					</array>
 					<key>Style</key>
@@ -4505,11 +4559,11 @@ source: "A"}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.52883</string>
+								<string>0.157497</string>
 								<key>g</key>
-								<string>0.269505</string>
+								<string>0.479658</string>
 								<key>r</key>
-								<string>0.0320406</string>
+								<string>0.105823</string>
 							</dict>
 						</dict>
 						<key>stroke</key>
@@ -4750,11 +4804,11 @@ source: "A"}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.52883</string>
+								<string>0.157497</string>
 								<key>g</key>
-								<string>0.269505</string>
+								<string>0.479658</string>
 								<key>r</key>
-								<string>0.0320406</string>
+								<string>0.105823</string>
 							</dict>
 						</dict>
 						<key>stroke</key>
@@ -4989,11 +5043,11 @@ source: "A"}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.52883</string>
+								<string>0.157497</string>
 								<key>g</key>
-								<string>0.269505</string>
+								<string>0.479658</string>
 								<key>r</key>
-								<string>0.0320406</string>
+								<string>0.105823</string>
 							</dict>
 						</dict>
 						<key>stroke</key>
@@ -5268,11 +5322,11 @@ source: "A"}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.52883</string>
+								<string>0.157497</string>
 								<key>g</key>
-								<string>0.269505</string>
+								<string>0.479658</string>
 								<key>r</key>
-								<string>0.0320406</string>
+								<string>0.105823</string>
 							</dict>
 						</dict>
 						<key>stroke</key>
@@ -5389,11 +5443,11 @@ source: "A"}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.52883</string>
+								<string>0.157497</string>
 								<key>g</key>
-								<string>0.269505</string>
+								<string>0.479658</string>
 								<key>r</key>
-								<string>0.0320406</string>
+								<string>0.105823</string>
 							</dict>
 						</dict>
 						<key>stroke</key>
@@ -5574,11 +5628,11 @@ source: "A"}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.52883</string>
+								<string>0.157497</string>
 								<key>g</key>
-								<string>0.269505</string>
+								<string>0.479658</string>
 								<key>r</key>
-								<string>0.0320406</string>
+								<string>0.105823</string>
 							</dict>
 						</dict>
 						<key>stroke</key>
@@ -5640,11 +5694,11 @@ source: "A"}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.52883</string>
+								<string>0.157497</string>
 								<key>g</key>
-								<string>0.269505</string>
+								<string>0.479658</string>
 								<key>r</key>
-								<string>0.0320406</string>
+								<string>0.105823</string>
 							</dict>
 						</dict>
 						<key>stroke</key>
@@ -5761,11 +5815,11 @@ source: "A"}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.52883</string>
+								<string>0.157497</string>
 								<key>g</key>
-								<string>0.269505</string>
+								<string>0.479658</string>
 								<key>r</key>
-								<string>0.0320406</string>
+								<string>0.105823</string>
 							</dict>
 						</dict>
 						<key>stroke</key>
@@ -5890,11 +5944,11 @@ source: "A"}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.52883</string>
+								<string>0.157497</string>
 								<key>g</key>
-								<string>0.269505</string>
+								<string>0.479658</string>
 								<key>r</key>
-								<string>0.0320406</string>
+								<string>0.105823</string>
 							</dict>
 						</dict>
 						<key>stroke</key>
@@ -6012,11 +6066,11 @@ source: "A"}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.52883</string>
+								<string>0.157497</string>
 								<key>g</key>
-								<string>0.269505</string>
+								<string>0.479658</string>
 								<key>r</key>
-								<string>0.0320406</string>
+								<string>0.105823</string>
 							</dict>
 						</dict>
 						<key>stroke</key>
@@ -6078,11 +6132,11 @@ source: "A"}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.52883</string>
+								<string>0.157497</string>
 								<key>g</key>
-								<string>0.269505</string>
+								<string>0.479658</string>
 								<key>r</key>
-								<string>0.0320406</string>
+								<string>0.105823</string>
 							</dict>
 						</dict>
 						<key>stroke</key>
@@ -6199,11 +6253,11 @@ source: "A"}</string>
 							<key>Color</key>
 							<dict>
 								<key>b</key>
-								<string>0.52883</string>
+								<string>0.157497</string>
 								<key>g</key>
-								<string>0.269505</string>
+								<string>0.479658</string>
 								<key>r</key>
-								<string>0.0320406</string>
+								<string>0.105823</string>
 							</dict>
 						</dict>
 						<key>stroke</key>
@@ -6291,7 +6345,7 @@ source: "A"}</string>
 		<key>ExpandedCanvases</key>
 		<array/>
 		<key>Frame</key>
-		<string>{{0, 0}, {1223, 778}}</string>
+		<string>{{0, 0}, {1218, 778}}</string>
 		<key>ListView</key>
 		<true/>
 		<key>OutlineWidth</key>
@@ -6305,7 +6359,7 @@ source: "A"}</string>
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{-93, 0}, {941.57125190791658, 553.00002754518266}}</string>
+		<string>{{-91, 0}, {937.2441781399574, 553.00002754518266}}</string>
 		<key>Zoom</key>
 		<real>1.1555153131484985</real>
 		<key>ZoomValues</key>
