@@ -12,93 +12,55 @@
             <li class="disabled"><a href="#">&raquo;</a></li>
             <li><a href="create_experiment.html">Create an Experiment</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
-            <li  class="active"><a href="#">Create a Measurement and add a Source</a></li>
+            <li  class="active"><a href="#">Add a Source and Create a Measurement</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
             <li><a href="create_team.html">Create a Team</a></li>
         </ul>
     </div>
     
 *************************************
-Create a Measurement and add a Source
+Add a Source and create a Measurement
 *************************************
-
-.. _sec-new-data:
-
-Now it's time to add data to our Experiment.  This is done by creating a Measurement and subsequently attaching that Measurement to the Source, or subject, from which it was collected (cell line, animal, tissue sample, etc).  To begin, right click on the Experiment and select 'Insert Measurement...'. This wizard will create a trial with one Measurement. You may optionally add more measurements to this same trial after it has been created.
-
-Step 1 contains the start and end time for the trial, referred to in Ovation as an Epoch.
-
-
-.. figure:: _static/insert_epoch_wizard1.png
-   :figwidth: 60%
-
-
-Step 2 allows you to select the sources that were used in this trial, or add a new Source.  Select the Source on the left and click the + button.
-
-
-.. figure:: _static/select_source_wizard1.png
-   :figwidth: 60%
-
-
-Next, you'll want to give a name to your Source.
-
-.. figure:: _static/select_source_wizard2.png
-   :figwidth: 60%
-
-
-The next few steps are optional and will allow you to enter any relevant information on the protocol or instrumentation used to gather your measurements in this particular trial.
-
-
-Step 6 is where you will choose the data file from your Measurment to add.  Some files will be available for view directly in Ovation and others will contain a link to their native application for viewing.
-
-
-.. figure:: _static/insert_meausrement_image.png
-   :figwidth: 60%
-
-
-The next two steps allow you to select which among the sources and devices associated with the trial (Epoch) should be associated with this particular Measurement.
-
-+------------------------------------------------------------+------------------------------------------------------------------+
-| .. figure:: _static/insert_meausrement_select_sources.png  | .. figure:: _static/insert_meausrement_select_empty_devices.png  |
-+------------------------------------------------------------+------------------------------------------------------------------+
-
-Great, we have now inserted our first Measurement! Follow either the 'Insert Measurement...', 'Insert Numeric Measurement...', or 'Insert Image...' wizards to insert more data.
-
-
-.. figure:: _static/measurement_inserted.png
-   :figwidth: 60%
-
-
 
 .. _sec-new-source:
 
-Add a `Source`
-#####################
-
-Sources represent the subject of a Measurement. A Source may be a cell line, tissue, specific animal or any other object from which you have taken a measurement.
-
-.. tip::
-    You may want to store additional information about the individual, such as sex, birth date, etc. as annotations on the Source object.
+Source
+======
 
 
-Insert a Source object by right-clicking in the "Source Navigator" and choosing :guilabel:`Insert Source...`:
+.. raw:: html
 
-.. image:: _static/insert_source.png
-   :width: 60%
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <p>Sources represent the subject of a Measurement. A Source may be a cell line, tissue, specific animal or any other object from which you have taken a measurement.</p>
+                <p>You may want to store additional information about the individual, such as sex, birth date, etc. as annotations on the Source object. To add annotations to the newly created Source, select the Source in the "Source Navigator" window and enter the annotations in the "Properties View" window.</p>
+            </div>
+            <div class="col-md-7">
+                <iframe width="560" height="315" src="//www.youtube.com/embed/u_EGXZGFGQk" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    
+    
+.. _sec-new-measurement:
 
+Measurement
+===========
 
-Enter the Source's label (the displayed name of the Source) and its identifier (e.g. an identification number within an animal facility database or in an other subject registration system).
+.. raw:: html
 
-.. figure:: _static/insert_source_wizard1.png
-   :width: 60%
-
-   Entering information for a new Source object. Here, the Source is given a label 'Mouse', and an identifier corresponding to the ID of the mouse in an external animal database.
-
-
-You may want to store additional information about the individual, such as sex, birth date, etc. as annotations on the Source object. To add annotations to the newly created Source, select the Source in the "Source Navigator" window and enter the annotations in the "Properties View" window (on the right side of the screen):
-
-.. image:: _static/source_with_properties.png
-   :width: 60%
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <p>You’re a scientist; you make measurements.  Those measurements are probably now stored in files on your computer.  Ovation stores those measurements in the cloud and displays them for you on your computer.  Click on a measurement to display the data.  If you select multiple measurements, they will all display at once. Double-click a Measurement to open it in a new Data Viewer window.</p>
+            </div>
+            <div class="col-md-7">
+                <iframe width="560" height="315" src="//www.youtube.com/embed/u0p8gDWWBV8" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    
 
 
 .. _ovation.io: http://ovation.io
