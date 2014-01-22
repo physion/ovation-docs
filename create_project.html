@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 
@@ -15,7 +16,7 @@
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
+        URL_ROOT:    '',
         VERSION:     '2.0 Beta',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -148,27 +149,36 @@
         <li class="disabled"><a href="#">&raquo;</a></li>
         <li><a href="create_experiment.html">Create an Experiment</a></li>
         <li class="disabled"><a href="#">&raquo;</a></li>
-        <li><a href="create_measurement_and_source.html">Create a Measurement and add a Source</a></li>
+        <li><a href="create_measurement_and_source.html">Add a Source and Create a Measurement</a></li>
         <li class="disabled"><a href="#">&raquo;</a></li>
         <li><a href="create_team.html">Create a Team</a></li>
     </ul>
 </div><div class="section" id="create-a-project">
 <h1>Create a Project<a class="headerlink" href="#create-a-project" title="Permalink to this headline">¶</a></h1>
-<p>Once you&#8217;ve <a class="reference internal" href="installation.html#doc-installation"><em>installed</em></a> Ovation, you&#8217;re ready to start organizing your data. Ovation organizes data in a fashion familiar to scientists - projects, experiments, measurements, etc.  The best way to get started is to create a project.</p>
-<p>Before you can add data to your Ovation database, you must login using your email address and <a class="reference external" href="http://ovation.io">ovation.io</a> password.  Open Ovation and click &#8220;file&#8221; then &#8220;login&#8221;.</p>
-<div class="figure" style="width: 50%">
-<img alt="_images/login_screen1.png" src="_images/login_screen1.png" />
-</div>
-<p>If you&#8217;ve forgotten your <a class="reference external" href="http://ovation.io">ovation.io</a> password, you can <a class="reference external" href="https://ovation.io/users/password/new">reset</a> it.</p>
-<div class="section" id="sec-new-project">
-<span id="id1"></span><h2>Create a <cite>Project</cite><a class="headerlink" href="#sec-new-project" title="Permalink to this headline">¶</a></h2>
-<p>This section shows you how to add a new <cite>Project</cite> to the database. Projects are top-level entities in the Ovation data model, and are used to organize related Experiments. Projects may contain many Experiments, and Experiments can belong to more than one Project.</p>
-<p>To add a new <cite>Project</cite>, right click on the &#8220;Project Navigator&#8221; browser window and select &#8216;Insert Project..&#8217;.</p>
-<a class="reference internal image-reference" href="_images/full_screen_before_project_insert_project1.png"><img alt="_images/full_screen_before_project_insert_project1.png" src="_images/full_screen_before_project_insert_project1.png" style="width: 60%;" /></a>
-<p>Follow the wizard to set the name, start time, and purpose for your Project.</p>
-<a class="reference internal image-reference" href="_images/insert_project_wizard1.png"><img alt="_images/insert_project_wizard1.png" src="_images/insert_project_wizard1.png" style="width: 60%;" /></a>
-<p>TIP:  If you do not see the new Project in the &#8220;Project Navigator&#8221; after finishing the project insertion wizzard, choose <em class="menuselection">Tools ‣ Reset Query</em> to refresh the display.</p>
-<a class="reference internal image-reference" href="_images/full_screen_after_project1.png"><img alt="_images/full_screen_after_project1.png" src="_images/full_screen_after_project1.png" style="width: 60%;" /></a>
+<p>Once you&#8217;ve <a class="reference internal" href="installation.html#doc-installation"><em>installed</em></a> Ovation, you&#8217;re ready to start organizing your data. Ovation organizes data in a fashion familiar to scientists including projects, experiments, and measurements.  The best way to get started is to create a project.</p>
+<div class="section" id="log-in">
+<span id="sec-login"></span><h2>Log in<a class="headerlink" href="#log-in" title="Permalink to this headline">¶</a></h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            Before you can add data to your Ovation database, you must login using your email address and <code>ovation.io</code> password. If you've forgotten your <code>ovation.io</code> password, you can <a href="https://ovation.io/users/password/new">reset</a> it.
+        </div>
+        <div class="col-md-7">
+            <iframe width="560" height="315" src="//www.youtube.com/embed/h-7b2Yefd3Q" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div><div class="section" id="sec-new-project">
+<span id="id1"></span><h3>Create a <cite>Project</cite><a class="headerlink" href="#sec-new-project" title="Permalink to this headline">¶</a></h3>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            Projects are top-level entities in the Ovation data model, and are used to organize related Experiments. Projects may contain many Experiments, and Experiments can belong to more than one Project.
+        </div>
+        <div class="col-md-7">
+            <iframe width="560" height="315" src="//www.youtube.com/embed/HFQmeQzu7g4" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div></div>
 </div>
 </div>
 
@@ -185,8 +195,8 @@
     </p>
     <p>
         &copy; Copyright 2013, Physion.<br/>
-      Last updated on Jan 10, 2014.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.<br/>
+      Last updated on Jan 22, 2014.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.<br/>
     </p>
   </div>
 </footer>
