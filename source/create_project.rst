@@ -58,7 +58,7 @@ Create a `Project`
                 Projects are top-level entities in the Ovation data model, and are used to organize related Experiments. Projects may contain many Experiments, and Experiments can belong to more than one Project.
             </div>
             <div class="col-md-7">
-                <iframe width="420" height="315" src="//www.youtube.com/embed/nsHxNxSiQV0" frameborder="0" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="//www.youtube.com/embed/HFQmeQzu7g4" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
     </div>
