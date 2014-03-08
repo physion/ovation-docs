@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 
@@ -16,7 +15,7 @@
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '',
+        URL_ROOT:    './',
         VERSION:     '2.0 Beta',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -167,17 +166,17 @@
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p class="first">Load the Ovation package:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">ovation.connection</span> <span class="kn">import</span> <span class="n">connect</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">ovation.connection</span> <span class="kn">import</span> <span class="n">new_data_context</span>
 </pre></div>
 </div>
 </li>
 <li><p class="first">Open a new <cite>DataContext</cite> with the <cite>connect</cite> function:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">context</span> <span class="o">=</span> <span class="n">connect</span><span class="p">(</span><span class="s">&#39;EMAIL&#39;</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">context</span> <span class="o">=</span> <span class="n">new_data_context</span><span class="p">(</span><span class="s">&#39;&lt;EMAIL&gt;&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
 </ol>
-<p>where <cite>EMAIL</cite> is the email registered with your <a class="reference external" href="http://ovation.io">ovation.io</a> account.</p>
+<p>where <cite>&lt;EMAIL&gt;</cite> is the email registered with your <a class="reference external" href="http://ovation.io">ovation.io</a> account.</p>
 </div>
 </div>
 
@@ -194,8 +193,8 @@
     </p>
     <p>
         &copy; Copyright 2013, Physion.<br/>
-      Last updated on Jan 24, 2014.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.<br/>
+      Last updated on Mar 08, 2014.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.1.<br/>
     </p>
   </div>
 </footer>
