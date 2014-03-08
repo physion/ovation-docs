@@ -28,10 +28,10 @@ Usage
 
 1. Load the Ovation package::
 
-    from ovation.connection import connect
+    from ovation.connection import new_data_context
     
 2. Open a new `DataContext` with the `connect` function::
 
-    context = connect('EMAIL')
+    context = new_data_context('<EMAIL>')
 
-where `EMAIL` is the email registered with your `ovation.io <http://ovation.io>`_ account.
+where `<EMAIL>` is the email registered with your `ovation.io <http://ovation.io>`_ account.
