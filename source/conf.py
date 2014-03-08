@@ -44,7 +44,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Ovation Scientific Data Management System'
-copyright = u'2013, Physion'
+copyright = u'2013-2014, Physion LLC'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
