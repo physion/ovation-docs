@@ -155,12 +155,12 @@
 <div class="tabbable">
 <ul class="nav nav-tabs simple">
 <li class="disabled"><a class="disabled">Ovation API:</a></li>
-<li class="active"><a data-toggle="tab" href="#1042f4050_Python">Python</a></li>
-<li><a data-toggle="tab" href="#1042f4050_R">R</a></li>
-<li><a data-toggle="tab" href="#1042f4050_Matlab">Matlab</a></li>
+<li class="active"><a data-toggle="tab" href="#1045434d0_Python">Python</a></li>
+<li><a data-toggle="tab" href="#1045434d0_R">R</a></li>
+<li><a data-toggle="tab" href="#1045434d0_Matlab">Matlab</a></li>
 </ul>
 <div class="tab-content admonition">
-<div class="tab-pane active first admonition" id="1042f4050_Python">
+<div class="tab-pane active first admonition" id="1045434d0_Python">
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">ovation.conversion</span> <span class="kn">import</span> <span class="n">to_map</span>
 
 <span class="c"># Create an iterable of inputs</span>
@@ -192,7 +192,7 @@
 </pre></div>
 </div>
 </div>
-<div class="tab-pane admonition" id="1042f4050_R">
+<div class="tab-pane admonition" id="1045434d0_R">
 <div class="highlight-python"><div class="highlight"><pre># Create an iterable of inputs
 inputs = c(measurement1, measurement2, measurement3)
 
@@ -220,7 +220,7 @@ ar&lt;-project$addAnalysisRecord(&#39;First analysis&#39;, # record name
 </pre></div>
 </div>
 </div>
-<div class="tab-pane last admonition" id="1042f4050_Matlab">
+<div class="tab-pane last admonition" id="1045434d0_Matlab">
 <div class="highlight-python"><div class="highlight"><pre>% Create an iterable of inputs
 inputs = [measurement1, measurement2, measurement3];
 
@@ -252,16 +252,16 @@ ar = project.addAnalysisRecord(&#39;First analysis&#39;,% record name
 </div>
 </div>
 </div>
-</div><p>To add an analysis output (an &#8220;artifact&#8221;) such as a numeric matrix, table, image or figure, right-click on the <cite>AnalysisRecord</cite> in the Ovation application and choose &#8220;Insert …&#8221; or use the corresponding API calls to an an analysis output programatically:</p>
+</div><p>To add an analysis output (an &#8220;artifact&#8221;) such as a numeric matrix, table, image or figure, right-click on the <cite>AnalysisRecord</cite> in the Ovation application and choose &#8220;Add Analysis Output…&#8221; or use the corresponding API calls to an an analysis output programatically:</p>
 <div class="tabbable">
 <ul class="nav nav-tabs simple">
 <li class="disabled"><a class="disabled">Ovation API:</a></li>
-<li class="active"><a data-toggle="tab" href="#1042da910_Python">Python</a></li>
-<li><a data-toggle="tab" href="#1042da910_R">R</a></li>
-<li><a data-toggle="tab" href="#1042da910_Matlab">Matlab</a></li>
+<li class="active"><a data-toggle="tab" href="#1043e89d0_Python">Python</a></li>
+<li><a data-toggle="tab" href="#1043e89d0_R">R</a></li>
+<li><a data-toggle="tab" href="#1043e89d0_Matlab">Matlab</a></li>
 </ul>
 <div class="tab-content admonition">
-<div class="tab-pane active first admonition" id="1042da910_Python">
+<div class="tab-pane active first admonition" id="1043e89d0_Python">
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">ovation.conversion</span> <span class="kn">import</span> <span class="n">to_file_url</span>
 <span class="kn">from</span> <span class="nn">ovation.data</span> <span class="kn">import</span> <span class="n">insert_numeric_analysis_artifact</span>
 
@@ -288,7 +288,7 @@ ar = project.addAnalysisRecord(&#39;First analysis&#39;,% record name
 </pre></div>
 </div>
 </div>
-<div class="tab-pane admonition" id="1042da910_R">
+<div class="tab-pane admonition" id="1043e89d0_R">
 <div class="highlight-python"><div class="highlight"><pre># outputs may be specified by URL and content type
 ar$addOutput(&#39;Output name&#39;,         # display name for this output
     NewUrl(output_file_path),       # path to file containing the output &quot;data&quot;
@@ -304,7 +304,7 @@ ar$addNumericOutput(&#39;Output name&#39;,  # display name for this output
 </pre></div>
 </div>
 </div>
-<div class="tab-pane last admonition" id="1042da910_Matlab">
+<div class="tab-pane last admonition" id="1043e89d0_Matlab">
 <div class="highlight-python"><div class="highlight"><pre>import java.net.URL
 
 % outputs may be specified by URL and content type
