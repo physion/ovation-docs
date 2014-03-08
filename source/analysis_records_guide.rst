@@ -109,7 +109,7 @@ To create an `AnalysisRecord`, right-click on a `Project` or `Epoch` in the Ovat
 
 .. OUTPUT
 
-To add an analysis output (an "artifact") such as a numeric matrix, table, image or figure, right-click on the `AnalysisRecord` in the Ovation application and choose "Insert …" or use the corresponding API calls to an an analysis output programatically:
+To add an analysis output (an "artifact") such as a numeric matrix, table, image or figure, right-click on the `AnalysisRecord` in the Ovation application and choose "Add Analysis Output…" or use the corresponding API calls to an an analysis output programatically:
 
 .. language_specific::
     --Python
