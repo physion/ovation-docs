@@ -17,10 +17,13 @@ Physion recommends the `Anaconda <https://store.continuum.io/cshop/anaconda/>`_ 
 Installation
 ============
 
-Install the `ovation` package from `PyPI <http://pypi.python.org>`_:
+Install the `ovation` package from `PyPI <http://pypi.python.org>`_ using `easy_install`:
 
 	easy_install ovation
 
+or `pip`:
+
+    pip install https://s3.amazonaws.com/download.ovation.io/ovation-2.1.8-py27-none-any.whl
 
 Usage
 =====
