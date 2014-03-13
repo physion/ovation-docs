@@ -14,12 +14,7 @@
 }
 
 
-@media (min-width: 980px) {
-  .navbar h3 a, .navbar .brand {
-    background: transparent url("ovation_logo.png") no-repeat 22px 3px;
-    padding-left: 62px;
-  }
-}
+  
 
 table {
   border: 0;
