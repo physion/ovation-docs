@@ -23,7 +23,7 @@ Install the `ovation` package from `PyPI <http://pypi.python.org>`_ using `easy_
 
 or `pip`::
 
-    pip install https://s3.amazonaws.com/download.ovation.io/ovation-2.1.8-py27-none-any.whl
+    pip install https://s3.amazonaws.com/download.ovation.io/ovation-2.1.11-py27-none-any.whl
 
 Usage
 =====
