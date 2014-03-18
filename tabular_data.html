@@ -1,3 +1,12 @@
+
+  
+  
+ 
+  
+  
+ 
+
+
 <!DOCTYPE html>
 
 
@@ -49,8 +58,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html"><img src="_static/ovation_logo.png">
-          Ovation</a>
+        <a class="navbar-brand" href="index.html">Ovation</a>
         <span class="navbar-text navbar-version pull-left"><b>2.0</b></span>
       </div>
 
@@ -365,27 +373,26 @@
 <div class="section" id="example-usage">
 <h4>Example Usage<a class="headerlink" href="#example-usage" title="Permalink to this headline">¶</a></h4>
 <p>This example shows the <cite>ImportCSV</cite> function in action. The <cite>EXPERIMENT.URI</cite> and <cite>PROTOCOL.URI</cite> variables should be replaced with the Ovation URI of an <cite>Experiment</cite> or <cite>EpochGroup</cite> and a <cite>Protocol</cite> respectively and <cite>EMAIL</cite> with your <a class="reference external" href="https://ovation.io">ovation.io</a> registered email. You can find the URI of an object by calling the <cite>getURI()</cite> method on that object from Ovation&#8217;s API or selecting the object in the Ovation application and choosing <em class="menuselection">Edit ‣ Copy</em> to copy the object&#8217;s URI to the clipboard:</p>
-<div class="highlight-python"><div class="highlight"><pre>library(Rovation)
+<div class="highlight-python"><pre>library(Rovation)
 library(Rovation.csv)
 
-ctx &lt;- NewDataContext(&quot;EMAIL&quot;)
-protocol.parameters = list(param.1=1, param.2=&quot;abc&quot;) # Replace with your Protocol&#39;s parameters here
-device.parameters = list(param.1=10, param.2=&quot;xyz&quot;) # Replace with your devices&#39; parameters here
-devices &lt;- c(&quot;device.1&quot;, &quot;device.2&quot;) # Replace with a vector the names of any devices used to make the measurements
+ctx &lt;- NewDataContext("EMAIL")
+protocol.parameters = list(param.1=1, param.2="abc") # Replace with your Protocol's parameters here
+device.parameters = list(param.1=10, param.2="xyz") # Replace with your devices' parameters here
+devices &lt;- c("device.1", "device.2") # Replace with a vector the names of any devices used to make the measurements
 
 start.time &lt;- Datetime(2013,1,1) # Replace with the Epoch start time
 end.time &lt;- Datetime(2013,1,2) # Replace with the Epoch end time
 
 epoch &lt;- ImportCSV(ctx,
-                   &quot;example_fixture.csv&quot;, # Replace with the path to your .csv file
+                   "example_fixture.csv", # Replace with the path to your .csv file
                    start.time,
                    end.time,
-                   &quot;PROTOCOL.URI&quot;,
+                   "PROTOCOL.URI",
                    protocol.parameters,
                    devices,
                    device.parameters,
-                   &quot;EXPERIMENT.URI&quot;)
-</pre></div>
+                   "EXPERIMENT.URI")</pre>
 </div>
 <p>Upon completion, <cite>epoch</cite> is a reference to the newly inserted <cite>Epoch</cite> object.</p>
 </div>
@@ -397,12 +404,11 @@ epoch &lt;- ImportCSV(ctx,
 <div class="section" id="collecting-all-epochs-from-an-experiment-or-epochgroup">
 <span id="ssec-collecting-epochs"></span><h3>Collecting all <cite>Epochs</cite> from an <cite>Experiment</cite> or <cite>EpochGroup</cite><a class="headerlink" href="#collecting-all-epochs-from-an-experiment-or-epochgroup" title="Permalink to this headline">¶</a></h3>
 <p>To collect all of the <cite>Epochs</cite> belonging to an <cite>Experiment</cite> or <cite>EpochGroup</cite>, use the <cite>CollectEpochs</cite> function. In the example below, replace <cite>EMAIL</cite> with your <a class="reference external" href="https://ovation.io">ovation.io</a> registered email, and <cite>CONTAINER.URI</cite> with the URI of the container (<cite>Experiment</cite> or <cite>EpochGroup</cite> from which you wish to collect Epochs):</p>
-<div class="highlight-python"><div class="highlight"><pre>library(Rovation.csv)
-ctx &lt;- NewDataContext(&quot;EMAIL&quot;)
-container &lt;- ctx$getObjectWithURI(&quot;CONTAINER.URI&quot;)
+<div class="highlight-python"><pre>library(Rovation.csv)
+ctx &lt;- NewDataContext("EMAIL")
+container &lt;- ctx$getObjectWithURI("CONTAINER.URI")
 
-epochs &lt;- CollectEpochs(container)
-</pre></div>
+epochs &lt;- CollectEpochs(container)</pre>
 </div>
 </div>
 <div class="section" id="collecting-measurements-from-a-list-of-epochs">
@@ -430,8 +436,8 @@ epochs &lt;- CollectEpochs(container)
     </p>
     <p>
         &copy; Copyright 2013-2014, Physion LLC.<br/>
-      Last updated on Mar 12, 2014.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.1.<br/>
+      Last updated on Mar 18, 2014.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2b3.<br/>
     </p>
   </div>
 </footer>

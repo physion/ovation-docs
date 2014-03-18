@@ -1,3 +1,12 @@
+
+  
+  
+ 
+  
+  
+ 
+
+
 <!DOCTYPE html>
 
 
@@ -49,8 +58,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html"><img src="_static/ovation_logo.png">
-          Ovation</a>
+        <a class="navbar-brand" href="index.html">Ovation</a>
         <span class="navbar-text navbar-version pull-left"><b>2.0</b></span>
       </div>
 
@@ -155,12 +163,12 @@
 <div class="tabbable">
 <ul class="nav nav-tabs simple">
 <li class="disabled"><a class="disabled">Ovation API:</a></li>
-<li class="active"><a data-toggle="tab" href="#1043ee0d0_Python">Python</a></li>
-<li><a data-toggle="tab" href="#1043ee0d0_R">R</a></li>
-<li><a data-toggle="tab" href="#1043ee0d0_Matlab">Matlab</a></li>
+<li class="active"><a data-toggle="tab" href="#10452fd90_Python">Python</a></li>
+<li><a data-toggle="tab" href="#10452fd90_R">R</a></li>
+<li><a data-toggle="tab" href="#10452fd90_Matlab">Matlab</a></li>
 </ul>
 <div class="tab-content admonition">
-<div class="tab-pane active first admonition" id="1043ee0d0_Python">
+<div class="tab-pane active first admonition" id="10452fd90_Python">
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">ovation.conversion</span> <span class="kn">import</span> <span class="n">to_map</span>
 
 <span class="c"># Create an iterable of inputs</span>
@@ -192,18 +200,18 @@
 </pre></div>
 </div>
 </div>
-<div class="tab-pane admonition" id="1043ee0d0_R">
-<div class="highlight-python"><div class="highlight"><pre># Create an iterable of inputs
+<div class="tab-pane admonition" id="10452fd90_R">
+<div class="highlight-python"><pre># Create an iterable of inputs
 inputs = c(measurement1, measurement2, measurement3)
 
 # Designate the protocol for this analysis
-protocol &lt;- context$getProtocol(&#39;First analysis v1&#39;)
+protocol &lt;- context$getProtocol('First analysis v1')
 if(is.null(protocol)) {
-    protocol = context$insertProtocol(&#39;First analysis v1&#39;,          # protocol name
-                    &#39;...analysis description...&#39;,                   # text block describing the analysis (e.g. its algorithms or approaches)
-                    &#39;analysis_fn&#39;,                                  # name of the &quot;top-level&quot; analysis function
-                    &#39;git@github.com:physion/ovation-docs.git&#39;,      # the URL hosting analysis code (we use the Ovation documentation site&#39;s GitHub repository as an example)
-                    &#39;96ff339f30297f3dda2e14ec9babaa590acd8174&#39;,     # revision number of the analysis code
+    protocol = context$insertProtocol('First analysis v1',          # protocol name
+                    '...analysis description...',                   # text block describing the analysis (e.g. its algorithms or approaches)
+                    'analysis_fn',                                  # name of the "top-level" analysis function
+                    'git@github.com:physion/ovation-docs.git',      # the URL hosting analysis code (we use the Ovation documentation site's GitHub repository as an example)
+                    '96ff339f30297f3dda2e14ec9babaa590acd8174',     # revision number of the analysis code
 
         )
 }
@@ -212,26 +220,25 @@ if(is.null(protocol)) {
 parameters &lt;- list(threshold=1.0, max_n=10)
 
 
-ar&lt;-project$addAnalysisRecord(&#39;First analysis&#39;, # record name
+ar&lt;-project$addAnalysisRecord('First analysis', # record name
     inputs,                                     # iterable of inputs (Measurements and/or AnalysisOutputs)
     protocol,                                   # analysis protocol
     list2map(parameters)                        # analysis parameters
-    )
-</pre></div>
+    )</pre>
 </div>
 </div>
-<div class="tab-pane last admonition" id="1043ee0d0_Matlab">
-<div class="highlight-python"><div class="highlight"><pre>% Create an iterable of inputs
+<div class="tab-pane last admonition" id="10452fd90_Matlab">
+<div class="highlight-python"><pre>% Create an iterable of inputs
 inputs = [measurement1, measurement2, measurement3];
 
 % Designate the protocol for this analysis
-protocol = context.getProtocol(&#39;First analysis v1&#39;);
+protocol = context.getProtocol('First analysis v1');
 if(isempty(protocol))
-    protocol = context.insertProtocol(&#39;First analysis v1&#39;,...       % protocol name
-                    &#39;...analysis description...&#39;,...                % text block describing the analysis (e.g. its algorithms or approaches)
-                    &#39;analysis_fn&#39;,...                               % name of the &quot;top-level&quot; analysis function
-                    &#39;git@github.com:physion/ovation-docs.git&#39;,...   % the URL hosting analysis code (we use the Ovation documentation site&#39;s GitHub repository as an example)
-                    &#39;96ff339f30297f3dda2e14ec9babaa590acd8174&#39;,...  % revision number of the analysis code
+    protocol = context.insertProtocol('First analysis v1',...       % protocol name
+                    '...analysis description...',...                % text block describing the analysis (e.g. its algorithms or approaches)
+                    'analysis_fn',...                               % name of the "top-level" analysis function
+                    'git@github.com:physion/ovation-docs.git',...   % the URL hosting analysis code (we use the Ovation documentation site's GitHub repository as an example)
+                    '96ff339f30297f3dda2e14ec9babaa590acd8174',...  % revision number of the analysis code
 
         );
 end
@@ -243,12 +250,11 @@ parameters.threshold = 1.0;
 parameters.max_n = 10;
 
 
-ar = project.addAnalysisRecord(&#39;First analysis&#39;,% record name
+ar = project.addAnalysisRecord('First analysis',% record name
     inputs,                                     % iterable of inputs (Measurements and/or AnalysisOutputs)
     protocol,                                   % analysis protocol
     struct2map(parameters)                      % analysis parameters
-    );
-</pre></div>
+    );</pre>
 </div>
 </div>
 </div>
@@ -256,12 +262,12 @@ ar = project.addAnalysisRecord(&#39;First analysis&#39;,% record name
 <div class="tabbable">
 <ul class="nav nav-tabs simple">
 <li class="disabled"><a class="disabled">Ovation API:</a></li>
-<li class="active"><a data-toggle="tab" href="#1043e3c90_Python">Python</a></li>
-<li><a data-toggle="tab" href="#1043e3c90_R">R</a></li>
-<li><a data-toggle="tab" href="#1043e3c90_Matlab">Matlab</a></li>
+<li class="active"><a data-toggle="tab" href="#10452fa50_Python">Python</a></li>
+<li><a data-toggle="tab" href="#10452fa50_R">R</a></li>
+<li><a data-toggle="tab" href="#10452fa50_Matlab">Matlab</a></li>
 </ul>
 <div class="tab-content admonition">
-<div class="tab-pane active first admonition" id="1043e3c90_Python">
+<div class="tab-pane active first admonition" id="10452fa50_Python">
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">ovation.conversion</span> <span class="kn">import</span> <span class="n">to_file_url</span>
 <span class="kn">from</span> <span class="nn">ovation.data</span> <span class="kn">import</span> <span class="n">insert_numeric_analysis_artifact</span>
 
@@ -288,39 +294,37 @@ ar = project.addAnalysisRecord(&#39;First analysis&#39;,% record name
 </pre></div>
 </div>
 </div>
-<div class="tab-pane admonition" id="1043e3c90_R">
-<div class="highlight-python"><div class="highlight"><pre># outputs may be specified by URL and content type
-ar$addOutput(&#39;Output name&#39;,         # display name for this output
-    NewUrl(output_file_path),       # path to file containing the output &quot;data&quot;
-    &#39;application/octet-stream&#39;      # output content type (this is a generic binary file)
+<div class="tab-pane admonition" id="10452fa50_R">
+<div class="highlight-python"><pre># outputs may be specified by URL and content type
+ar$addOutput('Output name',         # display name for this output
+    NewUrl(output_file_path),       # path to file containing the output "data"
+    'application/octet-stream'      # output content type (this is a generic binary file)
     )
 
 # or you can provide numeric outputs directly
-nd &lt;- NumericData(&#39;data_series&#39;, c(1,2,3), &#39;dimensionless&#39;, 1, &#39;dimensionless&#39;);
+nd &lt;- NumericData('data_series', c(1,2,3), 'dimensionless', 1, 'dimensionless');
 
-ar$addNumericOutput(&#39;Output name&#39;,  # display name for this output
+ar$addNumericOutput('Output name',  # display name for this output
     nd                              # output data
-    )
-</pre></div>
+    )</pre>
 </div>
 </div>
-<div class="tab-pane last admonition" id="1043e3c90_Matlab">
-<div class="highlight-python"><div class="highlight"><pre>import java.net.URL
+<div class="tab-pane last admonition" id="10452fa50_Matlab">
+<div class="highlight-python"><pre>import java.net.URL
 
 % outputs may be specified by URL and content type
-ar.addOutput(&#39;Output name&#39;,...                  % display name for this output
-    URL([&#39;file://&#39; output_file_path]),...       % path to file containing the output &quot;data&quot;
-    &#39;application/octet-stream&#39;...               % output content type (this is a generic binary file)
+ar.addOutput('Output name',...                  % display name for this output
+    URL(['file://' output_file_path]),...       % path to file containing the output "data"
+    'application/octet-stream'...               % output content type (this is a generic binary file)
     )
 
 % or you can provide numeric outputs directly
 nd = us.physion.ovation.values.NumericData();
-nd.addData(&#39;data_series&#39;, randn(1,10), &#39;dimensionless&#39;, 1, &#39;dimensionless&#39;);
+nd.addData('data_series', randn(1,10), 'dimensionless', 1, 'dimensionless');
 
-ar.addNumericOutput(&#39;Output name&#39;, ...  % display name for this output
+ar.addNumericOutput('Output name', ...  % display name for this output
     nd...                               % output data
-    )
-</pre></div>
+    )</pre>
 </div>
 </div>
 </div>
@@ -345,8 +349,8 @@ ar.addNumericOutput(&#39;Output name&#39;, ...  % display name for this output
     </p>
     <p>
         &copy; Copyright 2013-2014, Physion LLC.<br/>
-      Last updated on Mar 12, 2014.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.1.<br/>
+      Last updated on Mar 18, 2014.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2b3.<br/>
     </p>
   </div>
 </footer>
