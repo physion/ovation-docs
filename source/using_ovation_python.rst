@@ -10,6 +10,8 @@ Requirements
 * Java 1.6+
 * Python 2.7.x
 * `SciPy <http://scipy.org>`_ 0.13+
+* `Pandas <http://pandas.pydata.org>`_ 0.11.0+
+* `Phyjnius <https://pypi.python.org/pypi/phyjnius>`_ 1.2.1+
 
 Physion recommends the `Anaconda <https://store.continuum.io/cshop/anaconda/>`_ Python distribution.
 
@@ -17,13 +19,10 @@ Physion recommends the `Anaconda <https://store.continuum.io/cshop/anaconda/>`_ 
 Installation
 ============
 
-Install the `ovation` package from `PyPI <http://pypi.python.org>`_ using `easy_install`::
+Install the `ovation` package from `PyPI <http://pypi.python.org>`_ using `pip`::
 
-	easy_install ovation
+	pip install ovation
 
-or `pip`::
-
-    pip install https://s3.amazonaws.com/download.ovation.io/ovation-2.1.8-py27-none-any.whl
 
 Usage
 =====
