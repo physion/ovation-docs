@@ -7,8 +7,8 @@ The Ovation Python API wraps the Ovation Java API for use with CPython. Through 
 Requirements
 ============
 
-* Java 1.6+
-* Python 2.7.x
+* `Java <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_ 1.6+
+* `Python <https://www.python.org/downloads/>`_ 2.7.x
 * `SciPy <http://scipy.org>`_ 0.13+
 * `Pandas <http://pandas.pydata.org>`_ 0.11.0+
 * `Phyjnius <https://pypi.python.org/pypi/phyjnius>`_ 1.2.1+
