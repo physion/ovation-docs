@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Ovation Workflow &mdash; Ovation Scientific Data Management System 2.0 Beta documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.0 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Ovation Scientific Data Management System 2.0 Beta documentation" href="index.html" />
+    <link rel="next" title="Sources" href="source_guide.html" />
+    <link rel="prev" title="About Ovation" href="about_ovation.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><img src="_static/ovation_logo.png">
+          Ovation</a>
+        <span class="navbar-text navbar-version pull-left"><b>2.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+                <li><a href="http://ovation.io">Dashboard</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Topics <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul>
+<li class="toctree-l1"><a class="reference internal" href="about_ovation.html">Getting Started</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Ovation Workflow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#import-files">1. Import files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#use-files-in-your-existing-pipeline">2. Use files in your existing pipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#import-results-as-analysis-records">3. Import results as Analysis Records</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="source_guide.html">Sources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="source_guide.html#metadata">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_guide.html#derived-sources">Derived Sources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="procedure_guide.html">Protocols and Procedures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="procedure_guide.html#making-measurements">Making Measurements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="procedure_guide.html#source-derivation">Source derivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="procedure_guide.html#analysis-records">Analysis Records</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_records_guide.html">Analysis Records</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tabular_data.html">Importing and analyzing tabular (CSV) data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tabular_data.html#importing-tabular-csv-data">Importing tabular (CSV) data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tabular_data.html#retrieving-tabular-csv-data">Retrieving tabular (CSV) data</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="using_rovation.html">R</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_rovation.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_rovation.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_rovation.html#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="using_ovation_python.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_python.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_python.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_python.html#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="using_ovation_matlab.html">Matlab</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_matlab.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_matlab.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_matlab.html#usage">Usage</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="about_ovation.html"
+         title="Previous Chapter: About Ovation">&laquo; About Ovation</a></li>
+  <li><a href="source_guide.html"
+         title="Next Chapter: Sources">Sources &raquo;</a></li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="ovation-workflow">
+<span id="doc-workflow-guide"></span><h1>Ovation Workflow<a class="headerlink" href="#ovation-workflow" title="Permalink to this headline">¶</a></h1>
+<p>There are many ways that you can use Ovation&#8217;s powerful data organization and provenance tracking features. This document describes a workflow that other Ovation users have found succesful. If you have suggestions or find an other way of using Ovation that you really like, please <a class="reference external" href="http://ovation.uservoice.com">tell</a> us!</p>
+<div class="figure align-center" id="fig-organize-track-workflow">
+<img alt="_images/organize-track-workflow.png" src="_images/organize-track-workflow.png" />
+<p class="caption">Recommended workflow for organizig primary data (<cite>Measurements</cite>) and analyses in Ovation. The sections below describe how to do each step in this simple workflow.</p>
+</div>
+<div class="section" id="import-files">
+<span id="sec-import-files-workflow"></span><h2>1. Import files<a class="headerlink" href="#import-files" title="Permalink to this headline">¶</a></h2>
+<p>Data files can be imported directly from the instrument(s) used in an experiment or from existing files on your computer or server. When stored in Ovation, we call these files &#8220;Measurements&#8221;. You can use the Ovation application to insert new <a class="reference internal" href="create_measurement_and_source.html#sec-new-measurement"><em>Measurements</em></a>. You can also add Measurements programatically using the Ovation programming interface (API):</p>
+<div class="tabbable">
+<ul class="nav nav-tabs simple">
+<li class="disabled"><a class="disabled">Ovation API:</a></li>
+<li class="active"><a data-toggle="tab" href="#103d407d0_Python">Python</a></li>
+<li><a data-toggle="tab" href="#103d407d0_R">R</a></li>
+<li><a data-toggle="tab" href="#103d407d0_Matlab">Matlab</a></li>
+</ul>
+<div class="tab-content admonition">
+<div class="tab-pane active first admonition" id="103d407d0_Python">
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">ovation.conversion</span> <span class="kn">import</span> <span class="n">to_map</span><span class="p">,</span> <span class="n">to_java_set</span><span class="p">,</span> <span class="n">to_file_url</span><span class="p">,</span> <span class="n">asclass</span>
+<span class="kn">from</span> <span class="nn">ovation.core</span> <span class="kn">import</span> <span class="n">date_time</span>
+
+<span class="c"># Obtain a reference to the containing experiment, e.g. by URI</span>
+<span class="n">experiment</span> <span class="o">=</span> <span class="n">asclass</span><span class="p">(</span><span class="s">&#39;Experiment&#39;</span><span class="p">,</span> <span class="n">data_context</span><span class="o">.</span><span class="n">getObjectWithURI</span><span class="p">(</span><span class="s">&#39;ovation://...&#39;</span><span class="p">))</span>
+
+<span class="c"># Obtain a reference to the measured Source(s)</span>
+<span class="n">source</span> <span class="o">=</span> <span class="n">asclass</span><span class="p">(</span><span class="s">&#39;Source&#39;</span><span class="p">,</span> <span class="n">data_context</span><span class="o">.</span><span class="n">getObjectWithURI</span><span class="p">(</span><span class="s">&#39;ovation://...&#39;</span><span class="p">))</span>
+
+<span class="c"># Insert an Epoch describing the procedure that recorded the measurement(s)</span>
+
+<span class="n">input_sources</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;source&#39;</span><span class="p">:</span> <span class="n">source</span><span class="p">}</span>  <span class="c"># Map of Sources that were &quot;inputs&quot; to the measurements named by map key.</span>
+                                    <span class="c"># Input Source name(s) give the Sources&#39; named in the context of this procedure.</span>
+
+<span class="n">protocol</span> <span class="o">=</span> <span class="n">data_context</span><span class="o">.</span><span class="n">getProtocol</span><span class="p">(</span><span class="s">&#39;My protocol name&#39;</span><span class="p">)</span> <span class="c"># Get a protocol (by name) describing the Measurement procedure</span>
+
+<span class="n">protocol_parameters</span> <span class="o">=</span> <span class="p">{}</span> <span class="c"># Map of variable parameters for this protocol</span>
+<span class="n">device_parameters</span> <span class="o">=</span> <span class="p">{}</span> <span class="c"># Map of device parameters for devices used in making the Measurement(s)</span>
+
+<span class="n">epoch</span> <span class="o">=</span> <span class="n">experiment</span><span class="o">.</span><span class="n">insertEpoch</span><span class="p">(</span><span class="n">to_map</span><span class="p">(</span><span class="n">input_sources</span><span class="p">),</span>
+                                <span class="bp">None</span><span class="p">,</span>                                       <span class="c"># No Sources were generated in this Epoch</span>
+                                <span class="n">date_time</span><span class="p">(</span><span class="mi">2014</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">hour</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>    <span class="c"># Start of measurement procedure</span>
+                                <span class="n">date_time</span><span class="p">(</span><span class="mi">2014</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">hour</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">15</span><span class="p">),</span>   <span class="c"># End of measurement procedure</span>
+                                <span class="n">protocol</span><span class="p">,</span>                                   <span class="c"># Measurement protocol or None</span>
+                                <span class="n">to_map</span><span class="p">(</span><span class="n">protocol_parameters</span><span class="p">),</span>                <span class="c"># Protocol parameters or None</span>
+                                <span class="n">to_map</span><span class="p">(</span><span class="n">device_parameters</span><span class="p">))</span>                  <span class="c"># Device parameters or None</span>
+
+
+
+<span class="c"># Add a measurement file by path</span>
+<span class="n">measurement_path</span> <span class="o">=</span> <span class="s">&quot;/path/to/local/my_file&quot;</span>
+<span class="n">measurement_url</span> <span class="o">=</span> <span class="n">to_file_url</span><span class="p">(</span><span class="n">measurement_path</span><span class="p">)</span>
+<span class="n">measurement_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&quot;/path/to/local/file&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c"># i.e. &quot;my_file&quot;</span>
+<span class="n">epoch</span><span class="o">.</span><span class="n">insertMeasurement</span><span class="p">(</span><span class="n">measurement_name</span><span class="p">,</span>
+                        <span class="n">to_java_set</span><span class="p">(</span><span class="s">&#39;source&#39;</span><span class="p">),</span>                  <span class="c"># When Epoch has multiple input Sources, which are associated with this measurement, by name</span>
+                        <span class="n">to_java_set</span><span class="p">([</span><span class="s">&#39;device1&#39;</span><span class="p">,</span> <span class="s">&#39;device2&#39;</span><span class="p">]),</span>    <span class="c"># Devices used in this measurement or empty if none</span>
+                        <span class="n">measurement_url</span><span class="p">,</span>
+                        <span class="s">&#39;application/octet-stream&#39;</span>              <span class="c"># Measurment content type, e.g. text/csv, imate/tiff, etc. Application/octet-stream is the most generic</span>
+                        <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="tab-pane admonition" id="103d407d0_R">
+<div class="highlight-python"><div class="highlight"><pre># Obtain a reference to the containing experiment, e.g. by URI
+experiment &lt;- data_context$getObjectWithURI(&#39;ovation://...&#39;)
+
+# Obtain a reference to the measured Source(s)
+source &lt;- data_context$getObjectWithURI(&#39;ovation://...&#39;)
+
+# Insert an Epoch describing the procedure that recorded the measurement(s)
+
+input_sources &lt;- list(source_name = source)  # List of Sources that were &quot;inputs&quot; to the measurements named by list key.
+                                            #Input Source name(s) give the Sources&#39; named in the context of this procedure.
+
+protocol &lt;- data_context$getProtocol(&#39;My protocol name&#39;) # Get a protocol (by name) describing the Measurement procedure
+
+protocol_parameters &lt;- list()   # Map of variable parameters for this protocol
+device_parameters &lt;- list()     # Map of device parameters for devices used in making the Measurement(s)
+
+epoch &lt;- experiment$insertEpoch(list2map(input_sources),
+                                None,                                       # No Sources were generated in this Epoch
+                                Datetime(2014, 3, 2, hour=8, minute=5),     # Start of measurement procedure
+                                Datetime(2014, 3, 2, hour=8, minute=15),    # End of measurement procedure
+                                protocol,                                   # Measurement protocol or None
+                                list2map(protocol_parameters),              # Protocol parameters or None
+                                list2map(device_parameters))                # Device parameters or None
+
+
+
+# Add a measurement file by path
+measurement_path = &#39;/path/to/local/my_file&#39;
+measurement_url = NewUrl(measurement_path)
+epoch.insertMeasurement(&#39;my_file&#39;,                              # Measurement display name
+                        Vector2Set(c(&#39;source&#39;)),                # When Epoch has multiple input Sources, which are associated with this measurement, by name
+                        Vector2Set(c(&#39;device1&#39;, &#39;device2&#39;)),    # Devices used in this measurement or empty if none
+                        measurement_url,
+                        &#39;application/octet-stream&#39;)             # Measurment content type, e.g. text/csv, imate/tiff, etc. Application/octet-stream is the most generic
+</pre></div>
+</div>
+</div>
+<div class="tab-pane last admonition" id="103d407d0_Matlab">
+<div class="highlight-python"><div class="highlight"><pre>import ovation.*
+
+% Obtain a reference to the containing experiment, e.g. by URI
+experiment = dataContext.getObjectWithURI(&#39;ovation://...&#39;);
+
+% Obtain a reference to the measured Source(s)
+source = dataContext.getObjectWithURI(&#39;ovation://...&#39;);
+
+%% Insert an Epoch describing the procedure that recorded the measurement(s)
+input_sources = struct()
+input_sources.sourceName = source;  % Struct of Sources that were &quot;inputs&quot; to the measurements named by struct field.
+                                    % Input Source name(s) give the Sources&#39; named in the context of this procedure.
+
+protocol = dataContext.getProtocol(&#39;My protocol name&#39;); % Get a protocol (by name) describing the Measurement procedure
+
+protocol_parameters = struct(); % Map of variable parameters for this protocol
+device_parameters = struct();   % Map of device parameters for devices used in making the Measurement(s)
+
+epoch = experiment.insertEpoch(struct2map(input_sources),...
+                                [],...                                 % No Sources were generated in this Epoch
+                                datetime(2014, 3, 2, 8, 5),...         % Start of measurement procedure
+                                datetime(2014, 3, 2, 8, 15),...        % End of measurement procedure
+                                protocol,...                           % Measurement protocol or []
+                                struct2map(protocol_parameters),...    % Protocol parameters or []
+                                struct2map(device_parameters));        % Device parameters or []
+
+
+
+% Add a measurement file by path
+measurement_path = &#39;/path/to/local/my_file&#39;;
+measurement_url = java.net.URL([&#39;file://&#39; measurement_path]);
+measurement_name = &#39;my_file&#39;;
+epoch.insertMeasurement(measurement_name,...            % Measurement display name
+                        {&#39;source&#39;},...                  % When Epoch has multiple input Sources, which are associated with this measurement, by name
+                        {&#39;device1&#39;, &#39;device2&#39;},...      % Devices used in this measurement or empty if none
+                        measurement_url,...
+                        &#39;application/octet-stream&#39;...   % Measurment content type, e.g. text/csv, imate/tiff, etc. Application/octet-stream is the most generic
+                        )
+</pre></div>
+</div>
+</div>
+</div>
+</div></div>
+<div class="section" id="use-files-in-your-existing-pipeline">
+<span id="sec-use-files-workflow"></span><h2>2. Use files in your existing pipeline<a class="headerlink" href="#use-files-in-your-existing-pipeline" title="Permalink to this headline">¶</a></h2>
+<p>Once data files are stored in Ovation, it is easy to retrieve them for use in your existing analysis pipeline(s). To open a file, click the &#8220;Open in native application…&#8221; button in the Data Viewer or select &#8220;Open in Finder&#8221; (OS X) or &#8220;Open in Explorer&#8221; (Windows) from the context menu of a Measurement in the Ovation application.</p>
+<p>You can also retrieve the file programatically using the Ovation programming interface (API):</p>
+<div class="tabbable">
+<ul class="nav nav-tabs simple">
+<li class="disabled"><a class="disabled">Ovation API:</a></li>
+<li class="active"><a data-toggle="tab" href="#103d40e10_Python">Python</a></li>
+<li><a data-toggle="tab" href="#103d40e10_R">R</a></li>
+<li><a data-toggle="tab" href="#103d40e10_Matlab">Matlab</a></li>
+</ul>
+<div class="tab-content admonition">
+<div class="tab-pane active first admonition" id="103d40e10_Python">
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># Given a Measurement URI, retrieve the Measurement from the local Data Context</span>
+<span class="n">measurement</span> <span class="o">=</span> <span class="n">data_context</span><span class="o">.</span><span class="n">getObjectWithURI</span><span class="p">(</span><span class="s">&#39;ovation://...&#39;</span><span class="p">)</span>
+
+<span class="c"># Get the path to the Measurement&#39;s file(s). getLocalDataPath() returns asynchronously, get() waits for completion</span>
+<span class="n">local_path</span> <span class="o">=</span> <span class="n">measurement</span><span class="o">.</span><span class="n">getLocalDataPath</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="tab-pane admonition" id="103d40e10_R">
+<div class="highlight-python"><div class="highlight"><pre># Given a Measurement URI, retrieve the Measurement from the local Data Context
+measurement &lt;- data_context$getObjectWithURI(&#39;ovation://...&#39;)
+
+# Get the path to the Measurement&#39;s file(s). getLocalDataPath() returns asynchronously, get() waits for completion
+local_path &lt;- measurement$getLocalDataPath()$get()
+</pre></div>
+</div>
+</div>
+<div class="tab-pane last admonition" id="103d40e10_Matlab">
+<div class="highlight-python"><div class="highlight"><pre>% Given a Measurement URI, retrieve the Measurement from the local Data Context
+measurement = dataContext.getObjectWithURI(&#39;ovation://...&#39;);
+
+% Get the path to the Measurement&#39;s file(s). getLocalDataPath() returns asynchronously, get() waits for completion
+local_path = measurement.getLocalDataPath().get();
+</pre></div>
+</div>
+</div>
+</div>
+</div><p>Now you can perform your analysis as you do now (using the local data files). Don&#8217;t forget to record the parameters of your analysis so that you can store that information in Ovation!</p>
+</div>
+<div class="section" id="import-results-as-analysis-records">
+<span id="sec-import-analyses-workflow"></span><h2>3. Import results as Analysis Records<a class="headerlink" href="#import-results-as-analysis-records" title="Permalink to this headline">¶</a></h2>
+<p>Once you&#8217;ve performed an analysis, store the results (and parameters of that analysis) into Ovation as an Analysis Record. An Analysis Record lets you track the inputs, procedure and results of an analysis. No more losing track of how you did an analysis amidst a sea of files! The <a class="reference internal" href="analysis_records_guide.html#doc-analysis-records-guide"><em>Analysis Record Guide</em></a> had all the info you need to add an Analysis Record to Ovation.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013-2014, Physion LLC.<br/>
+      Last updated on Mar 24, 2014.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
