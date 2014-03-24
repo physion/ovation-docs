@@ -1,12 +1,3 @@
-
-  
-  
- 
-  
-  
- 
-
-
 <!DOCTYPE html>
 
 
@@ -40,7 +31,7 @@
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Ovation Scientific Data Management System 2.0 Beta documentation" href="index.html" />
     <link rel="next" title="Protocols and Procedures" href="procedure_guide.html" />
-    <link rel="prev" title="About Ovation" href="about_ovation.html" />
+    <link rel="prev" title="Ovation Workflow" href="workflow_guide.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -58,7 +49,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">Ovation</a>
+        <a class="navbar-brand" href="index.html"><img src="_static/ovation_logo.png">
+          Ovation</a>
         <span class="navbar-text navbar-version pull-left"><b>2.0</b></span>
       </div>
 
@@ -78,6 +70,7 @@
 <li class="toctree-l1"><a class="reference internal" href="about_ovation.html">Getting Started</a></li>
 </ul>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="workflow_guide.html">Ovation Workflow</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Sources</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#metadata">Metadata</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#derived-sources">Derived Sources</a></li>
@@ -123,8 +116,8 @@
             
               
                 
-  <li><a href="about_ovation.html"
-         title="Previous Chapter: About Ovation">&laquo; About Ovation</a></li>
+  <li><a href="workflow_guide.html"
+         title="Previous Chapter: Ovation Workflow">&laquo; Ovation Workflow</a></li>
   <li><a href="procedure_guide.html"
          title="Next Chapter: Protocols and Procedures">Protocols and Pr... &raquo;</a></li>
               
@@ -168,21 +161,22 @@
 <div class="tabbable">
 <ul class="nav nav-tabs simple">
 <li class="disabled"><a class="disabled">Ovation API:</a></li>
-<li class="active"><a data-toggle="tab" href="#10464ecd0_Python">Python</a></li>
-<li><a data-toggle="tab" href="#10464ecd0_R">R</a></li>
-<li><a data-toggle="tab" href="#10464ecd0_Matlab">Matlab</a></li>
+<li class="active"><a data-toggle="tab" href="#10481d590_Python">Python</a></li>
+<li><a data-toggle="tab" href="#10481d590_R">R</a></li>
+<li><a data-toggle="tab" href="#10481d590_Matlab">Matlab</a></li>
 </ul>
 <div class="tab-content admonition">
-<div class="tab-pane active first admonition" id="10464ecd0_Python">
+<div class="tab-pane active first admonition" id="10481d590_Python">
 <div class="highlight-python"><div class="highlight"><pre><span class="n">source</span><span class="o">.</span><span class="n">addProperty</span><span class="p">(</span><span class="s">&#39;genus&#39;</span><span class="p">,</span> <span class="s">&#39;Mus&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="tab-pane admonition" id="10464ecd0_R">
-<div class="highlight-python"><pre>source$addProperty('genus', 'Mus')</pre>
+<div class="tab-pane admonition" id="10481d590_R">
+<div class="highlight-python"><div class="highlight"><pre>source$addProperty(&#39;genus&#39;, &#39;Mus&#39;)
+</pre></div>
 </div>
 </div>
-<div class="tab-pane last admonition" id="10464ecd0_Matlab">
+<div class="tab-pane last admonition" id="10481d590_Matlab">
 <div class="highlight-python"><div class="highlight"><pre><span class="n">source</span><span class="o">.</span><span class="n">addProperty</span><span class="p">(</span><span class="s">&#39;genus&#39;</span><span class="p">,</span> <span class="s">&#39;Mus&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -200,12 +194,12 @@
 <div class="tabbable">
 <ul class="nav nav-tabs simple">
 <li class="disabled"><a class="disabled">Ovation API:</a></li>
-<li class="active"><a data-toggle="tab" href="#1045fe1d0_Python">Python</a></li>
-<li><a data-toggle="tab" href="#1045fe1d0_R">R</a></li>
-<li><a data-toggle="tab" href="#1045fe1d0_Matlab">Matlab</a></li>
+<li class="active"><a data-toggle="tab" href="#1048082d0_Python">Python</a></li>
+<li><a data-toggle="tab" href="#1048082d0_R">R</a></li>
+<li><a data-toggle="tab" href="#1048082d0_Matlab">Matlab</a></li>
 </ul>
 <div class="tab-content admonition">
-<div class="tab-pane active first admonition" id="1045fe1d0_Python">
+<div class="tab-pane active first admonition" id="1048082d0_Python">
 <div class="highlight-python"><div class="highlight"><pre><span class="n">childSource</span> <span class="o">=</span> <span class="n">parentSource</span><span class="o">.</span><span class="n">insertSource</span><span class="p">(</span><span class="n">epochContainer</span><span class="p">,</span>     <span class="c"># Container for inserted Epoch</span>
                                         <span class="n">startTime</span><span class="p">,</span>          <span class="c"># Epoch start</span>
                                         <span class="n">endTime</span><span class="p">,</span>            <span class="c"># Epoch end</span>
@@ -217,19 +211,20 @@
 </pre></div>
 </div>
 </div>
-<div class="tab-pane admonition" id="1045fe1d0_R">
-<div class="highlight-python"><pre>childSource &lt;- parentSource$insertSource(epochContainer,    # Container for inserted Epoch
+<div class="tab-pane admonition" id="1048082d0_R">
+<div class="highlight-python"><div class="highlight"><pre>childSource &lt;- parentSource$insertSource(epochContainer,    # Container for inserted Epoch
                                         startTime,          # Epoch start
                                         endTime,            # Epoch end
                                         protocol,           # Epoch Protocol
                                         protocolParameters, # Dict of protocol parameters
                                         deviceParameters,   # Dict of device parameters
                                         childLabel,         # Descriptive label for childSource
-                                        identifier)         # Identifier for childSource</pre>
+                                        identifier)         # Identifier for childSource
+</pre></div>
 </div>
 </div>
-<div class="tab-pane last admonition" id="1045fe1d0_Matlab">
-<div class="highlight-python"><pre>childSource = parentSource.insertSource(epochContainer,...     % Container for inserted Epoch
+<div class="tab-pane last admonition" id="1048082d0_Matlab">
+<div class="highlight-python"><div class="highlight"><pre>childSource = parentSource.insertSource(epochContainer,...     % Container for inserted Epoch
                                         startTime,...          % Epoch start
                                         endTime,...            % Epoch end
                                         protocol...,           % Epoch Protocol
@@ -237,7 +232,8 @@
                                         deviceParameters,...   % Dict of device parameters
                                         childLabel,...         % Descriptive label for childSource
                                         identifier...          % Identifier for childSource
-                                        )</pre>
+                                        )
+</pre></div>
 </div>
 </div>
 </div>
@@ -257,8 +253,8 @@
     </p>
     <p>
         &copy; Copyright 2013-2014, Physion LLC.<br/>
-      Last updated on Mar 18, 2014.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2b3.<br/>
+      Last updated on Mar 24, 2014.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.1.<br/>
     </p>
   </div>
 </footer>
