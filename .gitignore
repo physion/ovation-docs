@@ -41,3 +41,5 @@ ovation.log
 
 # Ignore the working TIFF directory
 tiff/
+
+_static/bootswatch-*
