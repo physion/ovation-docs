@@ -77,10 +77,11 @@ To create an `AnalysisRecord`, right-click on a `Project` or `Epoch` in the Ovat
     --Matlab
     ::
     
-        % Create an iterable of inputs
+        % Create cell array of inputs
         inputs = [measurement1, measurement2, measurement3];
         
-        % Designate the protocol for this analysis
+        % Optional: designate the protocol for this analysis. If you want to set the protocol later, use
+        % protocol = [];
         protocol = context.getProtocol('First analysis v1');
         if(isempty(protocol))
             protocol = context.insertProtocol('First analysis v1',...       % protocol name
