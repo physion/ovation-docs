@@ -7,11 +7,11 @@ The Ovation Python API wraps the Ovation Java API for use with CPython. Through 
 Requirements
 ============
 
-* `Java <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_ 1.6+
+* `Java <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_ 1.7+
 * `Python <https://www.python.org/downloads/>`_ 2.7.x
 * `SciPy <http://scipy.org>`_ 0.13+
 * `Pandas <http://pandas.pydata.org>`_ 0.11.0+
-* `Phyjnius <https://pypi.python.org/pypi/phyjnius>`_ 1.2.1+
+* `Pyjnius <https://pypi.python.org/pypi/pyjnius>`_ 1.3.2+
 
 Physion recommends the `Anaconda <https://store.continuum.io/cshop/anaconda/>`_ Python distribution.
 
