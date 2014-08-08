@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Ovation Application &mdash; Ovation Scientific Data Management System 2.0 Beta documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.0 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Ovation Scientific Data Management System 2.0 Beta documentation" href="index.html" />
+    <link rel="next" title="Using the Rovation client API" href="using_rovation.html" />
+    <link rel="prev" title="Importing and analyzing tabular (CSV) data" href="tabular_data.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Ovation</a>
+        <span class="navbar-text navbar-version pull-left"><b>2.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+                <li><a href="http://ovation.io">Dashboard</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Topics <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul>
+<li class="toctree-l1"><a class="reference internal" href="about_ovation.html">Getting Started</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="workflow_guide.html">Ovation Workflow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="workflow_guide.html#import-files">1. Import files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflow_guide.html#use-files-in-your-existing-pipeline">2. Use files in your existing pipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflow_guide.html#import-results-as-analysis-records">3. Import results as Analysis Records</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="source_guide.html">Sources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="source_guide.html#metadata">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_guide.html#derived-sources">Derived Sources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="procedure_guide.html">Protocols and Procedures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="procedure_guide.html#making-measurements">Making Measurements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="procedure_guide.html#source-derivation">Source derivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="procedure_guide.html#analysis-records">Analysis Records</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_records_guide.html">Analysis Records</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tabular_data.html">Importing and analyzing tabular (CSV) data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tabular_data.html#importing-tabular-csv-data">Importing tabular (CSV) data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tabular_data.html#retrieving-tabular-csv-data">Retrieving tabular (CSV) data</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Ovation Application</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#browsers">Browsers</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="using_rovation.html">R</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_rovation.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_rovation.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_rovation.html#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="using_ovation_python.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_python.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_python.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_python.html#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="using_ovation_matlab.html">Matlab</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_matlab.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_matlab.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_matlab.html#usage">Usage</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+  <li><a href="tabular_data.html"
+         title="Previous Chapter: Importing and analyzing tabular (CSV) data">&laquo; Importing and an...</a></li>
+  <li><a href="using_rovation.html"
+         title="Next Chapter: Using the Rovation client API">Using the Rovati... &raquo;</a></li>
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="ovation-application">
+<span id="doc-application-guide"></span><h1>Ovation Application<a class="headerlink" href="#ovation-application" title="Permalink to this headline">¶</a></h1>
+<p>The Ovation Application is an app that lets you work with Ovation right from your desktop computer. You can download the Ovation app from your ovation.io <a class="reference external" href="https://ovation.io/dashboard">dashboard</a>.</p>
+<div class="figure align-right">
+<img alt="_images/ovation_icon_osx.png" src="_images/ovation_icon_osx.png" />
+</div>
+<p>The <a class="reference internal" href="about_ovation.html#doc-about-ovation"><em>Getting Stared</em></a> guide has video tutorials for most of the features in the Ovation app and this page provides additional reference information.</p>
+<div class="section" id="browsers">
+<h2>Browsers<a class="headerlink" href="#browsers" title="Permalink to this headline">¶</a></h2>
+<p>The <em>Project</em>, <em>Source</em>, and <em>Protocol</em> browsers give you three views of your data. It&#8217;s the same data, just viewed from a different &#8216;vantage point&#8217;. All three browsers use the same icons to tell you what type of entity is being displayed. The table below shows the entity type associated with each icon:</p>
+<table border="1" class="table-hover docutils">
+<colgroup>
+<col width="15%" />
+<col width="85%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><em>Icon</em></th>
+<th class="head"><em>Entity</em></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="_images/project-icon.png"><img alt="project-icon" src="_images/project-icon.png" style="width: 48px; height: 48px;" /></a></td>
+<td><strong>Project</strong></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="_images/experiment-icon.png"><img alt="experiment-icon" src="_images/experiment-icon.png" style="width: 48px; height: 48px;" /></a></td>
+<td><strong>Experiment</strong></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="_images/epoch-group-icon.png"><img alt="epoch-group-icon" src="_images/epoch-group-icon.png" style="width: 48px; height: 48px;" /></a></td>
+<td><strong>Epoch Group</strong></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="_images/epoch-icon.png"><img alt="epoch-icon" src="_images/epoch-icon.png" style="width: 48px; height: 48px;" /></a></td>
+<td><strong>Epoch</strong></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="_images/measurement-icon.png"><img alt="measurement-icon" src="_images/measurement-icon.png" style="width: 48px; height: 48px;" /></a></td>
+<td><strong>Measurement</strong></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="_images/source-icon.png"><img alt="source-icon" src="_images/source-icon.png" style="width: 48px; height: 48px;" /></a></td>
+<td><strong>Source</strong></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="_images/user-icon.png"><img alt="user-icon" src="_images/user-icon.png" style="width: 48px; height: 48px;" /></a></td>
+<td><strong>User</strong></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="_images/analysis-record-icon.png"><img alt="analysis-record-icon" src="_images/analysis-record-icon.png" style="width: 48px; height: 48px;" /></a></td>
+<td><strong>Analysis Record</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If a browser is not visible, you can open a new browser by selecting &#8220;Projects Navigator&#8221;, &#8220;Sources Navigator&#8221; or &#8220;Protocols Navigator&#8221; from the &#8220;Window&#8221; menu.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013-2014, Physion LLC.<br/>
+      Last updated on Aug 08, 2014.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2b1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
