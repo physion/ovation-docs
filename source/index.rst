@@ -50,7 +50,7 @@ Resources
     procedure_guide
     analysis_records_guide
     tabular_data
-    application
+.. application
     
 
 Integration
