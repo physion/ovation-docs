@@ -1,10 +1,17 @@
 .. _doc-application-guide:
 
 ***********************
-The Ovation Application
+Ovation Application
 ***********************
 
+The Ovation Application is an app that lets you work with Ovation right from your desktop computer. You can download the Ovation app from your ovation.io `dashboard <https://ovation.io/dashboard>`_.
 
+
+.. figure:: _static/ovation_icon_osx.png
+    :align: right
+
+
+The :ref:`Getting Stared <doc-about-ovation>` guide has video tutorials for most of the features in the Ovation app and this page provides additional reference information.
 
 
 Browsers
