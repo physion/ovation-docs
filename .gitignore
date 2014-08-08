@@ -44,3 +44,5 @@ tiff/
 
 _static/bootswatch-*
 _images/
+*.txt
+*.html
