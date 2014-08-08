@@ -1,12 +1,3 @@
-
-  
-  
- 
-  
-  
- 
-
-
 <!DOCTYPE html>
 
 
@@ -101,6 +92,10 @@
 <li class="toctree-l2"><a class="reference internal" href="tabular_data.html#retrieving-tabular-csv-data">Retrieving tabular (CSV) data</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="application.html">Ovation Application</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="application.html#browsers">Browsers</a></li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="using_rovation.html">R</a><ul>
@@ -128,12 +123,10 @@
             
             
               
-                
   <li><a href="about_ovation.html"
          title="Previous Chapter: About Ovation">&laquo; About Ovation</a></li>
   <li><a href="source_guide.html"
          title="Next Chapter: Sources">Sources &raquo;</a></li>
-              
             
             
             
@@ -171,12 +164,12 @@
 <div class="tabbable">
 <ul class="nav nav-tabs simple">
 <li class="disabled"><a class="disabled">Ovation API:</a></li>
-<li class="active"><a data-toggle="tab" href="#1046c24d0_Python">Python</a></li>
-<li><a data-toggle="tab" href="#1046c24d0_R">R</a></li>
-<li><a data-toggle="tab" href="#1046c24d0_Matlab">Matlab</a></li>
+<li class="active"><a data-toggle="tab" href="#10377a450_Python">Python</a></li>
+<li><a data-toggle="tab" href="#10377a450_R">R</a></li>
+<li><a data-toggle="tab" href="#10377a450_Matlab">Matlab</a></li>
 </ul>
 <div class="tab-content admonition">
-<div class="tab-pane active first admonition" id="1046c24d0_Python">
+<div class="tab-pane active first admonition" id="10377a450_Python">
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">ovation.conversion</span> <span class="kn">import</span> <span class="n">to_map</span><span class="p">,</span> <span class="n">to_java_set</span><span class="p">,</span> <span class="n">to_file_url</span><span class="p">,</span> <span class="n">asclass</span>
 <span class="kn">from</span> <span class="nn">ovation.core</span> <span class="kn">import</span> <span class="n">date_time</span>
 
@@ -219,7 +212,7 @@
 </pre></div>
 </div>
 </div>
-<div class="tab-pane admonition" id="1046c24d0_R">
+<div class="tab-pane admonition" id="10377a450_R">
 <div class="highlight-python"><pre># Obtain a reference to the containing experiment, e.g. by URI
 experiment &lt;- data_context$getObjectWithURI('ovation://...')
 
@@ -256,7 +249,7 @@ epoch.insertMeasurement('my_file',                              # Measurement di
                         'application/octet-stream')             # Measurment content type, e.g. text/csv, imate/tiff, etc. Application/octet-stream is the most generic</pre>
 </div>
 </div>
-<div class="tab-pane last admonition" id="1046c24d0_Matlab">
+<div class="tab-pane last admonition" id="10377a450_Matlab">
 <div class="highlight-python"><pre>import ovation.*
 
 % Obtain a reference to the containing experiment, e.g. by URI
@@ -306,12 +299,12 @@ epoch.insertMeasurement(measurement_name,...            % Measurement display na
 <div class="tabbable">
 <ul class="nav nav-tabs simple">
 <li class="disabled"><a class="disabled">Ovation API:</a></li>
-<li class="active"><a data-toggle="tab" href="#1046c2290_Python">Python</a></li>
-<li><a data-toggle="tab" href="#1046c2290_R">R</a></li>
-<li><a data-toggle="tab" href="#1046c2290_Matlab">Matlab</a></li>
+<li class="active"><a data-toggle="tab" href="#10377ab90_Python">Python</a></li>
+<li><a data-toggle="tab" href="#10377ab90_R">R</a></li>
+<li><a data-toggle="tab" href="#10377ab90_Matlab">Matlab</a></li>
 </ul>
 <div class="tab-content admonition">
-<div class="tab-pane active first admonition" id="1046c2290_Python">
+<div class="tab-pane active first admonition" id="10377ab90_Python">
 <div class="highlight-python"><div class="highlight"><pre><span class="c"># Given a Measurement URI, retrieve the Measurement from the local Data Context</span>
 <span class="n">measurement</span> <span class="o">=</span> <span class="n">data_context</span><span class="o">.</span><span class="n">getObjectWithURI</span><span class="p">(</span><span class="s">&#39;ovation://...&#39;</span><span class="p">)</span>
 
@@ -320,7 +313,7 @@ epoch.insertMeasurement(measurement_name,...            % Measurement display na
 </pre></div>
 </div>
 </div>
-<div class="tab-pane admonition" id="1046c2290_R">
+<div class="tab-pane admonition" id="10377ab90_R">
 <div class="highlight-python"><pre># Given a Measurement URI, retrieve the Measurement from the local Data Context
 measurement &lt;- data_context$getObjectWithURI('ovation://...')
 
@@ -328,7 +321,7 @@ measurement &lt;- data_context$getObjectWithURI('ovation://...')
 local_path &lt;- measurement$getLocalDataPath()$get()</pre>
 </div>
 </div>
-<div class="tab-pane last admonition" id="1046c2290_Matlab">
+<div class="tab-pane last admonition" id="10377ab90_Matlab">
 <div class="highlight-python"><pre>% Given a Measurement URI, retrieve the Measurement from the local Data Context
 measurement = dataContext.getObjectWithURI('ovation://...');
 
@@ -358,8 +351,8 @@ local_path = measurement.getLocalDataPath().get();</pre>
     </p>
     <p>
         &copy; Copyright 2013-2014, Physion LLC.<br/>
-      Last updated on Jul 22, 2014.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2b3.<br/>
+      Last updated on Aug 08, 2014.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2b1.<br/>
     </p>
   </div>
 </footer>
