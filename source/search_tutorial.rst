@@ -1,10 +1,10 @@
-datadata .. _doc-about-ovation:
+.. _doc-getting-started-search:
 
 .. raw:: html
 
     <div class="span12 text-center">
         <ul class="nav nav-pills" style="display: inline-block">
-            <li class="active"><a href="about_ovation.html">About Ovation</a></li>
+            <li><a href="about_ovation.html">About Ovation</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
             <li><a href="installation.html">Install</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
@@ -12,7 +12,7 @@ datadata .. _doc-about-ovation:
             <li class="disabled"><a href="#">&raquo;</a></li>
             <li><a href="add_experiment.html">Add an Experiment</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
-            <li><a href="search_tutorial.html">Search</a></li>
+            <li class="active"><a href="search_tutorial.html">Search</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
             <li><a href="add_analysis.html">Add Analyses</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
@@ -20,14 +20,20 @@ datadata .. _doc-about-ovation:
         </ul>
     </div>
 
-*************
-About Ovation
-*************
+****************
+Search
+****************
 
-Ovation is the revolutionary data management service that empowers researchers through the seamless organization of multiple data formats and sources, preservation of the link between raw data and analyses and the ability to securely share of all of this with colleagues and collaborators.
+.. raw:: html
 
-    
-.. figure:: _static/ovation_overview.png
-    :align: center
-    :width: 1000px
-    :figclass: align-center
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                Ovation's powerful and intuitive search engine lets you search for items in the database by keyword tag, property or protocol parameter. Enter a search <a href="search_guide.html">query</a> into the "Quick Search" bar in the Ovation toolbar.
+            </div>
+            <div class="col-md-7">
+                <iframe width="560" height="315" src="//www.youtube.com/embed/HFQmeQzu7g4" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+  

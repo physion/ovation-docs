@@ -22,11 +22,13 @@ Welcome to `Ovation <http://ovation.io>`_! The workflow below will walk you thro
             <li class="disabled"><a href="#">&raquo;</a></li>
             <li><a href="installation.html">Install</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
-            <li><a href="create_project.html">Create a Project</a></li>
+            <li><a href="add_project.html">Add a Project</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
-            <li><a href="create_experiment.html">Create an Experiment</a></li>
+            <li><a href="add_experiment.html">Add an Experiment</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
-            <li><a href="create_measurement_and_source.html">Add a Source and Create a Measurement</a></li>
+            <li><a href="search_tutorial.html">Search</a></li>
+            <li class="disabled"><a href="#">&raquo;</a></li>
+            <li><a href="add_analysis.html">Add Analyses</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
             <li><a href="create_team.html">Create a Team</a></li>
         </ul>
