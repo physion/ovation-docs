@@ -1,4 +1,4 @@
-datadata .. _doc-about-ovation:
+.. _doc-about-ovation:
 
 .. raw:: html
 
