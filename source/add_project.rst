@@ -35,7 +35,7 @@ Once you've :ref:`installed <doc-installation>` Ovation, you're ready to start o
                 Projects are top-level entities in the Ovation data model, and are used to organize related Experiments. Projects may contain many Experiments, and Experiments can belong to more than one Project. To add a project to your Ovation database, click the <a href="">+New</a> hyperlink at the bottom of the Project Navigator or select "New" then "Project" from the "File" menu.
             </div>
             <div class="col-md-7">
-                <iframe width="560" height="315" src="//www.youtube.com/embed/HFQmeQzu7g4" frameborder="0" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/iPGm4c3rKfA?list=UUX5_9TMbyELAC-4dQtL2h7Q?rel=0" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
     </div>

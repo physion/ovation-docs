@@ -48,6 +48,7 @@ Resources
     :maxdepth: 1
 
     workflow_guide
+    search_guide
     source_guide
     procedure_guide
     analysis_records_guide

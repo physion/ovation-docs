@@ -32,7 +32,7 @@ Search
                 Ovation's powerful and intuitive search engine lets you search for items in the database by keyword tag, property or protocol parameter. Enter a search <a href="search_guide.html">query</a> into the "Quick Search" bar in the Ovation toolbar.
             </div>
             <div class="col-md-7">
-                <iframe width="560" height="315" src="//www.youtube.com/embed/HFQmeQzu7g4" frameborder="0" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/AL1iKz2hppA?rel=0" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
     </div>
