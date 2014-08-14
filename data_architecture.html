@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Ovation.io data architecture &mdash; Ovation Scientific Data Management System 2.0 Beta documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.0 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Ovation Scientific Data Management System 2.0 Beta documentation" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><img src="_static/ovation_logo.png">
+          Ovation</a>
+        <span class="navbar-text navbar-version pull-left"><b>2.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+                <li><a href="http://ovation.io">Dashboard</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Topics <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul>
+<li class="toctree-l1"><a class="reference internal" href="about_ovation.html">Getting Started</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="workflow_guide.html">Ovation Workflow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="workflow_guide.html#import-files">1. Import files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflow_guide.html#use-files-in-your-existing-pipeline">2. Use files in your existing pipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflow_guide.html#import-results-as-analysis-records">3. Import results as Analysis Records</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="search_guide.html">Search</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="search_guide.html#searching-for-many-entities">Searching for many entities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="search_guide.html#searching-by-entity-id">Searching by entity ID</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="source_guide.html">Sources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="source_guide.html#metadata">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_guide.html#derived-sources">Derived Sources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="procedure_guide.html">Protocols and Procedures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="procedure_guide.html#making-measurements">Making Measurements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="procedure_guide.html#source-derivation">Source derivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="procedure_guide.html#analysis-records">Analysis Records</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_records_guide.html">Analysis Records</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tabular_data.html">Importing and analyzing tabular (CSV) data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tabular_data.html#importing-tabular-csv-data">Importing tabular (CSV) data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tabular_data.html#retrieving-tabular-csv-data">Retrieving tabular (CSV) data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="application.html">Ovation Application</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="application.html#browsers">Browsers</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="using_rovation.html">R</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_rovation.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_rovation.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_rovation.html#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="using_ovation_python.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_python.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_python.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_python.html#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="using_ovation_matlab.html">Matlab</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_matlab.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_matlab.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_matlab.html#usage">Usage</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="ovation-io-data-architecture">
+<span id="doc-data-provenance"></span><h1>Ovation.io data architecture<a class="headerlink" href="#ovation-io-data-architecture" title="Permalink to this headline">¶</a></h1>
+<p>This chapter describes data architecture for the ovation.io cloud service—the chain of custody—for data as if flows through the Ovation.io infrastructure.</p>
+<div class="section" id="ownership-and-access-control">
+<h2>Ownership and Access Control<a class="headerlink" href="#ownership-and-access-control" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ownership">
+<h3>Ownership<a class="headerlink" href="#ownership" title="Permalink to this headline">¶</a></h3>
+<p>Ovation maintains careful ownership and access control for every data item in the database. Each metadata item (entity or annotation) has single owner, the user that first created that data item. Files associated with <cite>Measurement</cite>, <cite>AnalysisArtifact</cite> or <cite>Resource</cite> entities are owned by the owner of the associated entity.</p>
+</div>
+<div class="section" id="write-groups">
+<h3>Write groups<a class="headerlink" href="#write-groups" title="Permalink to this headline">¶</a></h3>
+<p>The owner of a data item may create one or more <em>write groups</em>, adding any other Ovation users to these groups. All members of any write group may modify that data item and create additional write groups.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Write groups are useful for transfering effective ownership to a new user or group when a team member changes jobs.</p>
+</div>
+</div>
+<div class="section" id="access-control">
+<h3>Access control<a class="headerlink" href="#access-control" title="Permalink to this headline">¶</a></h3>
+<p>Ovation&#8217;s access control policy is based on data ownership, write group membership and team membership. Unauthenticated users are not permitted to read any data in the Ovation database. Table <em class="xref std std-ref">tbl-acl</em> read and write (modify) permissions given to these three categories of users.</p>
+<table border="1" class="docutils" id="tbl-acl">
+<colgroup>
+<col width="26%" />
+<col width="19%" />
+<col width="22%" />
+<col width="15%" />
+<col width="18%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">User Role</th>
+<th class="head">Read metadata</th>
+<th class="head">Modify metadata</th>
+<th class="head">Read files</th>
+<th class="head">Modify files</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Owner</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="row-odd"><td>Write Group member</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr class="row-even"><td>Team member</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr class="row-odd"><td>Unauthenticated</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="cloud-provisioning">
+<h2>Cloud provisioning<a class="headerlink" href="#cloud-provisioning" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="cloudant">
+<h3>Cloudant<a class="headerlink" href="#cloudant" title="Permalink to this headline">¶</a></h3>
+<p>Ovation.io provisions a unique Cloudant API key and Cloudant database (Figure <a class="reference internal" href="#fig-data-architecture"><em>Ovation data architecture</em></a>.2) in the Physion cluster <a class="footnote-reference" href="#id2" id="id1">[1]</a> for each ovation.io user. The user&#8217;s Cloudant API key is given admin rights to their database, along with the ovation.io root account, and all others are given no access to this database.</p>
+</div>
+<div class="section" id="amazon-web-services">
+<h3>Amazon Web Services<a class="headerlink" href="#amazon-web-services" title="Permalink to this headline">¶</a></h3>
+<p>Ovation.io provisions a unique IAM user for each ovation.io user. In addition, a new folder in the <cite>users.ovation.io</cite> S3 bucket is created for the user. An ACL policy allowing the user to read and write to the <cite>users.ovation.io/[user folder]</cite> path is created for the IAM user. The effect of this strategy is that each ovation.io user may read and write to their designated folder, with no other access allowed outside of their folder. The ovation.io application has read/write access to the entire <cite>users.ovation.io</cite> bucket.</p>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Physion&#8217;s Cloudant cluster is currently hosted by Rackspace.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="metadata">
+<h2>Metadata<a class="headerlink" href="#metadata" title="Permalink to this headline">¶</a></h2>
+<p>Experimental metadata (everything except raw measurement files) are stored in a CouchDB database on the user&#8217;s computer (Figure <a class="reference internal" href="#fig-data-architecture"><em>Ovation data architecture</em></a>.1). As new metadata is added to Ovation, this metadata is immediately stored in CouchDB (Figure <a class="reference internal" href="#fig-data-architecture"><em>Ovation data architecture</em></a>.1). Access to the local CouchDB database is restricted by password, stored in the user&#8217;s keychain (OS X) or secure key store (Windows). If multiple users log in to Ovation using the same computer account, Ovation uses separate CouchDB databases for each user, but just one local CouchDB access password (stored in the computer account keychain).</p>
+<p>Metadata is automatically replicated to User 1&#8217;s cloud database [hosted by Cloudant] (Figure <a class="reference internal" href="#fig-data-architecture"><em>Ovation data architecture</em></a>.2). If User 1 is a member of a team, metadata in User 1&#8217;s database that is part of a project shared with that Team is automatically replicated to the team&#8217;s shared database [3]. Metadata in the shared team database (Figure <a class="reference internal" href="#fig-data-architecture"><em>Ovation data architecture</em></a>.3) is automatically replicated to all team members&#8217; databases (Figure <a class="reference internal" href="#fig-data-architecture"><em>Ovation data architecture</em></a>.2, Figure <a class="reference internal" href="#fig-data-architecture"><em>Ovation data architecture</em></a>.4). As a result, this metadata (metadata part of a project that is shared with a team) will be replicated to all team member&#8217;s local CouchDB databases (e.g. on User 2&#8217;s computer).</p>
+<p>Changes to the team&#8217;s project&#8217;s metadata made on User 2&#8217;s computer will be saved in User 2&#8217;s local CouchDB database (Figure <a class="reference internal" href="#fig-data-architecture"><em>Ovation data architecture</em></a>.5) and similarly be replicated, eventually, to User 2&#8217;s cloud database (Figure <a class="reference internal" href="#fig-data-architecture"><em>Ovation data architecture</em></a>.4), then to the the team database (Figure <a class="reference internal" href="#fig-data-architecture"><em>Ovation data architecture</em></a>.3), then to User 1&#8217;s cloud database (Figure <a class="reference internal" href="#fig-data-architecture"><em>Ovation data architecture</em></a>.2) and eventually to User 1&#8217;s local CouchDB database (Figure <a class="reference internal" href="#fig-data-architecture"><em>Ovation data architecture</em></a>.1).</p>
+</div>
+<div class="section" id="files">
+<h2>Files<a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h2>
+<p>Files associated with <cite>Measurement</cite>, <cite>Resource</cite>, or <cite>AnalysisArtifact</cite> entities are stored in cloud storage. ovation.io manages access to these cloud resources according to the access control policy shown in Table <em class="xref std std-ref">tbl-acl</em>. For example, User 1 adds a new <cite>Measurement</cite> to the local database on User 1&#8217;s computer (Figure <a class="reference internal" href="#fig-data-architecture"><em>Ovation data architecture</em></a>.1). The file(s) associated with this <cite>Measurement</cite> are copied to Ovation&#8217;s pending upload storage on User 1&#8217;s computer (Figure <a class="reference internal" href="#fig-data-architecture"><em>Ovation data architecture</em></a>.A). The Ovation client API uploads the file as an Object in the <cite>users.ovation.io</cite> bucket (Figure <a class="reference internal" href="#fig-data-architecture"><em>Ovation data architecture</em></a>.B)[#]_. A unique URL with ovation.io as the host <a class="footnote-reference" href="#id4" id="id3">[2]</a> is saved to the Ovation database in place of the resources actual URL. Ovation.io will redirect requests to this URL according to the access control policy described in <em class="xref std std-ref">tbl-acl</em>.</p>
+<p>A copy of the file is cached on User 1&#8217;s computer (Figure <a class="reference internal" href="#fig-data-architecture"><em>Ovation data architecture</em></a>.A). In the case that the cached file is deleted or removed, User 1 may access the file by requesting a &#8220;pre-signed&#8221; URL for the resource from ovation.io (Figure <a class="reference internal" href="#fig-data-architecture"><em>Ovation data architecture</em></a>.C). Beacuse User 1 is the resource owner, ovation.io provides a pre-signed URL for downloading the resource from cloud storage. When a team member requests the resource, ovation.io provides a pre-signed URL according to the the access control policy shown in Table <em class="xref std std-ref">tbl-acl</em>. When an unauthenticated user requests access to the resource via ovation.io, ovation.io replies with an HTTP 404 (access denied).</p>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[2]</a></td><td>The location of Object is determined by the ovation.io service. Use of the Amazon Web Services Simple Storage Service is not guaranteed.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id5" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[3]</td><td>Unique resource URLs currently have the form <cite>http://ovation.io/resources/{unique id}</cite></td></tr>
+</tbody>
+</table>
+<div class="figure" id="fig-data-architecture" style="width: 66%">
+<a class="reference internal image-reference" href="_static/ovation.io_data_architecture.png"><img alt="_static/ovation.io_data_architecture.png" src="_static/ovation.io_data_architecture.png" /></a>
+<p class="caption">Ovation data architecture</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013-2014, Physion LLC.<br/>
+      Last updated on Aug 13, 2014.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

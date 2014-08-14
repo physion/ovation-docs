@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Add an Experiment &mdash; Ovation Scientific Data Management System 2.0 Beta documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.0 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Ovation Scientific Data Management System 2.0 Beta documentation" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><img src="_static/ovation_logo.png">
+          Ovation</a>
+        <span class="navbar-text navbar-version pull-left"><b>2.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+                <li><a href="http://ovation.io">Dashboard</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Topics <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul>
+<li class="toctree-l1"><a class="reference internal" href="about_ovation.html">Getting Started</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="workflow_guide.html">Ovation Workflow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="workflow_guide.html#import-files">1. Import files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflow_guide.html#use-files-in-your-existing-pipeline">2. Use files in your existing pipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflow_guide.html#import-results-as-analysis-records">3. Import results as Analysis Records</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="search_guide.html">Search</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="search_guide.html#searching-for-many-entities">Searching for many entities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="search_guide.html#searching-by-entity-id">Searching by entity ID</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="source_guide.html">Sources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="source_guide.html#metadata">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_guide.html#derived-sources">Derived Sources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="procedure_guide.html">Protocols and Procedures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="procedure_guide.html#making-measurements">Making Measurements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="procedure_guide.html#source-derivation">Source derivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="procedure_guide.html#analysis-records">Analysis Records</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_records_guide.html">Analysis Records</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tabular_data.html">Importing and analyzing tabular (CSV) data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tabular_data.html#importing-tabular-csv-data">Importing tabular (CSV) data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tabular_data.html#retrieving-tabular-csv-data">Retrieving tabular (CSV) data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="application.html">Ovation Application</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="application.html#browsers">Browsers</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="using_rovation.html">R</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_rovation.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_rovation.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_rovation.html#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="using_ovation_python.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_python.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_python.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_python.html#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="using_ovation_matlab.html">Matlab</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_matlab.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_matlab.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_matlab.html#usage">Usage</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="span12 text-center">
+    <ul class="nav nav-pills" style="display: inline-block">
+        <li><a href="about_ovation.html">About Ovation</a></li>
+        <li class="disabled"><a href="#">&raquo;</a></li>
+        <li><a href="installation.html">Install</a></li>
+        <li class="disabled"><a href="#">&raquo;</a></li>
+        <li><a href="add_project.html">Add a Project</a></li>
+        <li class="disabled"><a href="#">&raquo;</a></li>
+        <li class="active"><a href="add_experiment.html">Add an Experiment</a></li>
+        <li class="disabled"><a href="#">&raquo;</a></li>
+        <li><a href="search_tutorial.html">Search</a></li>
+        <li class="disabled"><a href="#">&raquo;</a></li>
+        <li><a href="add_analysis.html">Add Analyses</a></li>
+        <li class="disabled"><a href="#">&raquo;</a></li>
+        <li><a href="create_team.html">Create a Team</a></li>
+    </ul>
+</div><div class="section" id="add-an-experiment">
+<h1>Add an Experiment<a class="headerlink" href="#add-an-experiment" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="experiment-data">
+<h2>Experiment data<a class="headerlink" href="#experiment-data" title="Permalink to this headline">¶</a></h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            To add data for a new Experiment to an existing Project, drag-and-drop the data files onto the Project info window.
+        </div>
+        <div class="col-md-7">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Sq9Wx1wMEY0?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div></div>
+<div class="section" id="protocol">
+<h2>Protocol<a class="headerlink" href="#protocol" title="Permalink to this headline">¶</a></h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            A Protocol is the procedure followed to perform an Experiment or make a Measurement. Protocols may have parameters that change each time the procedure is followed.
+        </div>
+        <div class="col-md-7">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Ufssv3HeYh4?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div></div>
+<div class="section" id="sources">
+<h2>Sources<a class="headerlink" href="#sources" title="Permalink to this headline">¶</a></h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            Ovation can help you maintain the relationships between data files and the Source, or biological subject, of the Experiment. To associate a Measurement with a Source, open the Measurement info panel and enter the identifiers of the Sources measured in the Experiment. If the Source does not exist in the database, Ovation will create a Source entity for you.
+        </div>
+        <div class="col-md-7">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/WMcP_9Qgds8?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div></div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013-2014, Physion LLC.<br/>
+      Last updated on Aug 13, 2014.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
