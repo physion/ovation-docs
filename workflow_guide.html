@@ -30,7 +30,7 @@
     <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Ovation Scientific Data Management System 2.0 Beta documentation" href="index.html" />
-    <link rel="next" title="Sources" href="source_guide.html" />
+    <link rel="next" title="Search" href="search_guide.html" />
     <link rel="prev" title="About Ovation" href="about_ovation.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -49,7 +49,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">Ovation</a>
+        <a class="navbar-brand" href="index.html"><img src="_static/ovation_logo.png">
+          Ovation</a>
         <span class="navbar-text navbar-version pull-left"><b>2.0</b></span>
       </div>
 
@@ -73,6 +74,11 @@
 <li class="toctree-l2"><a class="reference internal" href="#import-files">1. Import files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#use-files-in-your-existing-pipeline">2. Use files in your existing pipeline</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#import-results-as-analysis-records">3. Import results as Analysis Records</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="search_guide.html">Search</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="search_guide.html#searching-for-many-entities">Searching for many entities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="search_guide.html#searching-by-entity-id">Searching by entity ID</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="source_guide.html">Sources</a><ul>
@@ -123,10 +129,12 @@
             
             
               
+                
   <li><a href="about_ovation.html"
          title="Previous Chapter: About Ovation">&laquo; About Ovation</a></li>
-  <li><a href="source_guide.html"
-         title="Next Chapter: Sources">Sources &raquo;</a></li>
+  <li><a href="search_guide.html"
+         title="Next Chapter: Search">Search &raquo;</a></li>
+              
             
             
             
@@ -164,12 +172,12 @@
 <div class="tabbable">
 <ul class="nav nav-tabs simple">
 <li class="disabled"><a class="disabled">Ovation API:</a></li>
-<li class="active"><a data-toggle="tab" href="#103fb8550_Python">Python</a></li>
-<li><a data-toggle="tab" href="#103fb8550_R">R</a></li>
-<li><a data-toggle="tab" href="#103fb8550_Matlab">Matlab</a></li>
+<li class="active"><a data-toggle="tab" href="#1045bed10_Python">Python</a></li>
+<li><a data-toggle="tab" href="#1045bed10_R">R</a></li>
+<li><a data-toggle="tab" href="#1045bed10_Matlab">Matlab</a></li>
 </ul>
 <div class="tab-content admonition">
-<div class="tab-pane active first admonition" id="103fb8550_Python">
+<div class="tab-pane active first admonition" id="1045bed10_Python">
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">ovation.conversion</span> <span class="kn">import</span> <span class="n">to_map</span><span class="p">,</span> <span class="n">to_java_set</span><span class="p">,</span> <span class="n">to_file_url</span><span class="p">,</span> <span class="n">asclass</span>
 <span class="kn">from</span> <span class="nn">ovation.core</span> <span class="kn">import</span> <span class="n">date_time</span>
 
@@ -212,19 +220,19 @@
 </pre></div>
 </div>
 </div>
-<div class="tab-pane admonition" id="103fb8550_R">
-<div class="highlight-python"><pre># Obtain a reference to the containing experiment, e.g. by URI
-experiment &lt;- data_context$getObjectWithURI('ovation://...')
+<div class="tab-pane admonition" id="1045bed10_R">
+<div class="highlight-python"><div class="highlight"><pre># Obtain a reference to the containing experiment, e.g. by URI
+experiment &lt;- data_context$getObjectWithURI(&#39;ovation://...&#39;)
 
 # Obtain a reference to the measured Source(s)
-source &lt;- data_context$getObjectWithURI('ovation://...')
+source &lt;- data_context$getObjectWithURI(&#39;ovation://...&#39;)
 
 # Insert an Epoch describing the procedure that recorded the measurement(s)
 
-input_sources &lt;- list(source_name = source)  # List of Sources that were "inputs" to the measurements named by list key.
-                                            #Input Source name(s) give the Sources' named in the context of this procedure.
+input_sources &lt;- list(source_name = source)  # List of Sources that were &quot;inputs&quot; to the measurements named by list key.
+                                            #Input Source name(s) give the Sources&#39; named in the context of this procedure.
 
-protocol &lt;- data_context$getProtocol('My protocol name') # Get a protocol (by name) describing the Measurement procedure
+protocol &lt;- data_context$getProtocol(&#39;My protocol name&#39;) # Get a protocol (by name) describing the Measurement procedure
 
 protocol_parameters &lt;- list()   # Map of variable parameters for this protocol
 device_parameters &lt;- list()     # Map of device parameters for devices used in making the Measurement(s)
@@ -240,30 +248,31 @@ epoch &lt;- experiment$insertEpoch(list2map(input_sources),
 
 
 # Add a measurement file by path
-measurement_path = '/path/to/local/my_file'
+measurement_path = &#39;/path/to/local/my_file&#39;
 measurement_url = NewUrl(measurement_path)
-epoch.insertMeasurement('my_file',                              # Measurement display name
-                        Vector2Set(c('source')),                # When Epoch has multiple input Sources, which are associated with this measurement, by name
-                        Vector2Set(c('device1', 'device2')),    # Devices used in this measurement or empty if none
+epoch.insertMeasurement(&#39;my_file&#39;,                              # Measurement display name
+                        Vector2Set(c(&#39;source&#39;)),                # When Epoch has multiple input Sources, which are associated with this measurement, by name
+                        Vector2Set(c(&#39;device1&#39;, &#39;device2&#39;)),    # Devices used in this measurement or empty if none
                         measurement_url,
-                        'application/octet-stream')             # Measurment content type, e.g. text/csv, imate/tiff, etc. Application/octet-stream is the most generic</pre>
+                        &#39;application/octet-stream&#39;)             # Measurment content type, e.g. text/csv, imate/tiff, etc. Application/octet-stream is the most generic
+</pre></div>
 </div>
 </div>
-<div class="tab-pane last admonition" id="103fb8550_Matlab">
-<div class="highlight-python"><pre>import ovation.*
+<div class="tab-pane last admonition" id="1045bed10_Matlab">
+<div class="highlight-python"><div class="highlight"><pre>import ovation.*
 
 % Obtain a reference to the containing experiment, e.g. by URI
-experiment = dataContext.getObjectWithURI('ovation://...');
+experiment = dataContext.getObjectWithURI(&#39;ovation://...&#39;);
 
 % Obtain a reference to the measured Source(s)
-source = dataContext.getObjectWithURI('ovation://...');
+source = dataContext.getObjectWithURI(&#39;ovation://...&#39;);
 
 %% Insert an Epoch describing the procedure that recorded the measurement(s)
 input_sources = struct()
-input_sources.sourceName = source;  % Struct of Sources that were "inputs" to the measurements named by struct field.
-                                    % Input Source name(s) give the Sources' named in the context of this procedure.
+input_sources.sourceName = source;  % Struct of Sources that were &quot;inputs&quot; to the measurements named by struct field.
+                                    % Input Source name(s) give the Sources&#39; named in the context of this procedure.
 
-protocol = dataContext.getProtocol('My protocol name'); % Get a protocol (by name) describing the Measurement procedure
+protocol = dataContext.getProtocol(&#39;My protocol name&#39;); % Get a protocol (by name) describing the Measurement procedure
 
 protocol_parameters = struct(); % Map of variable parameters for this protocol
 device_parameters = struct();   % Map of device parameters for devices used in making the Measurement(s)
@@ -279,15 +288,16 @@ epoch = experiment.insertEpoch(struct2map(input_sources),...
 
 
 % Add a measurement file by path
-measurement_path = '/path/to/local/my_file';
-measurement_url = java.net.URL(['file://' measurement_path]);
-measurement_name = 'my_file';
+measurement_path = &#39;/path/to/local/my_file&#39;;
+measurement_url = java.net.URL([&#39;file://&#39; measurement_path]);
+measurement_name = &#39;my_file&#39;;
 epoch.insertMeasurement(measurement_name,...            % Measurement display name
-                        {'source'},...                  % When Epoch has multiple input Sources, which are associated with this measurement, by name
-                        {'device1', 'device2'},...      % Devices used in this measurement or empty if none
+                        {&#39;source&#39;},...                  % When Epoch has multiple input Sources, which are associated with this measurement, by name
+                        {&#39;device1&#39;, &#39;device2&#39;},...      % Devices used in this measurement or empty if none
                         measurement_url,...
-                        'application/octet-stream'...   % Measurment content type, e.g. text/csv, imate/tiff, etc. Application/octet-stream is the most generic
-                        )</pre>
+                        &#39;application/octet-stream&#39;...   % Measurment content type, e.g. text/csv, imate/tiff, etc. Application/octet-stream is the most generic
+                        )
+</pre></div>
 </div>
 </div>
 </div>
@@ -299,12 +309,12 @@ epoch.insertMeasurement(measurement_name,...            % Measurement display na
 <div class="tabbable">
 <ul class="nav nav-tabs simple">
 <li class="disabled"><a class="disabled">Ovation API:</a></li>
-<li class="active"><a data-toggle="tab" href="#103fb8c90_Python">Python</a></li>
-<li><a data-toggle="tab" href="#103fb8c90_R">R</a></li>
-<li><a data-toggle="tab" href="#103fb8c90_Matlab">Matlab</a></li>
+<li class="active"><a data-toggle="tab" href="#1045f0090_Python">Python</a></li>
+<li><a data-toggle="tab" href="#1045f0090_R">R</a></li>
+<li><a data-toggle="tab" href="#1045f0090_Matlab">Matlab</a></li>
 </ul>
 <div class="tab-content admonition">
-<div class="tab-pane active first admonition" id="103fb8c90_Python">
+<div class="tab-pane active first admonition" id="1045f0090_Python">
 <div class="highlight-python"><div class="highlight"><pre><span class="c"># Given a Measurement URI, retrieve the Measurement from the local Data Context</span>
 <span class="n">measurement</span> <span class="o">=</span> <span class="n">data_context</span><span class="o">.</span><span class="n">getObjectWithURI</span><span class="p">(</span><span class="s">&#39;ovation://...&#39;</span><span class="p">)</span>
 
@@ -313,20 +323,22 @@ epoch.insertMeasurement(measurement_name,...            % Measurement display na
 </pre></div>
 </div>
 </div>
-<div class="tab-pane admonition" id="103fb8c90_R">
-<div class="highlight-python"><pre># Given a Measurement URI, retrieve the Measurement from the local Data Context
-measurement &lt;- data_context$getObjectWithURI('ovation://...')
+<div class="tab-pane admonition" id="1045f0090_R">
+<div class="highlight-python"><div class="highlight"><pre># Given a Measurement URI, retrieve the Measurement from the local Data Context
+measurement &lt;- data_context$getObjectWithURI(&#39;ovation://...&#39;)
 
-# Get the path to the Measurement's file(s). getLocalDataPath() returns asynchronously, get() waits for completion
-local_path &lt;- measurement$getLocalDataPath()$get()</pre>
+# Get the path to the Measurement&#39;s file(s). getLocalDataPath() returns asynchronously, get() waits for completion
+local_path &lt;- measurement$getLocalDataPath()$get()
+</pre></div>
 </div>
 </div>
-<div class="tab-pane last admonition" id="103fb8c90_Matlab">
-<div class="highlight-python"><pre>% Given a Measurement URI, retrieve the Measurement from the local Data Context
-measurement = dataContext.getObjectWithURI('ovation://...');
+<div class="tab-pane last admonition" id="1045f0090_Matlab">
+<div class="highlight-python"><div class="highlight"><pre>% Given a Measurement URI, retrieve the Measurement from the local Data Context
+measurement = dataContext.getObjectWithURI(&#39;ovation://...&#39;);
 
-% Get the path to the Measurement's file(s). getLocalDataPath() returns asynchronously, get() waits for completion
-local_path = measurement.getLocalDataPath().get();</pre>
+% Get the path to the Measurement&#39;s file(s). getLocalDataPath() returns asynchronously, get() waits for completion
+local_path = measurement.getLocalDataPath().get();
+</pre></div>
 </div>
 </div>
 </div>
@@ -351,8 +363,8 @@ local_path = measurement.getLocalDataPath().get();</pre>
     </p>
     <p>
         &copy; Copyright 2013-2014, Physion LLC.<br/>
-      Last updated on Aug 08, 2014.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2b1.<br/>
+      Last updated on Aug 13, 2014.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
     </p>
   </div>
 </footer>

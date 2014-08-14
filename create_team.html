@@ -47,7 +47,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">Ovation</a>
+        <a class="navbar-brand" href="index.html"><img src="_static/ovation_logo.png">
+          Ovation</a>
         <span class="navbar-text navbar-version pull-left"><b>2.0</b></span>
       </div>
 
@@ -71,6 +72,11 @@
 <li class="toctree-l2"><a class="reference internal" href="workflow_guide.html#import-files">1. Import files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workflow_guide.html#use-files-in-your-existing-pipeline">2. Use files in your existing pipeline</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workflow_guide.html#import-results-as-analysis-records">3. Import results as Analysis Records</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="search_guide.html">Search</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="search_guide.html#searching-for-many-entities">Searching for many entities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="search_guide.html#searching-by-entity-id">Searching by entity ID</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="source_guide.html">Sources</a><ul>
@@ -121,6 +127,8 @@
             
             
               
+                
+              
             
             
             
@@ -151,42 +159,30 @@
         <li class="disabled"><a href="#">&raquo;</a></li>
         <li><a href="installation.html">Install</a></li>
         <li class="disabled"><a href="#">&raquo;</a></li>
-        <li><a href="create_project.html">Create a Project</a></li>
+        <li><a href="add_project.html">Add a Project</a></li>
         <li class="disabled"><a href="#">&raquo;</a></li>
-        <li><a href="create_experiment.html">Create an Experiment</a></li>
+        <li><a href="add_experiment.html">Add an Experiment</a></li>
         <li class="disabled"><a href="#">&raquo;</a></li>
-        <li><a href="create_measurement_and_source.html">Add a Source and Create a Measurement</a></li>
+        <li><a href="search_tutorial.html">Search</a></li>
         <li class="disabled"><a href="#">&raquo;</a></li>
-        <li class="active"><a href="#">Create a Team</a></li>
+        <li><a href="add_analysis.html">Add Analyses</a></li>
+        <li class="disabled"><a href="#">&raquo;</a></li>
+        <li class="active"><a href="create_team.html">Create a Team</a></li>
     </ul>
 </div><div class="section" id="create-a-collaborative-team">
 <h1>Create a Collaborative Team<a class="headerlink" href="#create-a-collaborative-team" title="Permalink to this headline">¶</a></h1>
-<p>Now that you have created a Project with associated Experiments, Measurements and Sources, you can create a Team to start collaborating on the Project.   A Team within Ovation not only enables you to share data, analyses, notes and more with colleagues and peers, it gives you a platform for exchanging ideas and building on hypotheses with collaborators.  You can share multiple Projects with a Team and invited Team Members can add Projects of their own to a Team.  So, let’s get collaborating!</p>
-<p>To create a team, visit <a class="reference external" href="http://ovation.io">ovation.io</a> and login to your Ovation account.</p>
-<p>You will be taken to your Ovation dashboard where you can view all of your current teams.</p>
-<div class="figure align-center">
-<img alt="_images/ovation-io-dashboard.png" src="_images/ovation-io-dashboard.png" />
-</div>
-<p>Click on “Create a Team”  and give your Team a name and description</p>
-<div class="figure align-center">
-<img alt="_images/ovation-io-create-team.png" src="_images/ovation-io-create-team.png" />
-</div>
-<div class="admonition tip">
-<p class="first admonition-title">Tip</p>
-<p class="last">You can optionally add a custom user license to any Team.  Each Team Member will need to accept the terms  of that license prior to joining the Team.</p>
-</div>
-<p>Next, invite Team Members by adding the email address associated with their Ovation account.  If your collaborator does not have an Ovation account, just enter their email address and they will receive a prompt to sign up.</p>
-<div class="figure align-center">
-<img alt="_images/ovation-io-team-invite.png" src="_images/ovation-io-team-invite.png" />
-</div>
-<p>Finally, add a Project by typing the Project Name in the box to the right.  A list of your Projects in Ovation will auto-populate as you begin to type.</p>
-<div class="figure align-center">
-<img alt="_images/ovation-io-team-project.png" src="_images/ovation-io-team-project.png" />
-</div>
-<p>That’s it!  Your invited Team Members will now receive an email with instructions on how to join the Team.</p>
-<div class="admonition tip">
-<p class="first admonition-title">Tip</p>
-<p class="last">Your Team Members may need to sync their desktop Ovation with their Ovation.io account before they can see the Project.  This is done by clicking “tools” and then “sync” in Ovation.</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            Ovation makes it incredible easy to share data, analyses and annotations with your collaborators. To get started, log in at <a href="https://ovation.io">ovation.io</a> and click the “Create Team” button on your ovation.io dashboard. Team members that you invite will receive an email with instructions for joining the team.
+        </div>
+        <div class="col-md-7">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/b3wY069Cdh4?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Your Team Members may need to sync their desktop Ovation with their Ovation.io account before they can see the Project.  This is done by selecting &#8220;Sync&#8221; from the &#8220;Tools&#8221; menu in Ovation.</p>
 </div>
 </div>
 
@@ -203,8 +199,8 @@
     </p>
     <p>
         &copy; Copyright 2013-2014, Physion LLC.<br/>
-      Last updated on Aug 08, 2014.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2b1.<br/>
+      Last updated on Aug 13, 2014.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
     </p>
   </div>
 </footer>

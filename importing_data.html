@@ -47,7 +47,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">Ovation</a>
+        <a class="navbar-brand" href="index.html"><img src="_static/ovation_logo.png">
+          Ovation</a>
         <span class="navbar-text navbar-version pull-left"><b>2.0</b></span>
       </div>
 
@@ -71,6 +72,11 @@
 <li class="toctree-l2"><a class="reference internal" href="workflow_guide.html#import-files">1. Import files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workflow_guide.html#use-files-in-your-existing-pipeline">2. Use files in your existing pipeline</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workflow_guide.html#import-results-as-analysis-records">3. Import results as Analysis Records</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="search_guide.html">Search</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="search_guide.html#searching-for-many-entities">Searching for many entities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="search_guide.html#searching-by-entity-id">Searching by entity ID</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="source_guide.html">Sources</a><ul>
@@ -121,6 +127,8 @@
             
             
               
+                
+              
             
             
             
@@ -155,8 +163,9 @@
 <li><p class="first">Add a Project and Experiment to the databse (if needed)</p>
 </li>
 <li><p class="first">Set the Experiment equipment setup (this only needs to be done once per experiment):</p>
-<div class="highlight-python"><pre>&gt;&gt; exp = context.getObjectWithURI('&lt;pasted URI from Ovation application'&gt;);
-&gt;&gt; exp.setEquipmentSetup(config2map('&lt;cfg file&gt;', 'Arena'));</pre>
+<div class="highlight-python"><div class="highlight"><pre>&gt;&gt; exp = context.getObjectWithURI(&#39;&lt;pasted URI from Ovation application&#39;&gt;);
+&gt;&gt; exp.setEquipmentSetup(config2map(&#39;&lt;cfg file&gt;&#39;, &#39;Arena&#39;));
+</pre></div>
 </div>
 </li>
 </ol>
@@ -168,15 +177,17 @@
 <li><p class="first">Create an EpochGroup within the new Experiment for the behavioral data</p>
 </li>
 <li><p class="first">Retrieve a reference to the <cite>EpochGroup</cite>, <cite>Source</cite> and <cite>Protocol</cite> for the data. You can browse from the <cite>DataContext</cite> in Matlab or copy-and-paste from the Ovation application, using <cite>getObjectWithURI</cite> from the Matlab <cite>DataContext</cite>, e.g.:</p>
-<div class="highlight-python"><pre>&gt;&gt; source = context.getObjectWithURI('&lt;pasted URI from Ovation application&gt;');
-&gt;&gt; protocol = context.getObjectWithURI('&lt;pasted URI from Ovation application Protocols View&gt;');
-&gt;&gt; epochGroup = context.getObjectWithURI('&lt;pasted URI from Ovation application&gt;');</pre>
+<div class="highlight-python"><div class="highlight"><pre>&gt;&gt; source = context.getObjectWithURI(&#39;&lt;pasted URI from Ovation application&gt;&#39;);
+&gt;&gt; protocol = context.getObjectWithURI(&#39;&lt;pasted URI from Ovation application Protocols View&gt;&#39;);
+&gt;&gt; epochGroup = context.getObjectWithURI(&#39;&lt;pasted URI from Ovation application&gt;&#39;);
+</pre></div>
 </div>
 </li>
 </ol>
 <ol class="arabic" start="4">
 <li><p class="first">Import the room-frame and arena-frame .dat and image files. This example shows an import of the <cite>bl1D1Hab</cite> trial:</p>
-<div class="highlight-python"><pre>&gt;&gt; epoch = import_fenton_dat(source, epochGroup, protocol, 'Arena', 'Arena.Camera', 'America/New_York', 600, 'bl1D1Hab_Arena.dat', fullfile(pwd(), 'bl1D1Hab_Arena.png'), 'bl1D1Hab_Room.dat', fullfile(pwd(), 'bl1D1Hab_Room.png'), 'image/png')</pre>
+<div class="highlight-python"><div class="highlight"><pre>&gt;&gt; epoch = import_fenton_dat(source, epochGroup, protocol, &#39;Arena&#39;, &#39;Arena.Camera&#39;, &#39;America/New_York&#39;, 600, &#39;bl1D1Hab_Arena.dat&#39;, fullfile(pwd(), &#39;bl1D1Hab_Arena.png&#39;), &#39;bl1D1Hab_Room.dat&#39;, fullfile(pwd(), &#39;bl1D1Hab_Room.png&#39;), &#39;image/png&#39;)
+</pre></div>
 </div>
 </li>
 </ol>
@@ -186,12 +197,13 @@
 </div>
 <ol class="arabic" start="6">
 <li><p class="first">Additional table (e.g. CSV) data can be imported using the &#8220;Insert Measurement...&#8221; wizard in the Ovation application:</p>
-<div class="highlight-python"><pre>&gt;&gt; epoch.insertMeasurement('&lt;table name&gt;', ...
-    array2set({'subject'}), ...
-    array2set({'Arena'}), ...
-    java.util.File('&lt;absolute path to .csv&gt;').toURI().toURL(), ...
-    'application/csv'... % or other appropriate content type
-    )</pre>
+<div class="highlight-python"><div class="highlight"><pre>&gt;&gt; epoch.insertMeasurement(&#39;&lt;table name&gt;&#39;, ...
+    array2set({&#39;subject&#39;}), ...
+    array2set({&#39;Arena&#39;}), ...
+    java.util.File(&#39;&lt;absolute path to .csv&gt;&#39;).toURI().toURL(), ...
+    &#39;application/csv&#39;... % or other appropriate content type
+    )
+</pre></div>
 </div>
 </li>
 </ol>
@@ -205,19 +217,23 @@
 <li><p class="first">If needed, install Python 2.7 (download from <a class="reference external" href="http://python.org">http://python.org</a>)</p>
 </li>
 <li><p class="first">If needed, install the Python <cite>setuptools</cite> package. Download and run <a class="reference external" href="http://peak.telecommunity.com/dist/ez_setup.py">ez_setup.py</a>:</p>
-<div class="highlight-python"><pre>python ez_setup.py</pre>
+<div class="highlight-python"><div class="highlight"><pre>python ez_setup.py
+</pre></div>
 </div>
 </li>
 <li><p class="first">Install the <em class="xref std std-ref">Ovation Python API</em> and the Ovation Neo Importer:</p>
-<div class="highlight-python"><pre>easy_install ovation-neo</pre>
+<div class="highlight-python"><div class="highlight"><pre>easy_install ovation-neo
+</pre></div>
 </div>
 </li>
 </ol>
 <p>The physiology data importer is run from the terminal command line:</p>
-<div class="highlight-python"><pre>python -m ovation_neo --timezone &lt;time zone ID&gt; --container &lt;experiment URI&gt; --protocol &lt;protocol URI&gt; --source &lt;source URI&gt; file1.abf file2.plx...</pre>
+<div class="highlight-python"><div class="highlight"><pre>python -m ovation_neo --timezone &lt;time zone ID&gt; --container &lt;experiment URI&gt; --protocol &lt;protocol URI&gt; --source &lt;source URI&gt; file1.abf file2.plx...
+</pre></div>
 </div>
 <p>You can get more information about the available arguments by running:</p>
-<div class="highlight-python"><pre>python -m ovation_neo -h</pre>
+<div class="highlight-python"><div class="highlight"><pre>python -m ovation_neo -h
+</pre></div>
 </div>
 <p>To find the <cite>Experiment</cite>, <cite>Protocol</cite> and <cite>Source</cite> URIs, you can copy-and-paste the relevant object(s) from the Ovation application or call the <cite>getURI())</cite> method on the object within Python.</p>
 </div>
@@ -276,26 +292,27 @@
 </div>
 <ol class="arabic" start="2">
 <li><p class="first">Load the <cite>Rovation</cite> library within R:</p>
-<div class="highlight-python"><pre>&gt; library(Rovation)</pre>
+<div class="highlight-python"><div class="highlight"><pre>&gt; library(Rovation)
+</pre></div>
 </div>
 </li>
 <li><p class="first">Follow the example import making use of the R API and the Ovation application:</p>
-<div class="highlight-python"><pre>## Connect to the database
-context &lt;- NewDataContext("&lt;registered email&gt;")
+<div class="highlight-python"><div class="highlight"><pre>## Connect to the database
+context &lt;- NewDataContext(&quot;&lt;registered email&gt;&quot;)
 
 ## Create a new Protocol
-protocol &lt;- context$insertProtocol("R protocol", "... my protocol document ...")
+protocol &lt;- context$insertProtocol(&quot;R protocol&quot;, &quot;... my protocol document ...&quot;)
 
 ## Or a protocol load one via URI
-protocol &lt;- context$getObjectWithURI('&lt;URI copied from Ovation application&gt;')
+protocol &lt;- context$getObjectWithURI(&#39;&lt;URI copied from Ovation application&gt;&#39;)
 
 ## Get a reference to a Source and Epoch container (e.g. an EpochGroup) by copy-and-paste from the Ovation application
 
-source &lt;- context$getObjectWithURI('&lt;source URI&gt;')
-epochGroup &lt;- context$getObjectWithURI('&lt;epochGroup URI&gt;')
+source &lt;- context$getObjectWithURI(&#39;&lt;source URI&gt;&#39;)
+epochGroup &lt;- context$getObjectWithURI(&#39;&lt;epochGroup URI&gt;&#39;)
 
 ## Insert a new Epoch
-protocolParameters &lt;- list(param1 = "value1", param2 = 3, param3 = "some text")
+protocolParameters &lt;- list(param1 = &quot;value1&quot;, param2 = 3, param3 = &quot;some text&quot;)
 deviceParameters &lt;- list() # Add device parameters here
 inputSources = list(subject=source) # Map of input sources
 outputSources - list() # No new sources generated by this Epoch
@@ -308,11 +325,11 @@ epoch &lt;- epochGroup$insertEpoch(List2Map(inputSources),
                                 List2Map(deviceParameters))
 
 ## Add a CSV measurement
-measurement &lt;- epoch$insertMeasurement("&lt;measurement name&gt;",
-                                       Vector2Set(c("subject")), # Note same name as inputSources above
-                                       Vector2Set(c("device1", "device2")), # Device(s) used to make measurement. Should be present (or added) in Experiment$getEquipmentSetup
-                                       NewUrl("&lt;/path/to/example.csv&gt;"),
-                                       "application/csv"
+measurement &lt;- epoch$insertMeasurement(&quot;&lt;measurement name&gt;&quot;,
+                                       Vector2Set(c(&quot;subject&quot;)), # Note same name as inputSources above
+                                       Vector2Set(c(&quot;device1&quot;, &quot;device2&quot;)), # Device(s) used to make measurement. Should be present (or added) in Experiment$getEquipmentSetup
+                                       NewUrl(&quot;&lt;/path/to/example.csv&gt;&quot;),
+                                       &quot;application/csv&quot;
                                        )
 
 # Wait (up to 10 minutes) for all uploads to finish
@@ -320,10 +337,11 @@ WaitForPendingUploads(context, timeout.seconds = 600)
 
 
 ## Retrieve the DataFrame from measurement
-# The pattern for downloading (if ncessary) and accessing the local cached copy of measurement's data
+# The pattern for downloading (if ncessary) and accessing the local cached copy of measurement&#39;s data
 localFilePath &lt;- measurement$getLocalDataPath()$get()
 
-df &lt;- read.csv(localFilePath)</pre>
+df &lt;- read.csv(localFilePath)
+</pre></div>
 </div>
 </li>
 </ol>
@@ -343,8 +361,8 @@ df &lt;- read.csv(localFilePath)</pre>
     </p>
     <p>
         &copy; Copyright 2013-2014, Physion LLC.<br/>
-      Last updated on Aug 08, 2014.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2b1.<br/>
+      Last updated on Aug 13, 2014.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
     </p>
   </div>
 </footer>
