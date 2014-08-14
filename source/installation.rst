@@ -8,11 +8,13 @@
             <li class="disabled"><a href="#">&raquo;</a></li>
             <li class="active"><a href="installation.html">Install</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
-            <li><a href="create_project.html">Create a Project</a></li>
+            <li><a href="add_project.html">Add a Project</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
-            <li><a href="create_experiment.html">Create an Experiment</a></li>
+            <li><a href="add_experiment.html">Add an Experiment</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
-            <li><a href="create_measurement_and_source.html">Add a Source and Create a Measurement</a></li>
+            <li><a href="search_tutorial.html">Search</a></li>
+            <li class="disabled"><a href="#">&raquo;</a></li>
+            <li><a href="add_analysis.html">Add Analyses</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
             <li><a href="create_team.html">Create a Team</a></li>
         </ul>
@@ -32,8 +34,10 @@ Ovation supports the following operating systems and architectures:
 
 * OS X 10.8 and later
 * Windows 7 and later (64-bit)
+* Fedora 20 and later
+* Ubuntu 14.04 LTS and later
 
-Ovation requires the Java runtime (JRE) version 7 or later. Please `download <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_ and install Java before installing Ovation.
+.. note:: Ovation requires the Java runtime (JRE) version 7 or later. Please `download <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_ and install Java before installing Ovation.
 
 
 Installation
