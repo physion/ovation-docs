@@ -166,8 +166,9 @@ You can also retrieve the file programatically using the Ovation programming int
         # Given a Measurement URI, retrieve the Measurement from the local Data Context
         measurement = data_context.getObjectWithURI('ovation://...')
         
-        # Get the path to the Measurement's file(s). getLocalDataPath() returns asynchronously, get() waits for completion
-        local_path = measurement.getLocalDataPath().get()
+        # Get the path to the Measurement's file(s).
+        from ovation.data import datapath
+        local_path = datapath(measurement)
         
     --R
     ::
@@ -185,7 +186,7 @@ You can also retrieve the file programatically using the Ovation programming int
         measurement = dataContext.getObjectWithURI('ovation://...');
         
         % Get the path to the Measurement's file(s). getLocalDataPath() returns asynchronously, get() waits for completion
-        local_path = measurement.getLocalDataPath().get();
+        local_path = ovation.datapath(measurement);
         
         
 Now you can perform your analysis as you do now (using the local data files). Don't forget to record the parameters of your analysis so that you can store that information in Ovation!
