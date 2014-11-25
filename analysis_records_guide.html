@@ -9,7 +9,8 @@
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootswatch-3.2.0/""/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.2.0/css/bootstrap-theme.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -175,12 +176,12 @@
 <div class="tabbable">
 <ul class="nav nav-tabs simple">
 <li class="disabled"><a class="disabled">Ovation API:</a></li>
-<li class="active"><a data-toggle="tab" href="#104a2a438_Python">Python</a></li>
-<li><a data-toggle="tab" href="#104a2a438_R">R</a></li>
-<li><a data-toggle="tab" href="#104a2a438_Matlab">Matlab</a></li>
+<li class="active"><a data-toggle="tab" href="#1040a8190_Python">Python</a></li>
+<li><a data-toggle="tab" href="#1040a8190_R">R</a></li>
+<li><a data-toggle="tab" href="#1040a8190_Matlab">Matlab</a></li>
 </ul>
 <div class="tab-content admonition">
-<div class="tab-pane active first admonition" id="104a2a438_Python">
+<div class="tab-pane active first admonition" id="1040a8190_Python">
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">ovation.conversion</span> <span class="kn">import</span> <span class="n">to_map</span>
 
 <span class="c"># Create an iterable of inputs</span>
@@ -212,7 +213,7 @@
 </pre></div>
 </div>
 </div>
-<div class="tab-pane admonition" id="104a2a438_R">
+<div class="tab-pane admonition" id="1040a8190_R">
 <div class="highlight-python"><div class="highlight"><pre># Create an iterable of inputs
 inputs = c(measurement1, measurement2, measurement3)
 
@@ -240,7 +241,7 @@ ar&lt;-project$addAnalysisRecord(&#39;First analysis&#39;, # record name
 </pre></div>
 </div>
 </div>
-<div class="tab-pane last admonition" id="104a2a438_Matlab">
+<div class="tab-pane last admonition" id="1040a8190_Matlab">
 <div class="highlight-python"><div class="highlight"><pre>% Create cell array of inputs
 inputs = [measurement1, measurement2, measurement3];
 
@@ -277,12 +278,12 @@ ar = project.addAnalysisRecord(&#39;First analysis&#39;,% record name
 <div class="tabbable">
 <ul class="nav nav-tabs simple">
 <li class="disabled"><a class="disabled">Ovation API:</a></li>
-<li class="active"><a data-toggle="tab" href="#104a2a940_Python">Python</a></li>
-<li><a data-toggle="tab" href="#104a2a940_R">R</a></li>
-<li><a data-toggle="tab" href="#104a2a940_Matlab">Matlab</a></li>
+<li class="active"><a data-toggle="tab" href="#10402cd10_Python">Python</a></li>
+<li><a data-toggle="tab" href="#10402cd10_R">R</a></li>
+<li><a data-toggle="tab" href="#10402cd10_Matlab">Matlab</a></li>
 </ul>
 <div class="tab-content admonition">
-<div class="tab-pane active first admonition" id="104a2a940_Python">
+<div class="tab-pane active first admonition" id="10402cd10_Python">
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">ovation.conversion</span> <span class="kn">import</span> <span class="n">to_file_url</span>
 <span class="kn">from</span> <span class="nn">ovation.data</span> <span class="kn">import</span> <span class="n">insert_numeric_analysis_artifact</span>
 
@@ -309,7 +310,7 @@ ar = project.addAnalysisRecord(&#39;First analysis&#39;,% record name
 </pre></div>
 </div>
 </div>
-<div class="tab-pane admonition" id="104a2a940_R">
+<div class="tab-pane admonition" id="10402cd10_R">
 <div class="highlight-python"><div class="highlight"><pre># outputs may be specified by URL and content type
 ar$addOutput(&#39;Output name&#39;,         # display name for this output
     NewUrl(output_file_path),       # path to file containing the output &quot;data&quot;
@@ -325,7 +326,7 @@ ar$addNumericOutput(&#39;Output name&#39;,  # display name for this output
 </pre></div>
 </div>
 </div>
-<div class="tab-pane last admonition" id="104a2a940_Matlab">
+<div class="tab-pane last admonition" id="10402cd10_Matlab">
 <div class="highlight-python"><div class="highlight"><pre>import java.net.URL
 
 % outputs may be specified by URL and content type
