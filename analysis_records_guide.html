@@ -9,8 +9,7 @@
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.2.0/""/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -25,9 +24,9 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Ovation Scientific Data Management System 2.0 Beta documentation" href="index.html" />
     <link rel="next" title="Importing and analyzing tabular (CSV) data" href="tabular_data.html" />
@@ -49,23 +48,26 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">Ovation</a>
+        <a class="navbar-brand" href="index.html"><img src="_static/ovation_logo.png">
+          Ovation</a>
         <span class="navbar-text navbar-version pull-left"><b>2.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
-            <li class="divider-vertical"></li>
             
                 <li><a href="http://ovation.io">Dashboard</a></li>
             
             
               <li class="dropdown globaltoc-container">
-  <a href="index.html"
-     class="dropdown-toggle"
-     data-toggle="dropdown">Topics <b class="caret"></b></a>
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Topics <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
-    ><ul>
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
 <li class="toctree-l1"><a class="reference internal" href="about_ovation.html">Getting Started</a></li>
 </ul>
 <ul class="current">
@@ -128,10 +130,16 @@
             
             
               
-  <li><a href="procedure_guide.html"
-         title="Previous Chapter: Protocols and Procedures">&laquo; Protocols and Pr...</a></li>
-  <li><a href="tabular_data.html"
-         title="Next Chapter: Importing and analyzing tabular (CSV) data">Importing and an... &raquo;</a></li>
+                
+  <li>
+    <a href="procedure_guide.html" title="Previous Chapter: Protocols and Procedures"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Protocols and Pr...</span>
+    </a>
+  </li>
+  <li>
+    <a href="tabular_data.html" title="Next Chapter: Importing and analyzing tabular (CSV) data"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Importing and an... &raquo;</span>
+    </a>
+  </li>
+              
             
             
             
@@ -167,12 +175,12 @@
 <div class="tabbable">
 <ul class="nav nav-tabs simple">
 <li class="disabled"><a class="disabled">Ovation API:</a></li>
-<li class="active"><a data-toggle="tab" href="#1047dd750_Python">Python</a></li>
-<li><a data-toggle="tab" href="#1047dd750_R">R</a></li>
-<li><a data-toggle="tab" href="#1047dd750_Matlab">Matlab</a></li>
+<li class="active"><a data-toggle="tab" href="#1048eb710_Python">Python</a></li>
+<li><a data-toggle="tab" href="#1048eb710_R">R</a></li>
+<li><a data-toggle="tab" href="#1048eb710_Matlab">Matlab</a></li>
 </ul>
 <div class="tab-content admonition">
-<div class="tab-pane active first admonition" id="1047dd750_Python">
+<div class="tab-pane active first admonition" id="1048eb710_Python">
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">ovation.conversion</span> <span class="kn">import</span> <span class="n">to_map</span>
 
 <span class="c"># Create an iterable of inputs</span>
@@ -204,18 +212,18 @@
 </pre></div>
 </div>
 </div>
-<div class="tab-pane admonition" id="1047dd750_R">
-<div class="highlight-python"><pre># Create an iterable of inputs
+<div class="tab-pane admonition" id="1048eb710_R">
+<div class="highlight-python"><div class="highlight"><pre># Create an iterable of inputs
 inputs = c(measurement1, measurement2, measurement3)
 
 # Designate the protocol for this analysis
-protocol &lt;- context$getProtocol('First analysis v1')
+protocol &lt;- context$getProtocol(&#39;First analysis v1&#39;)
 if(is.null(protocol)) {
-    protocol = context$insertProtocol('First analysis v1',          # protocol name
-                    '...analysis description...',                   # text block describing the analysis (e.g. its algorithms or approaches)
-                    'analysis_fn',                                  # name of the "top-level" analysis function
-                    'git@github.com:physion/ovation-docs.git',      # the URL hosting analysis code (we use the Ovation documentation site's GitHub repository as an example)
-                    '96ff339f30297f3dda2e14ec9babaa590acd8174',     # revision number of the analysis code
+    protocol = context$insertProtocol(&#39;First analysis v1&#39;,          # protocol name
+                    &#39;...analysis description...&#39;,                   # text block describing the analysis (e.g. its algorithms or approaches)
+                    &#39;analysis_fn&#39;,                                  # name of the &quot;top-level&quot; analysis function
+                    &#39;git@github.com:physion/ovation-docs.git&#39;,      # the URL hosting analysis code (we use the Ovation documentation site&#39;s GitHub repository as an example)
+                    &#39;96ff339f30297f3dda2e14ec9babaa590acd8174&#39;,     # revision number of the analysis code
 
         )
 }
@@ -224,26 +232,27 @@ if(is.null(protocol)) {
 parameters &lt;- list(threshold=1.0, max_n=10)
 
 
-ar&lt;-project$addAnalysisRecord('First analysis', # record name
+ar&lt;-project$addAnalysisRecord(&#39;First analysis&#39;, # record name
     inputs,                                     # iterable of inputs (Measurements and/or AnalysisOutputs)
     protocol,                                   # analysis protocol
     list2map(parameters)                        # analysis parameters
-    )</pre>
+    )
+</pre></div>
 </div>
 </div>
-<div class="tab-pane last admonition" id="1047dd750_Matlab">
-<div class="highlight-python"><pre>% Create cell array of inputs
+<div class="tab-pane last admonition" id="1048eb710_Matlab">
+<div class="highlight-python"><div class="highlight"><pre>% Create cell array of inputs
 inputs = [measurement1, measurement2, measurement3];
 
 % Optional: designate the protocol for this analysis. If you want to set the protocol later, use
 % protocol = [];
-protocol = context.getProtocol('First analysis v1');
+protocol = context.getProtocol(&#39;First analysis v1&#39;);
 if(isempty(protocol))
-    protocol = context.insertProtocol('First analysis v1',...       % protocol name
-                    '...analysis description...',...                % text block describing the analysis (e.g. its algorithms or approaches)
-                    'analysis_fn',...                               % name of the "top-level" analysis function
-                    'git@github.com:physion/ovation-docs.git',...   % the URL hosting analysis code (we use the Ovation documentation site's GitHub repository as an example)
-                    '96ff339f30297f3dda2e14ec9babaa590acd8174',...  % revision number of the analysis code
+    protocol = context.insertProtocol(&#39;First analysis v1&#39;,...       % protocol name
+                    &#39;...analysis description...&#39;,...                % text block describing the analysis (e.g. its algorithms or approaches)
+                    &#39;analysis_fn&#39;,...                               % name of the &quot;top-level&quot; analysis function
+                    &#39;git@github.com:physion/ovation-docs.git&#39;,...   % the URL hosting analysis code (we use the Ovation documentation site&#39;s GitHub repository as an example)
+                    &#39;96ff339f30297f3dda2e14ec9babaa590acd8174&#39;,...  % revision number of the analysis code
 
         );
 end
@@ -255,11 +264,12 @@ parameters.threshold = 1.0;
 parameters.max_n = 10;
 
 
-ar = project.addAnalysisRecord('First analysis',% record name
+ar = project.addAnalysisRecord(&#39;First analysis&#39;,% record name
     inputs,                                     % iterable of inputs (Measurements and/or AnalysisOutputs)
     protocol,                                   % analysis protocol
     struct2map(parameters)                      % analysis parameters
-    );</pre>
+    );
+</pre></div>
 </div>
 </div>
 </div>
@@ -267,12 +277,12 @@ ar = project.addAnalysisRecord('First analysis',% record name
 <div class="tabbable">
 <ul class="nav nav-tabs simple">
 <li class="disabled"><a class="disabled">Ovation API:</a></li>
-<li class="active"><a data-toggle="tab" href="#1047cb150_Python">Python</a></li>
-<li><a data-toggle="tab" href="#1047cb150_R">R</a></li>
-<li><a data-toggle="tab" href="#1047cb150_Matlab">Matlab</a></li>
+<li class="active"><a data-toggle="tab" href="#1049fbf28_Python">Python</a></li>
+<li><a data-toggle="tab" href="#1049fbf28_R">R</a></li>
+<li><a data-toggle="tab" href="#1049fbf28_Matlab">Matlab</a></li>
 </ul>
 <div class="tab-content admonition">
-<div class="tab-pane active first admonition" id="1047cb150_Python">
+<div class="tab-pane active first admonition" id="1049fbf28_Python">
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">ovation.conversion</span> <span class="kn">import</span> <span class="n">to_file_url</span>
 <span class="kn">from</span> <span class="nn">ovation.data</span> <span class="kn">import</span> <span class="n">insert_numeric_analysis_artifact</span>
 
@@ -299,37 +309,39 @@ ar = project.addAnalysisRecord('First analysis',% record name
 </pre></div>
 </div>
 </div>
-<div class="tab-pane admonition" id="1047cb150_R">
-<div class="highlight-python"><pre># outputs may be specified by URL and content type
-ar$addOutput('Output name',         # display name for this output
-    NewUrl(output_file_path),       # path to file containing the output "data"
-    'application/octet-stream'      # output content type (this is a generic binary file)
+<div class="tab-pane admonition" id="1049fbf28_R">
+<div class="highlight-python"><div class="highlight"><pre># outputs may be specified by URL and content type
+ar$addOutput(&#39;Output name&#39;,         # display name for this output
+    NewUrl(output_file_path),       # path to file containing the output &quot;data&quot;
+    &#39;application/octet-stream&#39;      # output content type (this is a generic binary file)
     )
 
 # or you can provide numeric outputs directly
-nd &lt;- NumericData('data_series', c(1,2,3), 'dimensionless', 1, 'dimensionless');
+nd &lt;- NumericData(&#39;data_series&#39;, c(1,2,3), &#39;dimensionless&#39;, 1, &#39;dimensionless&#39;);
 
-ar$addNumericOutput('Output name',  # display name for this output
+ar$addNumericOutput(&#39;Output name&#39;,  # display name for this output
     nd                              # output data
-    )</pre>
+    )
+</pre></div>
 </div>
 </div>
-<div class="tab-pane last admonition" id="1047cb150_Matlab">
-<div class="highlight-python"><pre>import java.net.URL
+<div class="tab-pane last admonition" id="1049fbf28_Matlab">
+<div class="highlight-python"><div class="highlight"><pre>import java.net.URL
 
 % outputs may be specified by URL and content type
-ar.addOutput('Output name',...                  % display name for this output
-    URL(['file://' output_file_path]),...       % path to file containing the output "data"
-    'application/octet-stream'...               % output content type (this is a generic binary file)
+ar.addOutput(&#39;Output name&#39;,...                  % display name for this output
+    URL([&#39;file://&#39; output_file_path]),...       % path to file containing the output &quot;data&quot;
+    &#39;application/octet-stream&#39;...               % output content type (this is a generic binary file)
     )
 
 % or you can provide numeric outputs directly
 nd = us.physion.ovation.values.NumericData();
-nd.addData('data_series', randn(1,10), 'dimensionless', 1, 'dimensionless');
+nd.addData(&#39;data_series&#39;, randn(1,10), &#39;dimensionless&#39;, 1, &#39;dimensionless&#39;);
 
-ar.addNumericOutput('Output name', ...  % display name for this output
+ar.addNumericOutput(&#39;Output name&#39;, ...  % display name for this output
     nd...                               % output data
-    )</pre>
+    )
+</pre></div>
 </div>
 </div>
 </div>
@@ -354,8 +366,8 @@ ar.addNumericOutput('Output name', ...  % display name for this output
     </p>
     <p>
         &copy; Copyright 2013-2014, Physion LLC.<br/>
-      Last updated on Oct 16, 2014.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2b1.<br/>
+      Last updated on Nov 25, 2014.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
     </p>
   </div>
 </footer>

@@ -9,8 +9,7 @@
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.2.0/""/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -25,9 +24,9 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Ovation Scientific Data Management System 2.0 Beta documentation" href="index.html" />
     <link rel="next" title="Sources" href="source_guide.html" />
@@ -49,23 +48,26 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">Ovation</a>
+        <a class="navbar-brand" href="index.html"><img src="_static/ovation_logo.png">
+          Ovation</a>
         <span class="navbar-text navbar-version pull-left"><b>2.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
-            <li class="divider-vertical"></li>
             
                 <li><a href="http://ovation.io">Dashboard</a></li>
             
             
               <li class="dropdown globaltoc-container">
-  <a href="index.html"
-     class="dropdown-toggle"
-     data-toggle="dropdown">Topics <b class="caret"></b></a>
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Topics <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
-    ><ul>
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
 <li class="toctree-l1"><a class="reference internal" href="about_ovation.html">Getting Started</a></li>
 </ul>
 <ul class="current">
@@ -128,10 +130,16 @@
             
             
               
-  <li><a href="workflow_guide.html"
-         title="Previous Chapter: Ovation Workflow">&laquo; Ovation Workflow</a></li>
-  <li><a href="source_guide.html"
-         title="Next Chapter: Sources">Sources &raquo;</a></li>
+                
+  <li>
+    <a href="workflow_guide.html" title="Previous Chapter: Ovation Workflow"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Ovation Workflow</span>
+    </a>
+  </li>
+  <li>
+    <a href="source_guide.html" title="Next Chapter: Sources"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Sources &raquo;</span>
+    </a>
+  </li>
+              
             
             
             
@@ -165,22 +173,27 @@
 <div class="section" id="keywords">
 <h3>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h3>
 <p>To search for entities with a keyword, use the <tt class="docutils literal"><span class="pre">tag:</span></tt> operator. For example, to search for all entities with the &#8220;awesome&#8221; tag:</p>
-<div class="highlight-python"><pre>tag:awesome</pre>
+<div class="highlight-python"><div class="highlight"><pre>tag:awesome
+</pre></div>
 </div>
 <p>You can use quotes to denote tags that contain spaces or other punctuation. For example, to search for all entities with the &#8220;for barry&#8221; tag:</p>
-<div class="highlight-python"><pre>tag:"for barry"</pre>
+<div class="highlight-python"><div class="highlight"><pre>tag:&quot;for barry&quot;
+</pre></div>
 </div>
 </div>
 <div class="section" id="properties">
 <h3>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h3>
 <p>To search for entities with a given property (any value) or entities with a particular value for a property, use the <tt class="docutils literal"><span class="pre">prop:</span></tt> operator. To search for all entities with a property name and any value, provide only the property name. For example, to find all entities with the &#8220;rating&#8221; property, regardless of value:</p>
-<div class="highlight-python"><pre>prop:rating</pre>
+<div class="highlight-python"><div class="highlight"><pre>prop:rating
+</pre></div>
 </div>
 <p>You can use quotes to denote property names that contain spaces or other punctuation. For example, to search for all entities with the &#8220;my rating&#8221; property, regardless of value:</p>
-<div class="highlight-python"><pre>prop:"my rating"</pre>
+<div class="highlight-python"><div class="highlight"><pre>prop:&quot;my rating&quot;
+</pre></div>
 </div>
 <p>To search for entities with a given property value, provide the property name and value. For example, to find all entities with a value of 5 for the property &#8220;my rating&#8221;:</p>
-<div class="highlight-python"><pre>prop:"my rating"=5</pre>
+<div class="highlight-python"><div class="highlight"><pre>prop:&quot;my rating&quot;=5
+</pre></div>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -190,13 +203,16 @@
 <div class="section" id="protocol-and-device-parameters">
 <h3>Protocol and device parameters<a class="headerlink" href="#protocol-and-device-parameters" title="Permalink to this headline">¶</a></h3>
 <p>To search for entities with a given protocol or device parameter (any value) or entities with a particular value for a protocol or device parameter, use the <tt class="docutils literal"><span class="pre">param:</span></tt> operator. To search for all entities with a protocol or device parameter name and any value, provide only the parameter name. For example, to find all entities with the &#8220;intensity&#8221; parameter, regardless of value:</p>
-<div class="highlight-python"><pre>param:intensity</pre>
+<div class="highlight-python"><div class="highlight"><pre>param:intensity
+</pre></div>
 </div>
 <p>You can use quotes to denote parameter names that contain spaces or other punctuation. For example, to search for all entities with the &#8220;bounce rate&#8221; property, regardless of value:</p>
-<div class="highlight-python"><pre>param:"bounce rate"</pre>
+<div class="highlight-python"><div class="highlight"><pre>param:&quot;bounce rate&quot;
+</pre></div>
 </div>
 <p>To search for entities with a given parameter value, provide the parameter name and value. For example, to find all entities with a value of 3 for the parameter &#8220;bounce rate&#8221;:</p>
-<div class="highlight-python"><pre>prop:"bounce rate"=3</pre>
+<div class="highlight-python"><div class="highlight"><pre>prop:&quot;bounce rate&quot;=3
+</pre></div>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -206,14 +222,16 @@
 <div class="section" id="boolean-operators">
 <h3>Boolean operators<a class="headerlink" href="#boolean-operators" title="Permalink to this headline">¶</a></h3>
 <p>Ovation&#8217;s query syntax supports full boolean logic so you can use <tt class="docutils literal"><span class="pre">&amp;&amp;</span></tt> (AND) <tt class="docutils literal"><span class="pre">||</span></tt> (OR) and <tt class="docutils literal"><span class="pre">!</span></tt> (NOT) as well as <tt class="docutils literal"><span class="pre">(</span></tt> and <tt class="docutils literal"><span class="pre">)</span></tt> to combine operators. For example, to search for all entities with the tag &#8220;awesome&#8221; and either the tag &#8220;public&#8221; <em>or</em> &#8220;share&#8221;:</p>
-<div class="highlight-python"><pre>tag:awesome &amp;&amp; (tag:public || tag:share)</pre>
+<div class="highlight-python"><div class="highlight"><pre>tag:awesome &amp;&amp; (tag:public || tag:share)
+</pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="searching-by-entity-id">
 <h2>Searching by entity ID<a class="headerlink" href="#searching-by-entity-id" title="Permalink to this headline">¶</a></h2>
 <p>Every entity in the Ovation database has a unique, cryptographically secure identifier. Entity identifiers make it easy to refer to any Ovation object in an email, text message or chat. You can copy an entity&#8217;s identifier to the clipboard by selecting the entity in any Navigator in the Ovation application and selecting &#8220;Copy&#8221; from the &#8220;Edit&#8221; menu. Ovation identifiers look like this:</p>
-<div class="highlight-python"><pre>ovation://1d590271-5fc7-403d-b6b1-f632b0602df2/</pre>
+<div class="highlight-python"><div class="highlight"><pre>ovation://1d590271-5fc7-403d-b6b1-f632b0602df2/
+</pre></div>
 </div>
 <p>You can jump directly to an entity by typing or pasting its identifier into the Quick Search field in the Ovation toolbar.</p>
 <div class="figure align-center">
@@ -240,8 +258,8 @@
     </p>
     <p>
         &copy; Copyright 2013-2014, Physion LLC.<br/>
-      Last updated on Oct 16, 2014.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2b1.<br/>
+      Last updated on Nov 25, 2014.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
     </p>
   </div>
 </footer>

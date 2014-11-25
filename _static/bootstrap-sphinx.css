@@ -2,7 +2,7 @@
 * bootstrap-sphinx.css
 * ~~~~~~~~~~~~~~~~~~~~
 *
-* Sphinx stylesheet -- Twitter Bootstrap theme.
+* Sphinx stylesheet -- Bootstrap theme.
 */
 
 .navbar-inverse .brand {
@@ -14,12 +14,7 @@
 }
 
 
-@media (min-width: 980px) {
-  .navbar h3 a, .navbar .brand {
-    background: transparent url("ovation_logo.png") no-repeat 22px 3px;
-    padding-left: 62px;
-  }
-}
+  
 
 table {
   border: 0;
@@ -36,6 +31,23 @@ table {
 
 div.highlight {
   background: none;
+}
+
+a.footnote-reference {
+  vertical-align: super;
+  font-size: 75%;
+}
+
+table.footnote td.label {
+  font-size: 100%;
+  display: block;
+  line-height: normal;
+  background: inherit;
+}
+
+table.footnote {
+  width: auto;
+  margin-bottom: 0px;
 }
 
 table.field-list {

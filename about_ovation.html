@@ -9,8 +9,7 @@
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.2.0/""/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -25,9 +24,9 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Ovation Scientific Data Management System 2.0 Beta documentation" href="index.html" />
     <link rel="next" title="Ovation Workflow" href="workflow_guide.html" />
@@ -49,23 +48,26 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">Ovation</a>
+        <a class="navbar-brand" href="index.html"><img src="_static/ovation_logo.png">
+          Ovation</a>
         <span class="navbar-text navbar-version pull-left"><b>2.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
-            <li class="divider-vertical"></li>
             
                 <li><a href="http://ovation.io">Dashboard</a></li>
             
             
               <li class="dropdown globaltoc-container">
-  <a href="index.html"
-     class="dropdown-toggle"
-     data-toggle="dropdown">Topics <b class="caret"></b></a>
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Topics <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
-    ><ul class="current">
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">Getting Started</a></li>
 </ul>
 <ul>
@@ -128,10 +130,16 @@
             
             
               
-  <li><a href="index.html"
-         title="Previous Chapter: Resources">&laquo; Resources</a></li>
-  <li><a href="workflow_guide.html"
-         title="Next Chapter: Ovation Workflow">Ovation Workflow &raquo;</a></li>
+                
+  <li>
+    <a href="index.html" title="Previous Chapter: Resources"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Resources</span>
+    </a>
+  </li>
+  <li>
+    <a href="workflow_guide.html" title="Next Chapter: Ovation Workflow"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Ovation Workflow &raquo;</span>
+    </a>
+  </li>
+              
             
             
             
@@ -175,7 +183,7 @@
 </div><div class="section" id="about-ovation">
 <h1>About Ovation<a class="headerlink" href="#about-ovation" title="Permalink to this headline">¶</a></h1>
 <p>Ovation is the revolutionary data management service that empowers researchers through the seamless organization of multiple data formats and sources, preservation of the link between raw data and analyses and the ability to securely share of all of this with colleagues and collaborators.</p>
-<div class="align-center figure align-center">
+<div class="align-center figure">
 <a class="reference internal image-reference" href="_images/ovation_overview.png"><img alt="_images/ovation_overview.png" src="_images/ovation_overview.png" style="width: 1000px;" /></a>
 </div>
 </div>
@@ -193,8 +201,8 @@
     </p>
     <p>
         &copy; Copyright 2013-2014, Physion LLC.<br/>
-      Last updated on Oct 16, 2014.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2b1.<br/>
+      Last updated on Nov 25, 2014.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
     </p>
   </div>
 </footer>
