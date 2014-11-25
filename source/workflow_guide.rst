@@ -141,11 +141,11 @@ Data files can be imported directly from the instrument(s) used in an experiment
         measurement_path = '/path/to/local/my_file';
         measurement_url = java.net.URL(['file://' measurement_path]);
         measurement_name = 'my_file';
-        epoch.insertMeasurement(measurement_name,...            % Measurement display name
-                                {'source'},...                  % When Epoch has multiple input Sources, which are associated with this measurement, by name
-                                {'device1', 'device2'},...      % Devices used in this measurement or empty if none
+        epoch.insertMeasurement(measurement_name,...                       % Measurement display name
+                                array2set({'source'}),...                  % When Epoch has multiple input Sources, which are associated with this measurement, by name
+                                array2set({'device1', 'device2'}),...      % Devices used in this measurement or empty if none
                                 measurement_url,...
-                                'application/octet-stream'...   % Measurment content type, e.g. text/csv, imate/tiff, etc. Application/octet-stream is the most generic
+                                'application/octet-stream'...              % Measurment content type, e.g. text/csv, imate/tiff, etc. Application/octet-stream is the most generic
                                 )
 
 
