@@ -10,7 +10,7 @@
             <li class="disabled"><a href="#">&raquo;</a></li>
             <li><a href="add_project.html">Add a Project</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
-            <li><a href="add_experiment.html">Add an Experiment</a></li>
+            <li><a href="add_experiment.html">Upload data</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
             <li><a href="search_tutorial.html">Search</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
@@ -37,7 +37,7 @@ Ovation supports the following operating systems and architectures:
 * Fedora 20 and later
 * Ubuntu 14.04 LTS and later
 
-.. note:: Ovation requires the Java runtime (JRE) version 7 or later. Please `download <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_ and install Java before installing Ovation.
+.. note:: Ovation requires the Java runtime (JRE) version 8 or later. Please `download <http://www.oracle.com/technetwork/java/javase/downloads/index.html>`_ and install Java before installing Ovation.
 
 
 Installation
