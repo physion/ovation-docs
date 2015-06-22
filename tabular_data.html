@@ -30,8 +30,6 @@
     <script type="text/javascript" src="_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Ovation Scientific Data Management System 2.0 Beta documentation" href="index.html" />
-    <link rel="next" title="Ovation Application" href="application.html" />
-    <link rel="prev" title="Analysis Records" href="analysis_records_guide.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -71,7 +69,7 @@
       aria-labelledby="dLabelGlobalToc"><ul>
 <li class="toctree-l1"><a class="reference internal" href="about_ovation.html">Getting Started</a></li>
 </ul>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="workflow_guide.html">Ovation Workflow</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="workflow_guide.html#import-files">1. Import files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workflow_guide.html#use-files-in-your-existing-pipeline">2. Use files in your existing pipeline</a></li>
@@ -81,6 +79,12 @@
 <li class="toctree-l1"><a class="reference internal" href="search_guide.html">Search</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="search_guide.html#searching-for-many-entities">Searching for many entities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="search_guide.html#searching-by-entity-id">Searching by entity ID</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="folders_guide.html">Files and Folders</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="folders_guide.html#adding-files-folders">Adding Files &amp; Folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="folders_guide.html#moving-files-folders">Moving Files &amp; Folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="folders_guide.html#file-revisions">File Revisions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="source_guide.html">Sources</a><ul>
@@ -95,11 +99,6 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="analysis_records_guide.html">Analysis Records</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Importing and analyzing tabular (CSV) data</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#importing-tabular-csv-data">Importing tabular (CSV) data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#retrieving-tabular-csv-data">Retrieving tabular (CSV) data</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="application.html">Ovation Application</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="application.html#browsers">Browsers</a></li>
 </ul>
@@ -132,14 +131,6 @@
             
               
                 
-  <li>
-    <a href="analysis_records_guide.html" title="Previous Chapter: Analysis Records"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Analysis Records</span>
-    </a>
-  </li>
-  <li>
-    <a href="application.html" title="Next Chapter: Ovation Application"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Ovation Applicat... &raquo;</span>
-    </a>
-  </li>
               
             
             
@@ -167,7 +158,7 @@
       
   <div class="section" id="importing-and-analyzing-tabular-csv-data">
 <span id="ch-getting-started"></span><h1>Importing and analyzing tabular (CSV) data<a class="headerlink" href="#importing-and-analyzing-tabular-csv-data" title="Permalink to this headline">¶</a></h1>
-<p>This chapter describes methods for importing and analyzign tabular <cite>Measurement</cite> data in Comma Separated Value (CSV) format with Ovation and the <a class="reference external" href="https://github.com/physion/ovation-R-tabular-data">Rovation.csv</a> package for R. Two methods for importing tabular data are described:</p>
+<p>This chapter describes methods for importing and analyzing tabular <cite>Measurement</cite> data in Excel (xlsx) or Comma Separated Value (CSV) format with Ovation and the <a class="reference external" href="https://github.com/physion/ovation-R-tabular-data">Rovation.csv</a> package for R. Two methods for importing tabular data are described:</p>
 <ul class="simple">
 <li><a class="reference internal" href="#sec-importing-csv-data-app"><em>Importing tabular (CSV) data via the Ovation application</em></a></li>
 <li><a class="reference internal" href="#sec-importing-csv-data-rovation"><em>Importing tabular (CSV) data from R using the Rovation.csv package</em></a></li>
@@ -450,7 +441,7 @@ epochs &lt;- CollectEpochs(container)
       
     </p>
     <p>
-        &copy; Copyright 2013-2014, Physion LLC.<br/>
+        &copy; Copyright 2013-2015, Physion LLC.<br/>
       Last updated on Jun 22, 2015.<br/>
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
     </p>

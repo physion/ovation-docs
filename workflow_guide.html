@@ -83,6 +83,12 @@
 <li class="toctree-l2"><a class="reference internal" href="search_guide.html#searching-by-entity-id">Searching by entity ID</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="folders_guide.html">Files and Folders</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="folders_guide.html#adding-files-folders">Adding Files &amp; Folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="folders_guide.html#moving-files-folders">Moving Files &amp; Folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="folders_guide.html#file-revisions">File Revisions</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="source_guide.html">Sources</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="source_guide.html#metadata">Metadata</a></li>
 <li class="toctree-l2"><a class="reference internal" href="source_guide.html#derived-sources">Derived Sources</a></li>
@@ -95,11 +101,6 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="analysis_records_guide.html">Analysis Records</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tabular_data.html">Importing and analyzing tabular (CSV) data</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tabular_data.html#importing-tabular-csv-data">Importing tabular (CSV) data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tabular_data.html#retrieving-tabular-csv-data">Retrieving tabular (CSV) data</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="application.html">Ovation Application</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="application.html#browsers">Browsers</a></li>
 </ul>
@@ -178,12 +179,12 @@
 <div class="tabbable">
 <ul class="nav nav-tabs simple">
 <li class="disabled"><a class="disabled">Ovation API:</a></li>
-<li class="active"><a data-toggle="tab" href="#1040f5f10_Python">Python</a></li>
-<li><a data-toggle="tab" href="#1040f5f10_R">R</a></li>
-<li><a data-toggle="tab" href="#1040f5f10_Matlab">Matlab</a></li>
+<li class="active"><a data-toggle="tab" href="#10429a510_Python">Python</a></li>
+<li><a data-toggle="tab" href="#10429a510_R">R</a></li>
+<li><a data-toggle="tab" href="#10429a510_Matlab">Matlab</a></li>
 </ul>
 <div class="tab-content admonition">
-<div class="tab-pane active first admonition" id="1040f5f10_Python">
+<div class="tab-pane active first admonition" id="10429a510_Python">
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">ovation.conversion</span> <span class="kn">import</span> <span class="n">to_map</span><span class="p">,</span> <span class="n">to_java_set</span><span class="p">,</span> <span class="n">to_file_url</span><span class="p">,</span> <span class="n">asclass</span>
 <span class="kn">from</span> <span class="nn">ovation.core</span> <span class="kn">import</span> <span class="n">date_time</span>
 
@@ -226,7 +227,7 @@
 </pre></div>
 </div>
 </div>
-<div class="tab-pane admonition" id="1040f5f10_R">
+<div class="tab-pane admonition" id="10429a510_R">
 <div class="highlight-python"><div class="highlight"><pre># Obtain a reference to the containing experiment, e.g. by URI
 experiment &lt;- data_context$getObjectWithURI(&#39;ovation://...&#39;)
 
@@ -264,7 +265,7 @@ epoch.insertMeasurement(&#39;my_file&#39;,                              # Measur
 </pre></div>
 </div>
 </div>
-<div class="tab-pane last admonition" id="1040f5f10_Matlab">
+<div class="tab-pane last admonition" id="10429a510_Matlab">
 <div class="highlight-python"><div class="highlight"><pre>import ovation.*
 
 % Obtain a reference to the containing experiment, e.g. by URI
@@ -315,12 +316,12 @@ epoch.insertMeasurement(measurement_name,...                       % Measurement
 <div class="tabbable">
 <ul class="nav nav-tabs simple">
 <li class="disabled"><a class="disabled">Ovation API:</a></li>
-<li class="active"><a data-toggle="tab" href="#10419a890_Python">Python</a></li>
-<li><a data-toggle="tab" href="#10419a890_R">R</a></li>
-<li><a data-toggle="tab" href="#10419a890_Matlab">Matlab</a></li>
+<li class="active"><a data-toggle="tab" href="#10429a8d0_Python">Python</a></li>
+<li><a data-toggle="tab" href="#10429a8d0_R">R</a></li>
+<li><a data-toggle="tab" href="#10429a8d0_Matlab">Matlab</a></li>
 </ul>
 <div class="tab-content admonition">
-<div class="tab-pane active first admonition" id="10419a890_Python">
+<div class="tab-pane active first admonition" id="10429a8d0_Python">
 <div class="highlight-python"><div class="highlight"><pre><span class="c"># Given a Measurement URI, retrieve the Measurement from the local Data Context</span>
 <span class="n">measurement</span> <span class="o">=</span> <span class="n">data_context</span><span class="o">.</span><span class="n">getObjectWithURI</span><span class="p">(</span><span class="s">&#39;ovation://...&#39;</span><span class="p">)</span>
 
@@ -330,7 +331,7 @@ epoch.insertMeasurement(measurement_name,...                       % Measurement
 </pre></div>
 </div>
 </div>
-<div class="tab-pane admonition" id="10419a890_R">
+<div class="tab-pane admonition" id="10429a8d0_R">
 <div class="highlight-python"><div class="highlight"><pre># Given a Measurement URI, retrieve the Measurement from the local Data Context
 measurement &lt;- data_context$getObjectWithURI(&#39;ovation://...&#39;)
 
@@ -339,7 +340,7 @@ local_path &lt;- measurement$getLocalDataPath()$get()
 </pre></div>
 </div>
 </div>
-<div class="tab-pane last admonition" id="10419a890_Matlab">
+<div class="tab-pane last admonition" id="10429a8d0_Matlab">
 <div class="highlight-python"><div class="highlight"><pre>% Given a Measurement URI, retrieve the Measurement from the local Data Context
 measurement = dataContext.getObjectWithURI(&#39;ovation://...&#39;);
 
@@ -369,7 +370,7 @@ local_path = ovation.datapath(measurement);
       
     </p>
     <p>
-        &copy; Copyright 2013-2014, Physion LLC.<br/>
+        &copy; Copyright 2013-2015, Physion LLC.<br/>
       Last updated on Jun 22, 2015.<br/>
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
     </p>
