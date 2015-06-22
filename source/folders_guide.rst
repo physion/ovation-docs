@@ -4,13 +4,13 @@
 Files and Folders
 *****************
 
-Ovation makes it easy to upload folders and files to the Ovation cloud. You can store Folders under any Ovation Project. Once uploaded, you can use the files and folders just as you would folders on your computer's hard drive but in Ovation, your Folders become even more powerful. Ovation automatically synchronizes Project files & folders with your collaborators. You can add annotations including Keyword Tags, Notes, and Properties, to folders. And you can add Analysis Records to folders that tie results in that folder to input files in any Project, Folder, or Experiment in your Ovation database.
+Ovation makes it easy to upload files to Project *Folders* in the Ovation cloud. Ovation keeps local copies of uploaded files so you continue to use the same apps to work with your files, just like they were stored on your computer's hard drive. But in Ovation, your folders become even more powerful. Ovation automatically synchronizes Project files & folders with your collaborators. You can add annotations to Folders including Keyword Tags, Notes, and Properties. And you can add :ref:`Analysis Records <doc-analysis-records-guide>` to folders that link results in that folder to input files in any Project, Folder, or Experiment in your Ovation database.
 
 
 Adding Files & Folders
 ======================
 
-To add new files, or a folder tree containing files and/or nested folders, drag-and-drop the file(s)/folder(s) onto the appropriate drop zone in the Ovation desktop.
+To upload new files, drag-and-drop the file(s)/folder(s) onto the appropriate drop zone in the Ovation desktop. You can drag-and-drop individual file(s) or entire folder trees. Ovation will create nested Folders for any folders you upload.
 
 To a Project
 ------------
@@ -42,7 +42,7 @@ To add a new empty Folder to a Folder, click the "+New Folder" link in the Folde
 Moving Files & Folders
 ======================
 
-You can drag-and-drop files or folders within the Projects Navigator to move them to an other folder. You can also copy file or folder to an other folder using your computer's copy-gesture during drag (the ``Alt`` key on Windows or ``Option`` key on OS X).
+You can drag-and-drop files or folders within the Projects Navigator to move them to another folder. You can also copy files or folders to another folder using your computer's copy-gesture during drag (the ``Alt`` key on Windows or ``Option`` key on OS X).
 
 .. figure:: _static/folder_drag.png
     :align: center
