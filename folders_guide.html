@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Files and Folders &mdash; Ovation Scientific Data Management System 2.0 Beta documentation</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.2.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.0 Beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Ovation Scientific Data Management System 2.0 Beta documentation" href="index.html" />
+    <link rel="next" title="Sources" href="source_guide.html" />
+    <link rel="prev" title="Search" href="search_guide.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><img src="_static/ovation_logo.png">
+          Ovation</a>
+        <span class="navbar-text navbar-version pull-left"><b>2.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="http://ovation.io">Dashboard</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Topics <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="about_ovation.html">Getting Started</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="workflow_guide.html">Ovation Workflow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="workflow_guide.html#import-files">1. Import files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflow_guide.html#use-files-in-your-existing-pipeline">2. Use files in your existing pipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflow_guide.html#import-results-as-analysis-records">3. Import results as Analysis Records</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="search_guide.html">Search</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="search_guide.html#searching-for-many-entities">Searching for many entities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="search_guide.html#searching-by-entity-id">Searching by entity ID</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Files and Folders</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#adding-files-folders">Adding Files &amp; Folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#moving-files-folders">Moving Files &amp; Folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-revisions">File Revisions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="source_guide.html">Sources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="source_guide.html#metadata">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source_guide.html#derived-sources">Derived Sources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="procedure_guide.html">Protocols and Procedures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="procedure_guide.html#making-measurements">Making Measurements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="procedure_guide.html#source-derivation">Source derivation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="procedure_guide.html#analysis-records">Analysis Records</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_records_guide.html">Analysis Records</a></li>
+<li class="toctree-l1"><a class="reference internal" href="application.html">Ovation Application</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="application.html#browsers">Browsers</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="using_rovation.html">R</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_rovation.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_rovation.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_rovation.html#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="using_ovation_python.html">Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_python.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_python.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_python.html#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="using_ovation_matlab.html">Matlab</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_matlab.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_matlab.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_ovation_matlab.html#usage">Usage</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="search_guide.html" title="Previous Chapter: Search"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Search</span>
+    </a>
+  </li>
+  <li>
+    <a href="source_guide.html" title="Next Chapter: Sources"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Sources &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="files-and-folders">
+<span id="doc-folders-guide"></span><h1>Files and Folders<a class="headerlink" href="#files-and-folders" title="Permalink to this headline">¶</a></h1>
+<p>Ovation makes it easy to upload files to Project <em>Folders</em> in the Ovation cloud. Ovation keeps local copies of uploaded files so you continue to use the same apps to work with your files, just like they were stored on your computer&#8217;s hard drive. But in Ovation, your folders become even more powerful. Ovation automatically synchronizes Project files &amp; folders with your collaborators. You can add annotations to Folders including Keyword Tags, Notes, and Properties. And you can add <a class="reference internal" href="analysis_records_guide.html#doc-analysis-records-guide"><em>Analysis Records</em></a> to folders that link results in that folder to input files in any Project, Folder, or Experiment in your Ovation database.</p>
+<div class="section" id="adding-files-folders">
+<h2>Adding Files &amp; Folders<a class="headerlink" href="#adding-files-folders" title="Permalink to this headline">¶</a></h2>
+<p>To upload new files, drag-and-drop the file(s)/folder(s) onto the appropriate drop zone in the Ovation desktop. You can drag-and-drop individual file(s) or entire folder trees. Ovation will create nested Folders for any folders you upload.</p>
+<div class="section" id="to-a-project">
+<h3>To a Project<a class="headerlink" href="#to-a-project" title="Permalink to this headline">¶</a></h3>
+<p>To add new file(s) or folder(s) to a Project, drag-and-drop the file(s) and/or folder(s) from the Finder (OS X) or Windows Explorer (Windows) onto the &#8220;Drop files to upload&#8221; zone in the Project info window.</p>
+<div class="figure align-center">
+<img alt="_images/file_drop.png" src="_images/file_drop.png" />
+<p class="caption">Drop files or folders onto a Project &#8220;Drop files to upload&#8221; zone to upload new file(s) or folder(s).</p>
+</div>
+<p>To add a new empty Folder to a Project, click the &#8220;+New Folder&#8221; link in the Project info window.</p>
+</div>
+<div class="section" id="to-a-folder">
+<h3>To a Folder<a class="headerlink" href="#to-a-folder" title="Permalink to this headline">¶</a></h3>
+<p>To add new file(s) or folder(s) to an existing Folder, drag-and-drop the file(s) and/or folder(s) from the Finder (OS X) or Windows Explorer (Windows) onto the &#8220;Drop files to upload&#8221; zone in the Folder info window.</p>
+<div class="figure align-center">
+<img alt="_images/file_drop.png" src="_images/file_drop.png" />
+<p class="caption">Drop files or folders onto a Folder&#8217;s &#8220;Drop files to upload&#8221; zone to upload new file(s) or folder(s).</p>
+</div>
+<p>To add a new empty Folder to a Folder, click the &#8220;+New Folder&#8221; link in the Folder info window.</p>
+</div>
+</div>
+<div class="section" id="moving-files-folders">
+<h2>Moving Files &amp; Folders<a class="headerlink" href="#moving-files-folders" title="Permalink to this headline">¶</a></h2>
+<p>You can drag-and-drop files or folders within the Projects Navigator to move them to another folder. You can also copy files or folders to another folder using your computer&#8217;s copy-gesture during drag (the <tt class="docutils literal"><span class="pre">Alt</span></tt> key on Windows or <tt class="docutils literal"><span class="pre">Option</span></tt> key on OS X).</p>
+<div class="figure align-center">
+<img alt="_images/folder_drag.png" src="_images/folder_drag.png" />
+<p class="caption">Drag-and-drop file(s) or folder(s) to move them within Ovation.</p>
+</div>
+</div>
+<div class="section" id="file-revisions">
+<h2>File Revisions<a class="headerlink" href="#file-revisions" title="Permalink to this headline">¶</a></h2>
+<p>Ovation tracks each version of stored files. Ovation does not automatically upload a new version of a file if you modify it locally, but you can choose to upload a new version any time. If you modify a file and want to upload the new version, select &#8220;Save Version&#8221; from the file&#8217;s context menu.</p>
+<div class="figure align-center">
+<img alt="_images/save_version.png" src="_images/save_version.png" />
+<p class="caption">To save and upload a new file revision, select &#8220;Save Version&#8221; from the file&#8217;s context menu in the Ovation Desktop app.</p>
+</div>
+<p>You can also drag-and-drop the new revision onto the file&#8217;s info window.</p>
+<div class="figure align-center">
+<img alt="_images/measurement_info.png" src="_images/measurement_info.png" />
+<p class="caption">File info panel showing drop zone for uploading a new revision of the displayed file.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013-2015, Physion LLC.<br/>
+      Last updated on Jun 22, 2015.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
