@@ -10,7 +10,7 @@
             <li class="disabled"><a href="#">&raquo;</a></li>
             <li><a href="add_project.html">Add a Project</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
-            <li><a href="add_experiment.html">Upload data</a></li>
+            <li><a href="add_experiment.html">Add an Experiment</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
             <li><a href="search_tutorial.html">Search</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
@@ -27,12 +27,13 @@ Add analyses
 Primary analysis
 ================
 
+
 .. raw:: html
 
     <div class="container">
         <div class="row">
             <div class="col-md-5">
-                Ovation can help you maintain the relationships between data files and analysis results. To add an Analysis Record to a Project, drag-and-drop the analysis result files on the Project info window. To add an Analysis Record to a Folder, drag-and-grop the analysis result(s) onto the Folder info window. As inputs, select the data files that were used in this analysis.
+                Ovation can help you maintain the relationships between data files and analysis  results. To add an Analysis Record to a Project, drag-and-drop the analysis result files on the Project info window. As inputs, select the data files that were used in this analysis.
             </div>
             <div class="col-md-7">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/STWmdnGfJ2c?rel=0" frameborder="0" allowfullscreen></iframe>

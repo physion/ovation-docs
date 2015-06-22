@@ -4,7 +4,7 @@
 Importing and analyzing tabular (CSV) data
 ******************************************
 
-This chapter describes methods for importing and analyzing tabular `Measurement` data in Excel (xlsx) or Comma Separated Value (CSV) format with Ovation and the `Rovation.csv <https://github.com/physion/ovation-R-tabular-data>`_ package for R. Two methods for importing tabular data are described:
+This chapter describes methods for importing and analyzign tabular `Measurement` data in Comma Separated Value (CSV) format with Ovation and the `Rovation.csv <https://github.com/physion/ovation-R-tabular-data>`_ package for R. Two methods for importing tabular data are described:
 
 * :ref:`Importing tabular (CSV) data via the Ovation application <sec-importing-csv-data-app>`
 * :ref:`Importing tabular (CSV) data from R using the Rovation.csv package <sec-importing-csv-data-rovation>`

@@ -12,16 +12,7 @@ Analysis Records
     
     An AnalysisRecord associates inputs, protocol (code or procedure), parameters and outputs of an analysis.
 
-To create an `AnalysisRecord`, drag-and-drop the analysis result(s) (files) onto the "Drop files to add analyses" zone.
-
-.. figure:: _static/analysis_drop.png
-    :align: center
-    
-    Drop files or folders onto a ``Project`` or ``Folder`` "Drop files to add analyses" zone to create a new Analysis Record.
-    
-  
-
-You can also use the Ovation API to create an `AnalysisRecord` programmatically (`project` is a Project instance):
+To create an `AnalysisRecord`, right-click on a `Project` or `Epoch` in the Ovation application and select "Insert Analysis Record…" or use the corresponding API calls to create an `AnalysisRecord` programatically (`project` is a Project instance):
 
 .. language_specific::
     --Python

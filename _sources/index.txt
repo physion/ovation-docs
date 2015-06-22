@@ -24,7 +24,7 @@ Welcome to `Ovation <http://ovation.io>`_! The workflow below will walk you thro
             <li class="disabled"><a href="#">&raquo;</a></li>
             <li><a href="add_project.html">Add a Project</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
-            <li><a href="add_experiment.html">Upload data</a></li>
+            <li><a href="add_experiment.html">Add an Experiment</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
             <li><a href="search_tutorial.html">Search</a></li>
             <li class="disabled"><a href="#">&raquo;</a></li>
@@ -49,10 +49,10 @@ Resources
 
     workflow_guide
     search_guide
-    folders_guide
     source_guide
     procedure_guide
     analysis_records_guide
+    tabular_data
     application
     
 
