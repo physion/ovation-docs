@@ -9,8 +9,7 @@
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-3.2.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootstrap-3.2.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.2.0/""/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -30,7 +29,7 @@
     <script type="text/javascript" src="_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="Ovation Scientific Data Management System 2.0 Beta documentation" href="index.html" />
-    <link rel="next" title="Importing and analyzing tabular (CSV) data" href="tabular_data.html" />
+    <link rel="next" title="Ovation Application" href="application.html" />
     <link rel="prev" title="Protocols and Procedures" href="procedure_guide.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -83,6 +82,12 @@
 <li class="toctree-l2"><a class="reference internal" href="search_guide.html#searching-by-entity-id">Searching by entity ID</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="folders_guide.html">Files and Folders</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="folders_guide.html#adding-files-folders">Adding Files &amp; Folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="folders_guide.html#moving-files-folders">Moving Files &amp; Folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="folders_guide.html#file-revisions">File Revisions</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="source_guide.html">Sources</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="source_guide.html#metadata">Metadata</a></li>
 <li class="toctree-l2"><a class="reference internal" href="source_guide.html#derived-sources">Derived Sources</a></li>
@@ -95,11 +100,6 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Analysis Records</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tabular_data.html">Importing and analyzing tabular (CSV) data</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tabular_data.html#importing-tabular-csv-data">Importing tabular (CSV) data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tabular_data.html#retrieving-tabular-csv-data">Retrieving tabular (CSV) data</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="application.html">Ovation Application</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="application.html#browsers">Browsers</a></li>
 </ul>
@@ -137,7 +137,7 @@
     </a>
   </li>
   <li>
-    <a href="tabular_data.html" title="Next Chapter: Importing and analyzing tabular (CSV) data"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Importing and an... &raquo;</span>
+    <a href="application.html" title="Next Chapter: Ovation Application"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Ovation Applicat... &raquo;</span>
     </a>
   </li>
               
@@ -172,16 +172,21 @@
 <img alt="_images/protocol-analysisrecord.png" src="_images/protocol-analysisrecord.png" />
 <p class="caption">An AnalysisRecord associates inputs, protocol (code or procedure), parameters and outputs of an analysis.</p>
 </div>
-<p>To create an <cite>AnalysisRecord</cite>, right-click on a <cite>Project</cite> or <cite>Epoch</cite> in the Ovation application and select &#8220;Insert Analysis Record…&#8221; or use the corresponding API calls to create an <cite>AnalysisRecord</cite> programatically (<cite>project</cite> is a Project instance):</p>
+<p>To create an <cite>AnalysisRecord</cite>, drag-and-drop the analysis result(s) (files) onto the &#8220;Drop files to add analyses&#8221; zone.</p>
+<div class="figure align-center">
+<img alt="_images/analysis_drop.png" src="_images/analysis_drop.png" />
+<p class="caption">Drop files or folders onto a <tt class="docutils literal"><span class="pre">Project</span></tt> or <tt class="docutils literal"><span class="pre">Folder</span></tt> &#8220;Drop files to add analyses&#8221; zone to create a new Analysis Record.</p>
+</div>
+<p>You can also use the Ovation API to create an <cite>AnalysisRecord</cite> programmatically (<cite>project</cite> is a Project instance):</p>
 <div class="tabbable">
 <ul class="nav nav-tabs simple">
 <li class="disabled"><a class="disabled">Ovation API:</a></li>
-<li class="active"><a data-toggle="tab" href="#1040a8190_Python">Python</a></li>
-<li><a data-toggle="tab" href="#1040a8190_R">R</a></li>
-<li><a data-toggle="tab" href="#1040a8190_Matlab">Matlab</a></li>
+<li class="active"><a data-toggle="tab" href="#104755b38_Python">Python</a></li>
+<li><a data-toggle="tab" href="#104755b38_R">R</a></li>
+<li><a data-toggle="tab" href="#104755b38_Matlab">Matlab</a></li>
 </ul>
 <div class="tab-content admonition">
-<div class="tab-pane active first admonition" id="1040a8190_Python">
+<div class="tab-pane active first admonition" id="104755b38_Python">
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">ovation.conversion</span> <span class="kn">import</span> <span class="n">to_map</span>
 
 <span class="c"># Create an iterable of inputs</span>
@@ -213,7 +218,7 @@
 </pre></div>
 </div>
 </div>
-<div class="tab-pane admonition" id="1040a8190_R">
+<div class="tab-pane admonition" id="104755b38_R">
 <div class="highlight-python"><div class="highlight"><pre># Create an iterable of inputs
 inputs = c(measurement1, measurement2, measurement3)
 
@@ -241,7 +246,7 @@ ar&lt;-project$addAnalysisRecord(&#39;First analysis&#39;, # record name
 </pre></div>
 </div>
 </div>
-<div class="tab-pane last admonition" id="1040a8190_Matlab">
+<div class="tab-pane last admonition" id="104755b38_Matlab">
 <div class="highlight-python"><div class="highlight"><pre>% Create cell array of inputs
 inputs = [measurement1, measurement2, measurement3];
 
@@ -278,12 +283,12 @@ ar = project.addAnalysisRecord(&#39;First analysis&#39;,% record name
 <div class="tabbable">
 <ul class="nav nav-tabs simple">
 <li class="disabled"><a class="disabled">Ovation API:</a></li>
-<li class="active"><a data-toggle="tab" href="#10402cd10_Python">Python</a></li>
-<li><a data-toggle="tab" href="#10402cd10_R">R</a></li>
-<li><a data-toggle="tab" href="#10402cd10_Matlab">Matlab</a></li>
+<li class="active"><a data-toggle="tab" href="#104755c50_Python">Python</a></li>
+<li><a data-toggle="tab" href="#104755c50_R">R</a></li>
+<li><a data-toggle="tab" href="#104755c50_Matlab">Matlab</a></li>
 </ul>
 <div class="tab-content admonition">
-<div class="tab-pane active first admonition" id="10402cd10_Python">
+<div class="tab-pane active first admonition" id="104755c50_Python">
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">ovation.conversion</span> <span class="kn">import</span> <span class="n">to_file_url</span>
 <span class="kn">from</span> <span class="nn">ovation.data</span> <span class="kn">import</span> <span class="n">insert_numeric_analysis_artifact</span>
 
@@ -310,7 +315,7 @@ ar = project.addAnalysisRecord(&#39;First analysis&#39;,% record name
 </pre></div>
 </div>
 </div>
-<div class="tab-pane admonition" id="10402cd10_R">
+<div class="tab-pane admonition" id="104755c50_R">
 <div class="highlight-python"><div class="highlight"><pre># outputs may be specified by URL and content type
 ar$addOutput(&#39;Output name&#39;,         # display name for this output
     NewUrl(output_file_path),       # path to file containing the output &quot;data&quot;
@@ -326,7 +331,7 @@ ar$addNumericOutput(&#39;Output name&#39;,  # display name for this output
 </pre></div>
 </div>
 </div>
-<div class="tab-pane last admonition" id="10402cd10_Matlab">
+<div class="tab-pane last admonition" id="104755c50_Matlab">
 <div class="highlight-python"><div class="highlight"><pre>import java.net.URL
 
 % outputs may be specified by URL and content type
@@ -366,8 +371,8 @@ ar.addNumericOutput(&#39;Output name&#39;, ...  % display name for this output
       
     </p>
     <p>
-        &copy; Copyright 2013-2014, Physion LLC.<br/>
-      Last updated on Nov 25, 2014.<br/>
+        &copy; Copyright 2013-2015, Physion LLC.<br/>
+      Last updated on Jun 22, 2015.<br/>
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
     </p>
   </div>
